@@ -455,7 +455,7 @@ function renderPlan(plan, planId) {
     + '<span class="rpill rp-pre">Pre: ~' + preMin + ' min</span>'
     + '<span class="rpill rp-post">Post: ~' + postMin + ' min</span></div></div>'
     + '<div class="edit-bar"><div class="edit-bar-left">' + editLabel + '</div>'
-    + '<div style="display:flex;gap:8px;align-items:center">'     + '<button class=\"btn-shuffle\" id=\"btn-shuffle\" onclick=\"shufflePlan()\">&#8635; Shuffle</button>'     + '<button class="btn-save-plan" onclick="openSaveModal()">Save Plan</button>'     + '</div></div>'
+    + '<div style="display:flex;gap:8px;align-items:center">'     + '<button class=\"btn-shuffle\" id=\"btn-shuffle\" onclick=\"shufflePlan()\">&#8635; Refresh</button>'     + '<button class="btn-save-plan" onclick="openSaveModal()">Save Plan</button>'     + '</div></div>'
     + '<div class="cov-wrap"><div class="cov-lbl">Muscles covered</div><div class="cov-chips">' + covChips + '</div></div>'
     + (act.length ? '<div class="phase-block">'
     + '<div class="phase-bar act"><div class="pb-dot act"></div><div class="pb-name act">Activation</div><div class="pb-type">Warm-Up</div>'
