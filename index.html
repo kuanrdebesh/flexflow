@@ -254,6 +254,8 @@ button{font-family:'Epilogue',sans-serif;}
 .cb{display:none;border-top:1px solid var(--bd);}
 .scard.open .cb{display:block;}
 .cb-grid{display:grid;grid-template-columns:148px 1fr 1fr;}
+.lib-grid .cb-grid{grid-template-columns:1fr!important;}
+.lib-grid .cb-col + .cb-col{border-left:none;border-top:1px solid var(--bd);}
 .cb-col{padding:13px 14px;}
 .cb-col + .cb-col{border-left:1px solid var(--bd);}
 .cb-sec{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
