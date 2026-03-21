@@ -11,7 +11,7 @@ var activeTab = 0;
 var timers = {};
 var currentPlan = null;
 var editingPlanId = null;
-var EXERCISE_COUNT = 132;
+var EXERCISE_COUNT = 133;
 
 // Stretch IDs that have reference photos in /images/
 // Add entries here as photos are sourced
@@ -151,6 +151,7 @@ var IMAGE_STRETCHES = {
   'pre-90-90-hip' : 'images/pre-90-90-hip.png',
   'pre-frog-pulses' : 'images/pre-frog-pulses.png',
   'pre-lunge-to-hamstring' : 'images/pre-lunge-to-hamstring.png',
+  'post-knee-to-chest' : 'images/post-knee-to-chest.png',
 };
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
