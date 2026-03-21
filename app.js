@@ -143,6 +143,7 @@ var IMAGE_STRETCHES = {
   'post-wall-tricep-press' : 'images/post-wall-tricep-press.png',
   'Post-Workout' : 'images/Post-Workout.png',
   'act-neck-rotation' : 'images/act-neck-rotation.png',
+  'post-scm-str' : 'images/post-scm-stretch',
 };
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
