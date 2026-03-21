@@ -272,100 +272,36 @@ function clearAll() {
 // ── OPTIMISED SELECTION ───────────────────────────────────────
 // Greedily picks stretches that maximise new muscles covered.
 // maxPer = approximate max items to return
-function optimisedSelect(candidates, muscles, maxPer, shuffle) {
-  var list = candidates.slice();
-  if (shuffle) {
-    list.sort(function(a, b) {
-      var diff = b.covers.length - a.covers.length;
-      if (diff !== 0) return diff;
-      return Math.random() - 0.5;
-    });
-  }
-
+function optimisedSelect(candidates, muscles, maxPer) {
   var covered = {};
   var selected = [];
+  var n = muscles.length;
 
-  // First pass: coverage-based selection up to maxPer
-  list.forEach(function(s) {
+  // First pass: take items with highest unique new coverage
+  candidates.forEach(function(s) {
     if (selected.length >= maxPer) return;
     var newCoverage = s.covers.filter(function(m){ return !covered[m]; }).length;
-    if (newCoverage > 0) {
+    if (newCoverage > 0 || selected.length < 2) {
       selected.push(s);
       s.covers.forEach(function(m){ covered[m] = true; });
     }
   });
 
-  // Second pass: fill remaining budget from pool regardless of coverage
-  // This ensures single-muscle selections get enough exercises
-  list.forEach(function(s) {
-    if (selected.length >= maxPer) return;
-    if (selected.indexOf(s) >= 0) return;
-    selected.push(s);
-  });
+  // Second pass: if not all muscles covered yet and we have budget, add more
+  var stillUncovered = muscles.filter(function(m){ return !covered[m]; });
+  if (stillUncovered.length > 0) {
+    candidates.forEach(function(s) {
+      if (selected.indexOf(s) >= 0) return;
+      if (selected.length >= maxPer + 2) return;
+      var coversUncovered = s.covers.filter(function(m){ return !covered[m]; }).length;
+      if (coversUncovered > 0) {
+        selected.push(s);
+        s.covers.forEach(function(m){ covered[m] = true; });
+      }
+    });
+  }
 
   return selected;
-}
-
-// ── SHUFFLE PLAN ─────────────────────────────────────────────
-// Regenerates the current plan with randomised selection
-// keeping the same muscles and depth
-function shufflePlan() {
-  if (!currentPlan) return;
-  var muscles = currentPlan.muscles;
-  var d = currentPlan.depth;
-  timers = {};
-
-  var seen = {};
-  var allAct = [], allPre = [], allPost = [];
-  STRETCHES.forEach(function(s) {
-    if (seen[s.id]) return;
-    var covers = s.muscles.filter(function(m){ return muscles.indexOf(m) >= 0; });
-    if (!covers.length) return;
-    seen[s.id] = true;
-    var e = obj(s); e.covers = covers;
-    if (s.phase === 'activation') allAct.push(e);
-    else if (s.phase === 'pre') allPre.push(e);
-    else allPost.push(e);
-  });
-
-  var act, pre, post;
-  var n = muscles.length;
-  var qCapAct  = Math.max(2, Math.min(n * 2, 8));
-  var qCapPre  = Math.max(2, Math.min(n * 1, 6));
-  var qCapPost = Math.max(3, Math.min(n * 1, 8));
-  var oCapAct  = Math.max(3, Math.min(n * 2, 12));
-  var oCapPre  = Math.max(3, Math.min(n * 2, 10));
-  var oCapPost = Math.max(4, Math.min(n * 2, 14));
-
-  if (d === 'quick') {
-    var qAct  = allAct.filter(function(s){ return (s.priority||1) === 1; });
-    var qPre  = allPre.filter(function(s){ return (s.priority||1) === 1; });
-    var qPost = allPost.filter(function(s){ return (s.priority||1) === 1; });
-    act  = optimisedSelect(qAct,  muscles, qCapAct,  true);
-    pre  = optimisedSelect(qPre,  muscles, qCapPre,  true);
-    post = optimisedSelect(qPost, muscles, qCapPost, true);
-  } else if (d === 'optimised') {
-    act  = optimisedSelect(allAct,  muscles, oCapAct,  true);
-    pre  = optimisedSelect(allPre,  muscles, oCapPre,  true);
-    post = optimisedSelect(allPost, muscles, oCapPost, true);
-  } else {
-    // Detailed: shuffle the order
-    allAct.sort(function(){ return Math.random() - 0.5; });
-    allPre.sort(function(){ return Math.random() - 0.5; });
-    allPost.sort(function(){ return Math.random() - 0.5; });
-    act = allAct; pre = allPre; post = allPost;
-  }
-
-  currentPlan = {muscles:muscles, depth:d, act:act, pre:pre, post:post};
-  renderPlan(currentPlan, editingPlanId || null);
-
-  // Brief visual feedback on the button
-  var btn = document.getElementById('btn-shuffle');
-  if (btn) {
-    btn.style.transform = 'rotate(360deg)';
-    btn.style.transition = 'transform 0.4s ease';
-    setTimeout(function(){ btn.style.transform = ''; btn.style.transition = ''; }, 400);
-  }
 }
 
 function generate() {
@@ -392,28 +328,22 @@ function generate() {
   allPre.sort(function(a,b){ return b.covers.length - a.covers.length; });
   allPost.sort(function(a,b){ return b.covers.length - a.covers.length; });
 
-  // Dynamic caps: scale with number of muscles selected
-  // min 2 per phase for single muscle, up to reasonable max for full body
-  var n = muscles.length;
-  var qCapAct  = Math.max(2, Math.min(n * 2, 8));
-  var qCapPre  = Math.max(2, Math.min(n * 1, 6));
-  var qCapPost = Math.max(3, Math.min(n * 1, 8));
-  var oCapAct  = Math.max(3, Math.min(n * 2, 12));
-  var oCapPre  = Math.max(3, Math.min(n * 2, 10));
-  var oCapPost = Math.max(4, Math.min(n * 2, 14));
-
   if (depth === 'quick') {
+    // Minimum effective dose — smart selection, tight caps
+    // p1 candidates only, then pick highest coverage
     var qAct  = allAct.filter(function(s){ return (s.priority||1) === 1; });
     var qPre  = allPre.filter(function(s){ return (s.priority||1) === 1; });
     var qPost = allPost.filter(function(s){ return (s.priority||1) === 1; });
-    act  = optimisedSelect(qAct,  muscles, qCapAct);
-    pre  = optimisedSelect(qPre,  muscles, qCapPre);
-    post = optimisedSelect(qPost, muscles, qCapPost);
+    act  = optimisedSelect(qAct,  muscles, 2);
+    pre  = optimisedSelect(qPre,  muscles, 3);
+    post = optimisedSelect(qPost, muscles, 4);
   } else if (depth === 'optimised') {
-    act  = optimisedSelect(allAct,  muscles, oCapAct);
-    pre  = optimisedSelect(allPre,  muscles, oCapPre);
-    post = optimisedSelect(allPost, muscles, oCapPost);
+    // Best return on time — smart selection, medium caps, all priorities
+    act  = optimisedSelect(allAct,  muscles, 4);
+    pre  = optimisedSelect(allPre,  muscles, 5);
+    post = optimisedSelect(allPost, muscles, 7);
   } else {
+    // Detailed: everything, sorted by coverage
     act  = allAct;
     pre  = allPre;
     post = allPost;
@@ -455,7 +385,7 @@ function renderPlan(plan, planId) {
     + '<span class="rpill rp-pre">Pre: ~' + preMin + ' min</span>'
     + '<span class="rpill rp-post">Post: ~' + postMin + ' min</span></div></div>'
     + '<div class="edit-bar"><div class="edit-bar-left">' + editLabel + '</div>'
-    + '<div style="display:flex;gap:8px;align-items:center">'     + '<button class=\"btn-shuffle\" id=\"btn-shuffle\" onclick=\"shufflePlan()\">&#8635; Refresh</button>'     + '<button class="btn-save-plan" onclick="openSaveModal()">Save Plan</button>'     + '</div></div>'
+    + '<div><button class="btn-save-plan" onclick="openSaveModal()">Save Plan</button></div></div>'
     + '<div class="cov-wrap"><div class="cov-lbl">Muscles covered</div><div class="cov-chips">' + covChips + '</div></div>'
     + (act.length ? '<div class="phase-block">'
     + '<div class="phase-bar act"><div class="pb-dot act"></div><div class="pb-name act">Activation</div><div class="pb-type">Warm-Up</div>'
@@ -506,7 +436,7 @@ function renderCard(s, idx, phase, stackId) {
     + (imgSrc ? ' onclick="event.stopPropagation();flipCard(\'flip-th-' + uid + '\')"' : '') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front">' + figSvg + (imgSrc ? '<span class="flip-hint">&#8635;</span>' : '') + '</div>'
-    + (imgSrc ? '<div class="flip-face back"><img src=\"' + imgSrc + '\" alt=\"' + s.name + '\" loading=\"lazy\" onerror=\"this.closest(\\'.flip-wrap\\').classList.remove(\\'has-img\\')\"><span class=\"flip-hint\">&#8635;</span></div>' : '')
+    + (imgSrc ? '<div class="flip-face back"><img src="' + imgSrc + '" alt="' + s.name + '" loading="lazy" onerror="this.closest(\'.flip-wrap\').classList.remove(\'has-img\')"><span class=\"flip-hint\">&#8635;</span></div>' : '')
     + '</div></div>';
 
   // Expanded position column
@@ -840,7 +770,7 @@ function renderLibCard(s, idx, parent) {
     + '<div class="viz-flip' + (imgSrc ? ' flipped' : '') + '" id="'+expId+'"' + (imgSrc?' onclick="flipCard(\''+expId+'\')" style="cursor:pointer"':'') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front"><div class="viz-fig-inner">'+figSvg+'</div></div>'
-    + (imgSrc?'<div class="flip-face back"><img src=\"'+imgSrc+'\" loading=\"lazy\" onerror=\"this.closest(\\'.flip-wrap\\').classList.remove(\\'has-img\\')\"><span class=\"flip-hint\">&#8635;</span></div>':'')
+    + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>':'')
     + '</div></div>'
     + '<div class="viz-name">'+s.name+'</div>'
     + '<div class="viz-reps">'+s.reps+' &middot; '+s.sets+'</div>';
@@ -850,7 +780,7 @@ function renderLibCard(s, idx, parent) {
   var stepsHtml = s.steps.map(function(st,j){ return '<li><span class="snum">0'+(j+1)+'</span><span>'+st+'</span></li>'; }).join('');
   var thumbHtml = '<div class="flip-wrap' + (imgSrc?' has-img flipped':'') + '" id="flip-th-'+uid+'"' + (imgSrc?' onclick="event.stopPropagation();flipCard(\'flip-th-'+uid+'\')"':'') + '>'
     + '<div class="flip-inner"><div class="flip-face front">'+figSvg+(imgSrc?'<span class="flip-hint">&#8635;</span>':'')+'</div>'
-    + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" loading="lazy" onerror="this.closest(\'.flip-wrap\').classList.remove(\'has-img\')"></div>':'')
+    + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" loading="lazy" onerror="this.closest(\'.flip-wrap\').classList.remove(\'has-img\')"><span class=\"flip-hint\">&#8635;</span></div>':'')
     + '</div></div>';
 
   var card = document.createElement('div');
