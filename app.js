@@ -436,19 +436,19 @@ function renderCard(s, idx, phase, stackId) {
     + (imgSrc ? ' onclick="event.stopPropagation();flipCard(\'flip-th-' + uid + '\')"' : '') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front">' + figSvg + (imgSrc ? '<span class="flip-hint">&#8635;</span>' : '') + '</div>'
-    + (imgSrc ? '<div class="flip-face back"><img src="' + imgSrc + '" alt="' + s.name + '" loading="lazy" onerror="this.closest(\'.flip-wrap\').classList.remove(\'has-img\')"><span class=\"flip-hint\">&#8635;</span></div>' : '')
+    + (imgSrc ? '<div class="flip-face back"><img src="' + imgSrc + '" alt="' + s.name + '" loading="lazy" onerror="this.closest(\'.flip-wrap\').classList.remove(\'has-img\')"><span class=\\\"flip-hint\\\">&#8635;</span></div>' : '')
     + '</div></div>';
 
   // Expanded position column
   var expId = 'flip-ex-' + uid;
   var expHtml = '<div class="cb-sec">Position'
-    + (imgSrc ? '<span class="flip-exp-btn" onclick="flipCard(\'' + expId + '\')">&#8635; photo</span>' : '')
+    + (imgSrc ? '<span class="flip-exp-btn" onclick="flipCard(\'' + expId + '\')">&#8635; flip</span>' : '')
     + '</div>'
     + '<div class="viz-flip' + (imgSrc ? ' flipped' : '') + '" id="' + expId + '"'
     + (imgSrc ? ' onclick="flipCard(\'' + expId + '\')" style="cursor:pointer"' : '') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front"><div class="viz-fig-inner">' + figSvg + '</div></div>'
-    + (imgSrc ? '<div class="flip-face back"><img src="' + imgSrc + '" alt="' + s.name + '" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>' : '')
+    + (imgSrc ? '<div class="flip-face back"><img src="' + imgSrc + '" alt="' + s.name + '" loading="lazy" style="width:100%;height:100%;object-fit:cover"><span class=\\\"flip-hint\\\">&#8635;</span></div>' : '')
     + '</div></div>'
     + '<div class="viz-name">' + s.name + '</div>'
     + '<div class="viz-reps">' + s.reps + ' &middot; ' + s.sets + '</div>'
@@ -766,11 +766,11 @@ function renderLibCard(s, idx, parent) {
   var coverPills = s.muscles.map(function(m){ return '<span class="cpill cp-cov">'+m+'</span>'; }).join('');
   var expId = 'flip-ex-' + uid;
   var expHtml = '<div class="cb-sec">Position'
-    + (imgSrc ? '<span class="flip-exp-btn" onclick="flipCard(\''+expId+'\')">&#8635; photo</span>' : '') + '</div>'
+    + (imgSrc ? '<span class="flip-exp-btn" onclick="flipCard(\''+expId+'\')">&#8635; flip</span>' : '') + '</div>'
     + '<div class="viz-flip' + (imgSrc ? ' flipped' : '') + '" id="'+expId+'"' + (imgSrc?' onclick="flipCard(\''+expId+'\')" style="cursor:pointer"':'') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front"><div class="viz-fig-inner">'+figSvg+'</div></div>'
-    + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>':'')
+    + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" style="width:100%;height:100%;object-fit:cover" loading="lazy"><span class=\\\"flip-hint\\\">&#8635;</span></div>':'')
     + '</div></div>'
     + '<div class="viz-name">'+s.name+'</div>'
     + '<div class="viz-reps">'+s.reps+' &middot; '+s.sets+'</div>';
@@ -780,7 +780,7 @@ function renderLibCard(s, idx, parent) {
   var stepsHtml = s.steps.map(function(st,j){ return '<li><span class="snum">0'+(j+1)+'</span><span>'+st+'</span></li>'; }).join('');
   var thumbHtml = '<div class="flip-wrap' + (imgSrc?' has-img flipped':'') + '" id="flip-th-'+uid+'"' + (imgSrc?' onclick="event.stopPropagation();flipCard(\'flip-th-'+uid+'\')"':'') + '>'
     + '<div class="flip-inner"><div class="flip-face front">'+figSvg+(imgSrc?'<span class="flip-hint">&#8635;</span>':'')+'</div>'
-    + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" loading="lazy" onerror="this.closest(\'.flip-wrap\').classList.remove(\'has-img\')"><span class=\"flip-hint\">&#8635;</span></div>':'')
+    + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" loading="lazy" onerror="this.closest(\'.flip-wrap\').classList.remove(\'has-img\')"><span class=\\\"flip-hint\\\">&#8635;</span></div>':'')
     + '</div></div>';
 
   var card = document.createElement('div');
