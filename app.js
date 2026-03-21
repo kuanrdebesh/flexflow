@@ -336,6 +336,73 @@ function optimisedSelect(candidates, muscles, maxPer) {
   return selected;
 }
 
+// ── SHUFFLE / REFRESH PLAN ───────────────────────────────────
+function shufflePlan() {
+  if (!currentPlan) return;
+  var muscles = currentPlan.muscles;
+  var d = currentPlan.depth;
+  timers = {};
+
+  var seen = {};
+  var allAct = [], allPre = [], allPost = [];
+  STRETCHES.forEach(function(s) {
+    if (seen[s.id]) return;
+    var covers = s.muscles.filter(function(m){ return muscles.indexOf(m) >= 0; });
+    if (!covers.length) return;
+    seen[s.id] = true;
+    var e = obj(s); e.covers = covers;
+    if (s.phase === 'activation') allAct.push(e);
+    else if (s.phase === 'pre') allPre.push(e);
+    else allPost.push(e);
+  });
+
+  // Shuffle each pool randomly
+  function shuffle(arr) {
+    for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+    }
+    return arr;
+  }
+  shuffle(allAct); shuffle(allPre); shuffle(allPost);
+
+  var n = muscles.length;
+  var qCapAct  = Math.max(2, Math.min(n * 2, 8));
+  var qCapPre  = Math.max(2, Math.min(n * 1, 6));
+  var qCapPost = Math.max(3, Math.min(n * 1, 8));
+  var oCapAct  = Math.max(3, Math.min(n * 2, 12));
+  var oCapPre  = Math.max(3, Math.min(n * 2, 10));
+  var oCapPost = Math.max(4, Math.min(n * 2, 14));
+
+  var act, pre, post;
+  if (d === 'quick') {
+    var qA = allAct.filter(function(s){ return (s.priority||1) === 1; });
+    var qP = allPre.filter(function(s){ return (s.priority||1) === 1; });
+    var qO = allPost.filter(function(s){ return (s.priority||1) === 1; });
+    act  = optimisedSelect(qA,  muscles, qCapAct);
+    pre  = optimisedSelect(qP,  muscles, qCapPre);
+    post = optimisedSelect(qO,  muscles, qCapPost);
+  } else if (d === 'optimised') {
+    act  = optimisedSelect(allAct,  muscles, oCapAct);
+    pre  = optimisedSelect(allPre,  muscles, oCapPre);
+    post = optimisedSelect(allPost, muscles, oCapPost);
+  } else {
+    act = allAct; pre = allPre; post = allPost;
+  }
+
+  currentPlan = { muscles:muscles, depth:d, act:act, pre:pre, post:post };
+  renderPlan(currentPlan, editingPlanId || null);
+
+  // Spin animation on button
+  var btn = document.getElementById('btn-shuffle');
+  if (btn) {
+    btn.style.transform = 'rotate(360deg)';
+    btn.style.transition = 'transform 0.4s ease';
+    setTimeout(function(){ btn.style.transform = ''; btn.style.transition = ''; }, 400);
+  }
+}
+
+
 function generate() {
   if (!selected.size) return;
   timers = {}; editingPlanId = null;
@@ -417,7 +484,10 @@ function renderPlan(plan, planId) {
     + '<span class="rpill rp-pre">Pre: ~' + preMin + ' min</span>'
     + '<span class="rpill rp-post">Post: ~' + postMin + ' min</span></div></div>'
     + '<div class="edit-bar"><div class="edit-bar-left">' + editLabel + '</div>'
-    + '<div><button class="btn-save-plan" onclick="openSaveModal()">Save Plan</button></div></div>'
+    + '<div style="display:flex;gap:8px;align-items:center">'
+    + '<button class="btn-shuffle" id="btn-shuffle" onclick="shufflePlan()">&#8634; Refresh</button>'
+    + '<button class="btn-save-plan" onclick="openSaveModal()">Save Plan</button>'
+    + '</div></div>'
     + '<div class="cov-wrap"><div class="cov-lbl">Muscles covered</div><div class="cov-chips">' + covChips + '</div></div>'
     + (act.length ? '<div class="phase-block">'
     + '<div class="phase-bar act"><div class="pb-dot act"></div><div class="pb-name act">Activation</div><div class="pb-type">Warm-Up</div>'
