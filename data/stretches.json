@@ -2021,6 +2021,32 @@
     "tip": "The lateral push-out phase directly activates the TFL and glute medius \u2014 key stabilisers for all leg work."
   },
   {
+    "id": "pre-90-90-hip",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "hip9090pre",
+    "name": "90-90 Hip Switch",
+    "targets": "Glutes \u00b7 Hip Flexors \u00b7 Adductors \u00b7 Abductors",
+    "muscles": [
+      "glutes",
+      "hipflexors",
+      "adductors",
+      "abductors"
+    ],
+    "reps": "5 switches / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit on the floor in the 90-90 position \u2014 front leg bent 90\u00b0 in front, back leg bent 90\u00b0 to the side.",
+      "Sit tall with equal weight on both hips. Hands can rest on the floor beside you for balance.",
+      "Windshield-wiper both legs to the opposite side in one smooth motion \u2014 the front leg becomes the back leg and vice versa.",
+      "Pause briefly at each end to feel the stretch before switching back.",
+      "Focus on the rotation coming from the hips, not by leaning or twisting the torso."
+    ],
+    "why": "The dynamic version of the 90-90 warms the hip capsule through its full range of internal and external rotation before training \u2014 priming the exact movement pattern required in squats, deadlifts, and lunges. Unlike the static hold, the switching motion actively lubricates the joint rather than just passively lengthening the surrounding tissue.",
+    "tip": "Keep your torso upright throughout the switch \u2014 most people lean sideways to compensate for limited rotation. If you have to lean, reduce the range and let the hip rotation build over time."
+  },
+  {
     "id": "pre-frog-pulses",
     "phase": "pre",
     "priority": 2,
@@ -2614,7 +2640,7 @@
     "id": "post-90-90-hip",
     "phase": "post",
     "priority": 1,
-    "fig": "piriformis",
+    "fig": "hip9090",
     "name": "90-90 Hip Stretch",
     "targets": "Glutes \u00b7 Hip Flexors \u00b7 Adductors \u00b7 Abductors \u00b7 Piriformis",
     "muscles": [
