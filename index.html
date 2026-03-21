@@ -260,7 +260,7 @@ button{font-family:'Epilogue',sans-serif;}
 .cb-sec .flip-exp-btn{font-size:8px;color:var(--post);cursor:pointer;margin-left:6px;font-weight:400;}
 
 /* VIZ FLIP (expanded) */
-.viz-flip{width:100%;height:200px;perspective:600px;margin-bottom:8px;position:relative;}
+.viz-flip{width:160px;height:160px;perspective:600px;margin-bottom:8px;position:relative;}
 .viz-flip .flip-inner{position:relative;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.4,0,.2,1);min-height:100px;}
 .viz-flip.flipped .flip-inner{transform:rotateY(180deg);}
 .viz-flip .flip-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:3px;background:var(--s3);border:1px solid var(--bd2);}
@@ -728,7 +728,7 @@ body.light .preset-btn.on { border-color:var(--pre); background:rgba(42,125,0,.0
 body.light .preset-btn.on .p-icon,body.light .preset-btn.on .p-name { color:var(--pre); }
 body.light .mg-tab.on { color:var(--pre); border-color:var(--pre); }
 body.light .scard { background:#fff; }
-body.light .scard:hover,.scard.open { background:#f8f9fb; }
+body.light .scard:hover, body.light .scard.open { background:#f8f9fb; }
 body.light .phase-bar.pre { background:linear-gradient(90deg,rgba(80,160,0,.08),transparent); }
 body.light .phase-bar.post { background:linear-gradient(90deg,rgba(0,140,200,.08),transparent); }
 body.light .btn-save-plan { background:var(--pre); }
