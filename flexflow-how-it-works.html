@@ -320,6 +320,92 @@ body {
   .flip-demo-cards { flex-direction:column; align-items:center; }
 }
 
+
+/* ── TIMER DEMO ── */
+.timer-demo {
+  margin:20px 0 8px;
+  padding:14px 16px;
+  background:var(--s2);
+  border:1px solid var(--bd);
+  border-radius:6px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  max-width:320px;
+}
+.td-btn {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; letter-spacing:1px;
+  text-transform:uppercase;
+  padding:6px 12px;
+  border:1px solid var(--a2);
+  background:transparent;
+  color:var(--a2);
+  border-radius:3px;
+  cursor:default;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.td-track {
+  flex:1; height:3px;
+  background:var(--bd);
+  border-radius:2px;
+  overflow:hidden;
+}
+.td-fill {
+  height:100%;
+  width:60%;
+  background:var(--a2);
+  border-radius:2px;
+  animation:td-pulse 2s ease-in-out infinite alternate;
+}
+@keyframes td-pulse { from{width:20%} to{width:85%} }
+.td-lbl {
+  font-family:'JetBrains Mono',monospace;
+  font-size:10px; color:var(--muted);
+  width:28px; text-align:right;
+  flex-shrink:0;
+}
+
+
+/* ── REFRESH DEMO ── */
+.refresh-demo {
+  margin:16px 0 4px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.rd-btn {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; letter-spacing:1px;
+  text-transform:uppercase;
+  padding:6px 12px;
+  border:1px solid var(--bd2);
+  background:transparent;
+  color:var(--text2);
+  border-radius:3px;
+  cursor:default;
+  display:flex; align-items:center; gap:5px;
+}
+.rd-save {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; letter-spacing:1px;
+  text-transform:uppercase;
+  padding:6px 14px;
+  border:none;
+  background:var(--a1);
+  color:#07080f;
+  border-radius:3px;
+  cursor:default;
+  font-weight:700;
+}
+.rd-label {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; color:var(--muted);
+  letter-spacing:.5px;
+}
+
 </style>
 </head>
 <body>
@@ -495,7 +581,7 @@ body {
       </div>
       <div class="flip-demo-desc">
         <div class="flip-desc-title">Muscle map + reference photo</div>
-        <div class="flip-desc-text">Every exercise card shows a reference photo of the movement by default. Tap the card to flip to the anatomical SVG with target muscles highlighted -- so you always know exactly which muscles are being worked.</div>
+        <div class="flip-desc-text">Every exercise card shows an anatomical SVG with the target muscles highlighted in blue. Tap the figure to flip to a real reference photo showing exact position and form.</div>
         <div class="flip-desc-text" style="margin-top:8px">All 126 exercises have SVG figures. Visual aids -- including reference photos and GIFs -- are being progressively added to provide better guidance for each movement.</div>
       </div>
     </div>
@@ -505,15 +591,20 @@ body {
     <div class="step">
       <div class="step-num">◉</div>
       <div>
-        <div class="step-title">Muscle map SVG figure</div>
-        <div class="step-text">Every exercise has an anatomical figure with the target muscles highlighted. Tap the figure to flip to a reference photo where available.</div>
+        <div class="step-title">Reference photo + muscle map</div>
+        <div class="step-text">Every exercise shows a reference photo by default. Tap to flip to the anatomical SVG with target muscles highlighted — so you always know what's being worked.</div>
       </div>
     </div>
     <div class="step">
       <div class="step-num">◉</div>
       <div>
-        <div class="step-title">Step-by-step instructions</div>
-        <div class="step-text">Five clear steps for every exercise. A built-in hold timer for static stretches counts down and tracks your sets.</div>
+        <div class="step-title">Step-by-step instructions + timer</div>
+        <div class="step-text">Five clear steps for every exercise. Static stretches have a built-in countdown timer with a progress bar — tap to start, it tracks your sets automatically.</div>
+        <div class="timer-demo">
+          <div class="td-btn">&#9654; 30s</div>
+          <div class="td-track"><div class="td-fill"></div></div>
+          <div class="td-lbl">18s</div>
+        </div>
       </div>
     </div>
     <div class="step">
@@ -528,6 +619,25 @@ body {
       <div>
         <div class="step-title">Pro tip</div>
         <div class="step-text">One insight per exercise — the detail most people miss and the coaches know. The cue that makes the difference between going through the motions and actually stretching.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">◉</div>
+      <div>
+        <div class="step-title">&#8634; Refresh for variety</div>
+        <div class="step-text">Not feeling a particular set of exercises? Hit Refresh to instantly regenerate your plan with different movements — same muscles, same coverage, different selection every time.</div>
+        <div class="refresh-demo">
+          <div class="rd-btn">&#8634; Refresh</div>
+          <div class="rd-save">Save Plan</div>
+          <div class="rd-label">← appears in your plan header</div>
+        </div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">◉</div>
+      <div>
+        <div class="step-title">Library search</div>
+        <div class="step-text">Browse all 126 exercises in the Library tab. Search by name or muscle group to find specific movements, see their instructions, and add them to your plan manually.</div>
       </div>
     </div>
   </div>
