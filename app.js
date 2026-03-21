@@ -81,6 +81,21 @@ var IMAGE_STRETCHES = {
   'act-calves-raise-slow' : 'images/act-calves-raise-slow.png',
   'act-calves-single-leg' : 'images/act-calves-single-leg.png',
   'act-shins-tib-raise' : 'images/act-shins-tib-raise.png',
+  'pre-wrist-circle' : 'images/pre-wrist-circle.png',
+  'pre-side-step' : 'images/pre-side-step.png',
+  'pre-ankle-circle' : 'images/pre-ankle-circle.png',
+  'pre-inchworm' : 'images/pre-inchworm.png',
+  'pre-lunge' : 'images/pre-lunge.png',
+  'pre-hip-circle' : 'images/pre-hip-circle.png',
+  'pre-leg-swing' : 'images/pre-leg-swing.png',
+  'pre-cat-cow' : 'images/pre-cat-cow.png',
+  'pre-torso-twist' : 'images/pre-torso-twist.png',
+  'pre-neck-roll' : 'images/pre-neck-roll.png',
+  'pre-shoulder-roll' : 'images/pre-shoulder-roll.png',
+  'pre-arm-circle' : 'images/pre-arm-circle.png',
+  'act-shins-toe-tap' : 'images/act-shins-toe-tap.png',
+  'act-shins-band-dorsiflex' : 'images/act-shins-band-dorsiflex.png',
+  'act-shins-heel-walk' : 'images/act-shins-heel-walk.png',
 };
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
