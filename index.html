@@ -260,14 +260,14 @@ button{font-family:'Epilogue',sans-serif;}
 .cb-sec .flip-exp-btn{font-size:8px;color:var(--post);cursor:pointer;margin-left:6px;font-weight:400;}
 
 /* VIZ FLIP (expanded) */
-.viz-flip{width:100%;perspective:600px;margin-bottom:8px;}
+.viz-flip{width:100%;aspect-ratio:1/1;perspective:600px;margin-bottom:8px;}
 .viz-flip .flip-inner{position:relative;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.4,0,.2,1);min-height:100px;}
 .viz-flip.flipped .flip-inner{transform:rotateY(180deg);}
 .viz-flip .flip-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:3px;background:var(--s3);border:1px solid var(--bd2);}
 .viz-flip .flip-face.back{transform:rotateY(180deg);overflow:hidden;}
 .viz-flip .flip-face.back img{width:100%;height:100%;object-fit:cover;}
 .viz-fig-inner{width:100%;display:flex;align-items:center;justify-content:center;padding:6px;min-height:100px;}
-.viz-fig-inner svg{width:100%;max-height:140px;}
+.viz-fig-inner svg{width:100%;height:100%;max-height:none;}
 .viz-name{font-size:11px;font-weight:700;}
 .viz-reps{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);margin-top:2px;}
 .viz-covers-lbl{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin:8px 0 3px;}
