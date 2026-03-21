@@ -894,6 +894,29 @@ body.light .r-mode.optimised { background:rgba(0,119,170,.1); border-color:rgba(
 body.light .lib-search { background:#fff; border-color:var(--bd); color:var(--text); }
 body.light .lib-search:focus { border-color:var(--a1); }
   
+
+/* ── SHUFFLE BUTTON ── */
+.btn-shuffle {
+  width:30px; height:30px;
+  background:transparent;
+  border:1px solid var(--bd2);
+  border-radius:3px;
+  color:var(--text2);
+  font-size:16px;
+  cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s;
+  line-height:1;
+}
+.btn-shuffle:hover {
+  color:var(--a1);
+  border-color:var(--a1);
+  background:var(--a1-dim);
+}
+@media(max-width:820px){
+  .btn-shuffle { width:28px; height:28px; font-size:15px; }
+}
+
 </style>
 </head>
 <body>

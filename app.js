@@ -272,13 +272,24 @@ function clearAll() {
 // ── OPTIMISED SELECTION ───────────────────────────────────────
 // Greedily picks stretches that maximise new muscles covered.
 // maxPer = approximate max items to return
-function optimisedSelect(candidates, muscles, maxPer) {
+function optimisedSelect(candidates, muscles, maxPer, shuffle) {
+  // When shuffle=true, randomise within equal-coverage groups
+  // so same muscles/mode gives a different valid plan each time
+  var list = candidates.slice();
+  if (shuffle) {
+    // Sort by coverage DESC but randomly break ties within same score
+    list.sort(function(a, b) {
+      var diff = b.covers.length - a.covers.length;
+      if (diff !== 0) return diff;
+      return Math.random() - 0.5;
+    });
+  }
+
   var covered = {};
   var selected = [];
-  var n = muscles.length;
 
   // First pass: take items with highest unique new coverage
-  candidates.forEach(function(s) {
+  list.forEach(function(s) {
     if (selected.length >= maxPer) return;
     var newCoverage = s.covers.filter(function(m){ return !covered[m]; }).length;
     if (newCoverage > 0 || selected.length < 2) {
@@ -290,7 +301,7 @@ function optimisedSelect(candidates, muscles, maxPer) {
   // Second pass: if not all muscles covered yet and we have budget, add more
   var stillUncovered = muscles.filter(function(m){ return !covered[m]; });
   if (stillUncovered.length > 0) {
-    candidates.forEach(function(s) {
+    list.forEach(function(s) {
       if (selected.indexOf(s) >= 0) return;
       if (selected.length >= maxPer + 2) return;
       var coversUncovered = s.covers.filter(function(m){ return !covered[m]; }).length;
@@ -302,6 +313,60 @@ function optimisedSelect(candidates, muscles, maxPer) {
   }
 
   return selected;
+}
+
+// ── SHUFFLE PLAN ─────────────────────────────────────────────
+// Regenerates the current plan with randomised selection
+// keeping the same muscles and depth
+function shufflePlan() {
+  if (!currentPlan) return;
+  var muscles = currentPlan.muscles;
+  var d = currentPlan.depth;
+  timers = {};
+
+  var seen = {};
+  var allAct = [], allPre = [], allPost = [];
+  STRETCHES.forEach(function(s) {
+    if (seen[s.id]) return;
+    var covers = s.muscles.filter(function(m){ return muscles.indexOf(m) >= 0; });
+    if (!covers.length) return;
+    seen[s.id] = true;
+    var e = obj(s); e.covers = covers;
+    if (s.phase === 'activation') allAct.push(e);
+    else if (s.phase === 'pre') allPre.push(e);
+    else allPost.push(e);
+  });
+
+  var act, pre, post;
+  if (d === 'quick') {
+    var qAct  = allAct.filter(function(s){ return (s.priority||1) === 1; });
+    var qPre  = allPre.filter(function(s){ return (s.priority||1) === 1; });
+    var qPost = allPost.filter(function(s){ return (s.priority||1) === 1; });
+    act  = optimisedSelect(qAct,  muscles, 2, true);
+    pre  = optimisedSelect(qPre,  muscles, 3, true);
+    post = optimisedSelect(qPost, muscles, 4, true);
+  } else if (d === 'optimised') {
+    act  = optimisedSelect(allAct,  muscles, 4, true);
+    pre  = optimisedSelect(allPre,  muscles, 5, true);
+    post = optimisedSelect(allPost, muscles, 7, true);
+  } else {
+    // Detailed: shuffle the order
+    allAct.sort(function(){ return Math.random() - 0.5; });
+    allPre.sort(function(){ return Math.random() - 0.5; });
+    allPost.sort(function(){ return Math.random() - 0.5; });
+    act = allAct; pre = allPre; post = allPost;
+  }
+
+  currentPlan = {muscles:muscles, depth:d, act:act, pre:pre, post:post};
+  renderPlan(currentPlan, editingPlanId || null);
+
+  // Brief visual feedback on the button
+  var btn = document.getElementById('btn-shuffle');
+  if (btn) {
+    btn.style.transform = 'rotate(360deg)';
+    btn.style.transition = 'transform 0.4s ease';
+    setTimeout(function(){ btn.style.transform = ''; btn.style.transition = ''; }, 400);
+  }
 }
 
 function generate() {
@@ -385,7 +450,7 @@ function renderPlan(plan, planId) {
     + '<span class="rpill rp-pre">Pre: ~' + preMin + ' min</span>'
     + '<span class="rpill rp-post">Post: ~' + postMin + ' min</span></div></div>'
     + '<div class="edit-bar"><div class="edit-bar-left">' + editLabel + '</div>'
-    + '<div><button class="btn-save-plan" onclick="openSaveModal()">Save Plan</button></div></div>'
+    + '<div style="display:flex;gap:8px;align-items:center">'     + '<button class="btn-shuffle" id="btn-shuffle" onclick="shufflePlan()" title="Shuffle plan">&#8635;</button>'     + '<button class="btn-save-plan" onclick="openSaveModal()">Save Plan</button>'     + '</div></div>'
     + '<div class="cov-wrap"><div class="cov-lbl">Muscles covered</div><div class="cov-chips">' + covChips + '</div></div>'
     + (act.length ? '<div class="phase-block">'
     + '<div class="phase-bar act"><div class="pb-dot act"></div><div class="pb-name act">Activation</div><div class="pb-type">Warm-Up</div>'
