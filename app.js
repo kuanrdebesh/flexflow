@@ -506,7 +506,7 @@ function renderCard(s, idx, phase, stackId) {
     + (imgSrc ? ' onclick="event.stopPropagation();flipCard(\'flip-th-' + uid + '\')"' : '') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front">' + figSvg + (imgSrc ? '<span class="flip-hint">&#8635;</span>' : '') + '</div>'
-    + (imgSrc ? '<div class="flip-face back"><img src="' + imgSrc + '" alt="' + s.name + '" loading="lazy" onerror="this.closest(\'.flip-wrap\').classList.remove(\'has-img\')"></div>' : '')
+    + (imgSrc ? '<div class="flip-face back"><img src=\"' + imgSrc + '\" alt=\"' + s.name + '\" loading=\"lazy\" onerror=\"this.closest(\\'.flip-wrap\\').classList.remove(\\'has-img\\')\"><span class=\"flip-hint\">&#8635;</span></div>' : '')
     + '</div></div>';
 
   // Expanded position column
@@ -840,7 +840,7 @@ function renderLibCard(s, idx, parent) {
     + '<div class="viz-flip' + (imgSrc ? ' flipped' : '') + '" id="'+expId+'"' + (imgSrc?' onclick="flipCard(\''+expId+'\')" style="cursor:pointer"':'') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front"><div class="viz-fig-inner">'+figSvg+'</div></div>'
-    + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>':'')
+    + (imgSrc?'<div class="flip-face back"><img src=\"'+imgSrc+'\" loading=\"lazy\" onerror=\"this.closest(\\'.flip-wrap\\').classList.remove(\\'has-img\\')\"><span class=\"flip-hint\">&#8635;</span></div>':'')
     + '</div></div>'
     + '<div class="viz-name">'+s.name+'</div>'
     + '<div class="viz-reps">'+s.reps+' &middot; '+s.sets+'</div>';
