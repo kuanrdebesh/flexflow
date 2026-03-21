@@ -58,6 +58,17 @@ var IMAGE_STRETCHES = {
   'act-back-db-pullover-light' : 'images/act-back-db-pullover-light.png',
   'act-back-scap-pushup' : 'images/act-back-scap-pushup.png',
   'act-back-band-row' : 'images/act-back-band-row.png',
+  'act-hams-good-morning-bw' : 'images/act-hams-good-morning-bw.png',
+  'act-hams-db-rdl-light' : 'images/act-hams-db-rdl-light.png',
+  'act-hams-band-leg-curl' : 'images/act-hams-band-leg-curl.png',
+  'act-hams-nordic-eccentric' : 'images/act-hams-nordic-eccentric.png',
+  'act-quads-step-up' : 'images/act-quads-step-up.png',
+  'act-quads-db-lunge-light' : 'images/act-quads-db-lunge-light.png',
+  'act-quads-wall-sit' : 'images/act-quads-wall-sit.png',
+  'act-quads-tke' : 'images/act-quads-tke.png',
+  'act-glutes-clamshell' : 'images/act-glutes-clamshell.png',
+  'act-glutes-db-rdl-light' : 'images/act-glutes-db-rdl-light.png',
+  'act-glutes-band-walk' : 'images/act-glutes-band-walk.png',
 };
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
