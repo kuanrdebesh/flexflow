@@ -16,7 +16,7 @@
 :root{
   --bg:#07080f; --s1:#0d0e1a; --s2:#111220; --s3:#161727;
   --bd:#1e1f30; --bd2:#272840;
-  --text:#f0f0f8; --text2:#9494b0; --text3:#585870; --text4:#30304a;
+  --text:#f0f0f8; --text2:#a8a8c4; --text3:#6e6e88; --text4:#30304a;
   --a1:#4a9eff;
   --a1-dim:rgba(74,158,255,.12); --a1-line:rgba(74,158,255,.28);
   --a2:#34d399;
@@ -706,7 +706,7 @@ button{font-family:'Epilogue',sans-serif;}
 body.light {
   --bg:#f2f4f8; --s1:#ffffff; --s2:#edf0f5; --s3:#e2e6ed;
   --bd:#d0d4de; --bd2:#b8bece;
-  --text:#0d0f1a; --text2:#3a3d52; --text3:#7a7d96; --text4:#b0b3c6;
+  --text:#0d0f1a; --text2:#2a2d42; --text3:#5a5d76; --text4:#b0b3c6;
   --a1:#1565a8; --a1-dim:rgba(21,101,168,.1); --a1-line:rgba(21,101,168,.28);
   --a2:#047857; --a2-dim:rgba(4,120,87,.1); --a2-line:rgba(4,120,87,.25);
   --a3:#b45309; --a3-dim:rgba(180,83,9,.1); --a3-line:rgba(180,83,9,.25);
@@ -878,7 +878,22 @@ body.light .r-mode.optimised { background:rgba(0,119,170,.1); border-color:rgba(
   .guide-step-text { font-size:13px; }
   .guide-tip-box { margin:8px 16px 24px; }
 }
-
+  
+/* -- LIBRARY SEARCH -- */
+.lib-search {
+  width:100%; box-sizing:border-box;
+  padding:10px 14px; margin-bottom:12px;
+  background:var(--s2); border:1px solid var(--bd2);
+  border-radius:4px; color:var(--text);
+  font-family:'JetBrains Mono',monospace; font-size:11px;
+  letter-spacing:.5px; outline:none;
+  transition:border-color .15s;
+}
+.lib-search::placeholder { color:var(--text3); }
+.lib-search:focus { border-color:var(--a1); }
+body.light .lib-search { background:#fff; border-color:var(--bd); color:var(--text); }
+body.light .lib-search:focus { border-color:var(--a1); }
+  
 </style>
 </head>
 <body>
@@ -964,7 +979,8 @@ body.light .r-mode.optimised { background:rgba(0,119,170,.1); border-color:rgba(
 
 <div class="view" id="view-library">
   <div class="lib-h">Stretch <em>Library</em></div>
-  <div class="lib-sub">All 56 stretches — filter by phase or muscle group.</div>
+  <div class="lib-sub">All 126 stretches — filter by phase or muscle group.</div>
+  <input class="lib-search" id="lib-search" type="text" placeholder="Search exercises..." oninput="filterLibrary()">
   <div class="lib-filters" id="lib-filters"></div>
   <div class="lib-grid" id="lib-grid"></div>
 </div>
