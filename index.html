@@ -211,6 +211,7 @@ button{font-family:'Epilogue',sans-serif;}
 .scard{background:var(--s1);border-bottom:1px solid var(--bd);transition:background .13s;animation:cardIn .25s ease both;}
 .scard:last-child{border-bottom:none;}
 .scard:hover,.scard.open{background:var(--s2);}
+.scard.open .cb{background:var(--s2);}
 @keyframes cardIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .ct{display:grid;grid-template-columns:60px 1fr auto;align-items:start;gap:11px;padding:11px 12px;cursor:pointer;}
 
@@ -254,7 +255,7 @@ button{font-family:'Epilogue',sans-serif;}
 .cb{display:none;border-top:1px solid var(--bd);}
 .scard.open .cb{display:block;}
 .cb-grid{display:grid;grid-template-columns:148px 1fr 1fr;}
-.cb-col{padding:13px 14px;}
+.cb-col{padding:13px 14px;background:var(--s2);}
 .cb-col + .cb-col{border-left:1px solid var(--bd);}
 .cb-sec{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
 .cb-sec .flip-exp-btn{font-size:8px;color:var(--post);cursor:pointer;margin-left:6px;font-weight:400;}
