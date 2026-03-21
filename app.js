@@ -16,7 +16,9 @@ var editingPlanId = null;
 // Add entries here as photos are sourced
 // Add image paths here as photos are sourced
 // e.g. 'post-pigeon-pose': 'images/post-pigeon-pose.jpg'
-var IMAGE_STRETCHES = {};
+var IMAGE_STRETCHES = {
+  'act-chest-band-pullaway': 'images/act-chest-band-pullaway.png',
+};
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
 var MG = [
