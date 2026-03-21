@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlexFlow — How It Works</title>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:#07080f; --s1:#0d0e1a; --s2:#111220; --s3:#161727;
+  --bd:#1e1f30; --bd2:#272840;
+  --text:#f0f0f8; --text2:#9494b0; --text3:#585870;
+  --a1:#4a9eff; --a1-dim:rgba(74,158,255,.12); --a1-line:rgba(74,158,255,.28);
+  --a2:#34d399; --a2-dim:rgba(52,211,153,.10); --a2-line:rgba(52,211,153,.25);
+  --a3:#fbbf24; --a3-dim:rgba(251,191,36,.10); --a3-line:rgba(251,191,36,.25);
+}
+
+html { scroll-behavior:smooth; }
+body {
+  background:var(--bg); color:var(--text);
+  font-family:'Epilogue', sans-serif;
+  line-height:1.6; overflow-x:hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height:100vh; display:flex; flex-direction:column;
+  justify-content:center; padding:80px 24px;
+  position:relative; overflow:hidden;
+}
+.hero::before {
+  content:''; position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 40%, rgba(74,158,255,.08) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 80% 60%, rgba(52,211,153,.06) 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-inner { max-width:720px; margin:0 auto; position:relative; }
+
+.hero-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--a1); margin-bottom:24px;
+  padding:5px 12px; border:1px solid var(--a1-line);
+  border-radius:100px; background:var(--a1-dim);
+}
+.hero-badge-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:var(--a1); animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.8)} }
+
+.hero-title {
+  font-size:clamp(48px, 10vw, 88px);
+  font-weight:900; letter-spacing:-3px; line-height:.95;
+  margin-bottom:24px; color:var(--text);
+}
+.hero-title em { font-style:normal; color:var(--a1); }
+
+.hero-sub {
+  font-size:clamp(15px, 2.5vw, 18px);
+  color:var(--text2); font-weight:300; line-height:1.7;
+  max-width:520px; margin-bottom:40px;
+}
+
+.hero-cta {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 28px; background:var(--a1);
+  color:var(--bg); font-weight:800; font-size:13px;
+  letter-spacing:1px; text-transform:uppercase;
+  border-radius:4px; text-decoration:none;
+  transition:all .2s; font-family:'JetBrains Mono',monospace;
+}
+.hero-cta:hover { background:#6ab4ff; transform:translateY(-1px); box-shadow:0 8px 24px rgba(74,158,255,.3); }
+.hero-cta-arrow { font-size:16px; transition:transform .2s; }
+.hero-cta:hover .hero-cta-arrow { transform:translateX(4px); }
+
+.hero-stats {
+  display:flex; gap:32px; margin-top:48px;
+  padding-top:32px; border-top:1px solid var(--bd);
+  flex-wrap:wrap;
+}
+.hero-stat-num {
+  font-size:28px; font-weight:900; color:var(--a1); line-height:1;
+}
+.hero-stat-label {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--text3); margin-top:3px;
+}
+
+/* ── SECTION WRAPPER ── */
+.section { padding:80px 24px; max-width:720px; margin:0 auto; }
+.section + .section { border-top:1px solid var(--bd); }
+
+.section-eye {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--a1); margin-bottom:10px;
+}
+.section-title {
+  font-size:clamp(26px,5vw,40px); font-weight:900;
+  letter-spacing:-1px; margin-bottom:14px; color:var(--text);
+}
+.section-title em { font-style:normal; color:var(--a1); }
+.section-sub {
+  font-size:14px; color:var(--text2); font-weight:300;
+  line-height:1.7; max-width:500px;
+}
+
+/* ── HOW IT WORKS STEPS ── */
+.steps { display:flex; flex-direction:column; gap:0; margin-top:40px; }
+
+.step {
+  display:grid; grid-template-columns:48px 1fr;
+  gap:24px; padding:28px 0;
+  border-bottom:1px solid var(--bd);
+  animation:fadeUp .5s ease both;
+}
+.step:last-child { border-bottom:none; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+
+.step-num {
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; font-weight:700; letter-spacing:1px;
+  color:var(--a1); padding-top:3px;
+}
+.step-title {
+  font-size:18px; font-weight:800; color:var(--text);
+  margin-bottom:8px; letter-spacing:-.3px;
+}
+.step-text {
+  font-size:13px; color:var(--text2); font-weight:300;
+  line-height:1.7; margin-bottom:16px;
+}
+.step-text:last-child { margin-bottom:0; }
+
+/* ── PHASE CARDS ── */
+.phase-cards { display:flex; flex-direction:column; gap:8px; }
+.phase-card {
+  display:flex; align-items:flex-start; gap:14px;
+  padding:14px 16px; border-radius:6px;
+  border:1px solid var(--bd);
+}
+.phase-card.act { background:var(--a3-dim); border-color:var(--a3-line); }
+.phase-card.pre { background:var(--a1-dim); border-color:var(--a1-line); }
+.phase-card.post { background:var(--a2-dim); border-color:var(--a2-line); }
+.phase-dot {
+  width:10px; height:10px; border-radius:50%; flex-shrink:0; margin-top:3px;
+}
+.act .phase-dot { background:var(--a3); box-shadow:0 0 8px var(--a3-dim); }
+.pre .phase-dot { background:var(--a1); box-shadow:0 0 8px var(--a1-dim); }
+.post .phase-dot { background:var(--a2); box-shadow:0 0 8px var(--a2-dim); }
+.phase-name { font-size:14px; font-weight:800; color:var(--text); margin-bottom:3px; }
+.phase-desc { font-size:12px; color:var(--text2); font-weight:300; line-height:1.55; }
+.phase-time {
+  font-family:'JetBrains Mono',monospace; font-size:9px;
+  letter-spacing:1px; text-transform:uppercase;
+  color:var(--text3); margin-top:4px;
+}
+
+/* ── MODE CARDS ── */
+.mode-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:16px; }
+.mode-card {
+  padding:14px 12px; background:var(--s2);
+  border:1px solid var(--bd); border-radius:6px;
+  text-align:center;
+}
+.mode-icon { font-size:20px; margin-bottom:6px; }
+.mode-name {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--text2); margin-bottom:4px;
+}
+.mode-time { font-size:10px; color:var(--text3); font-weight:300; line-height:1.4; }
+
+/* ── CHIP EXAMPLES ── */
+.chips { display:flex; flex-wrap:wrap; gap:6px; }
+.chip {
+  font-size:12px; font-weight:600; padding:4px 10px;
+  border-radius:3px; border:1px solid var(--a1-line);
+  background:var(--a1-dim); color:var(--a1);
+}
+.chip.neutral {
+  background:var(--s2); color:var(--text2);
+  border-color:var(--bd2);
+}
+
+/* ── RULE BOX ── */
+.rule-box {
+  margin-top:32px; padding:20px 22px;
+  background:var(--a3-dim); border:1px solid var(--a3-line);
+  border-left:3px solid var(--a3); border-radius:6px;
+}
+.rule-label {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--a3); margin-bottom:8px;
+}
+.rule-text {
+  font-size:14px; color:var(--text2); font-weight:300; line-height:1.7;
+}
+.rule-text strong { color:var(--text); font-weight:700; }
+
+/* ── FOOTER CTA ── */
+.footer-cta {
+  padding:80px 24px; text-align:center;
+  border-top:1px solid var(--bd);
+  background:linear-gradient(180deg, transparent, rgba(74,158,255,.04));
+}
+.footer-cta-title {
+  font-size:clamp(28px,6vw,48px); font-weight:900;
+  letter-spacing:-1.5px; margin-bottom:12px; color:var(--text);
+}
+.footer-cta-title em { font-style:normal; color:var(--a1); }
+.footer-cta-sub {
+  font-size:14px; color:var(--text2); font-weight:300;
+  margin-bottom:32px;
+}
+.footer-cta-btn {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:16px 32px; background:var(--a1);
+  color:var(--bg); font-weight:800; font-size:14px;
+  letter-spacing:1px; text-transform:uppercase;
+  border-radius:4px; text-decoration:none;
+  font-family:'JetBrains Mono',monospace;
+  transition:all .2s;
+}
+.footer-cta-btn:hover { background:#6ab4ff; transform:translateY(-2px); box-shadow:0 12px 32px rgba(74,158,255,.3); }
+
+.footer-note {
+  margin-top:16px; font-size:11px; color:var(--text3);
+  font-family:'JetBrains Mono',monospace; letter-spacing:.5px;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .hero { padding:60px 20px; }
+  .section { padding:56px 20px; }
+  .mode-cards { grid-template-columns:1fr; }
+  .step { grid-template-columns:36px 1fr; gap:16px; }
+  .footer-cta { padding:56px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      FlexFlow · How It Works
+    </div>
+    <h1 class="hero-title">Stretch<br>smarter.<br><em>Not longer.</em></h1>
+    <p class="hero-sub">FlexFlow generates a personalised stretch and warm-up plan based on exactly what you trained today. No filler. No redundancy. Every movement earns its place.</p>
+    <a href="#how" class="hero-cta">See how it works <span class="hero-cta-arrow">→</span></a>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">126</div>
+        <div class="hero-stat-label">Exercises</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">17</div>
+        <div class="hero-stat-label">Muscle Groups</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Phases per session</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">0</div>
+        <div class="hero-stat-label">Redundant stretches</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section" id="how">
+  <div class="section-eye">The process</div>
+  <h2 class="section-title">Four steps.<br><em>One complete plan.</em></h2>
+  <p class="section-sub">FlexFlow takes your training session and turns it into a complete pre and post-workout routine in seconds.</p>
+
+  <div class="steps">
+
+    <div class="step" style="animation-delay:.05s">
+      <div class="step-num">01</div>
+      <div>
+        <div class="step-title">Select what you trained</div>
+        <div class="step-text">Tap the muscles you worked today. Pick individual muscle groups or use the Full Body, Upper, or Lower presets for complete coverage in one tap.</div>
+        <div class="chips">
+          <span class="chip">Chest</span>
+          <span class="chip">Shoulders</span>
+          <span class="chip">Triceps</span>
+          <span class="chip neutral">+ any combination</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step" style="animation-delay:.1s">
+      <div class="step-num">02</div>
+      <div>
+        <div class="step-title">Choose your depth</div>
+        <div class="step-text">How much time do you have? Three modes — same muscles, different volume. FlexFlow always picks the highest-coverage exercises first.</div>
+        <div class="mode-cards">
+          <div class="mode-card">
+            <div class="mode-icon">⚡</div>
+            <div class="mode-name">Quick</div>
+            <div class="mode-time">~8–10 min total</div>
+          </div>
+          <div class="mode-card">
+            <div class="mode-icon">✦</div>
+            <div class="mode-name">Optimised</div>
+            <div class="mode-time">~14–18 min total</div>
+          </div>
+          <div class="mode-card">
+            <div class="mode-icon">◯</div>
+            <div class="mode-name">Detailed</div>
+            <div class="mode-time">Full coverage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step" style="animation-delay:.15s">
+      <div class="step-num">03</div>
+      <div>
+        <div class="step-title">Your plan — three phases in order</div>
+        <div class="step-text">Every plan is structured correctly by design. Do them in sequence — activation first, dynamic second, static last.</div>
+        <div class="phase-cards">
+          <div class="phase-card act">
+            <div class="phase-dot"></div>
+            <div>
+              <div class="phase-name">Activation</div>
+              <div class="phase-desc">Fire the muscle before loading it. Band, dumbbell, or bodyweight exercises to prime the joint and establish the movement pattern.</div>
+              <div class="phase-time">Do this first · before training</div>
+            </div>
+          </div>
+          <div class="phase-card pre">
+            <div class="phase-dot"></div>
+            <div>
+              <div class="phase-name">Pre-Workout Dynamic</div>
+              <div class="phase-desc">Movement-based stretches that increase range of motion and mobilise the joints without reducing strength.</div>
+              <div class="phase-time">Do this second · before training</div>
+            </div>
+          </div>
+          <div class="phase-card post">
+            <div class="phase-dot"></div>
+            <div>
+              <div class="phase-name">Post-Workout Static</div>
+              <div class="phase-desc">Long passive holds that lengthen the muscles, reduce soreness, and restore resting length after training.</div>
+              <div class="phase-time">Do this after training</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step" style="animation-delay:.2s">
+      <div class="step-num">04</div>
+      <div>
+        <div class="step-title">Edit, save, and reuse</div>
+        <div class="step-text">Every card can be replaced with an alternative, removed, or expanded for full instructions. Save named plans for your regular splits — Leg Day, Push Day, Full Body Sunday — and load them in one tap.</div>
+        <div class="chips">
+          <span class="chip neutral">Leg Day</span>
+          <span class="chip neutral">Push Day</span>
+          <span class="chip neutral">Full Body Sunday</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="rule-box">
+    <div class="rule-label">⚑ The FlexFlow rule</div>
+    <div class="rule-text"><strong>Never static stretch before training.</strong> Static holds reduce force output by up to 8% if held for more than 60 seconds before a session. FlexFlow enforces the correct order by design — activation and dynamic always come before static, every time.</div>
+  </div>
+</div>
+
+<!-- WHAT'S INSIDE -->
+<div class="section">
+  <div class="section-eye">What's inside</div>
+  <h2 class="section-title">Every stretch<br><em>earns its place.</em></h2>
+  <p class="section-sub">FlexFlow doesn't just list stretches — it explains why each one matters and how to do it correctly.</p>
+
+  <div class="steps" style="margin-top:32px">
+    <div class="step">
+      <div class="step-num">◉</div>
+      <div>
+        <div class="step-title">Muscle map SVG figure</div>
+        <div class="step-text">Every exercise has an anatomical figure with the target muscles highlighted. Tap the figure to flip to a reference photo where available.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">◉</div>
+      <div>
+        <div class="step-title">Step-by-step instructions</div>
+        <div class="step-text">Five clear steps for every exercise. A built-in hold timer for static stretches counts down and tracks your sets.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">◉</div>
+      <div>
+        <div class="step-title">Why this stretch</div>
+        <div class="step-text">The biomechanical reason this specific stretch matters for the muscles you trained — not generic advice, specific rationale for each movement.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">◉</div>
+      <div>
+        <div class="step-title">Pro tip</div>
+        <div class="step-text">One insight per exercise — the detail most people miss and the coaches know. The cue that makes the difference between going through the motions and actually stretching.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta">
+  <div class="footer-cta-title">Ready to<br><em>stretch smarter?</em></div>
+  <p class="footer-cta-sub">Open FlexFlow, select today's muscles, and generate your plan.</p>
+  <a href="https://flexflow-8cb.pages.dev/" class="footer-cta-btn" target="_blank">Open FlexFlow &#8594;</a>
+  <div class="footer-note">Works in any browser · No account needed · Plans saved locally</div>
+</div>
+
+</body>
+</html>
