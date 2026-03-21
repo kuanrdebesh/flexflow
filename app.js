@@ -11,6 +11,7 @@ var activeTab = 0;
 var timers = {};
 var currentPlan = null;
 var editingPlanId = null;
+var EXERCISE_COUNT = 133;
 
 // Stretch IDs that have reference photos in /images/
 // Add entries here as photos are sourced
