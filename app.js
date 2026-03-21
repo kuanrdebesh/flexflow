@@ -142,6 +142,7 @@ var IMAGE_STRETCHES = {
   'post-tibialis-kneel' : 'images/post-tibialis-kneel.png',
   'post-wall-tricep-press' : 'images/post-wall-tricep-press.png',
   'Post-Workout' : 'images/Post-Workout.png',
+  'act-neck-rotation' : 'images/act-neck-rotation.png',
 };
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
