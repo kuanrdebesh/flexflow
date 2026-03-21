@@ -212,6 +212,8 @@ function init() {
   buildLibrary();
   updatePlansBadge();
   document.getElementById('loading').style.display = 'none';
+  var spans = ['ex-count-lib','ex-count-about'];
+  spans.forEach(function(id){ var el=document.getElementById(id); if(el) el.textContent=EXERCISE_COUNT; });
 }
 
 function showError(msg) {
