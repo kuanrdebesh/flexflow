@@ -432,7 +432,7 @@ function renderCard(s, idx, phase, stackId) {
   var figSvg = getFig(s.fig || '');
 
   // Thumbnail flip card
-  var thumbHtml = '<div class="flip-wrap' + (imgSrc ? ' has-img' : '') + '" id="flip-th-' + uid + '"'
+  var thumbHtml = '<div class="flip-wrap' + (imgSrc ? ' has-img flipped' : '') + '" id="flip-th-' + uid + '"'
     + (imgSrc ? ' onclick="event.stopPropagation();flipCard(\'flip-th-' + uid + '\')"' : '') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front">' + figSvg + (imgSrc ? '<span class="flip-hint">&#8635;</span>' : '') + '</div>'
@@ -444,7 +444,7 @@ function renderCard(s, idx, phase, stackId) {
   var expHtml = '<div class="cb-sec">Position'
     + (imgSrc ? '<span class="flip-exp-btn" onclick="flipCard(\'' + expId + '\')">&#8635; photo</span>' : '')
     + '</div>'
-    + '<div class="viz-flip' + (imgSrc ? '' : '') + '" id="' + expId + '"'
+    + '<div class="viz-flip' + (imgSrc ? ' flipped' : '') + '" id="' + expId + '"'
     + (imgSrc ? ' onclick="flipCard(\'' + expId + '\')" style="cursor:pointer"' : '') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front"><div class="viz-fig-inner">' + figSvg + '</div></div>'
@@ -742,6 +742,20 @@ function renderLib(fid) {
     renderLibCard(s, i, w);
   });
 }
+
+function filterLibrary() {
+  var q = (document.getElementById('lib-search') || {}).value || '';
+  q = q.toLowerCase().trim();
+  var cards = document.querySelectorAll('#lib-grid .scard');
+  cards.forEach(function(card) {
+    var name    = (card.getAttribute('data-name') || '').toLowerCase();
+    var targets = (card.getAttribute('data-targets') || '').toLowerCase();
+    var muscles = (card.getAttribute('data-muscles') || '').toLowerCase();
+    var matchQ  = !q || name.indexOf(q) >= 0 || targets.indexOf(q) >= 0 || muscles.indexOf(q) >= 0;
+    card.style.display = matchQ ? '' : 'none';
+  });
+}
+
 function renderLibCard(s, idx, parent) {
   var uid = 'lib-' + s.id + '-' + idx;
   var pClass = s.phase==='pre'?'cp-pre':s.phase==='activation'?'cp-act':'cp-post';
@@ -753,7 +767,7 @@ function renderLibCard(s, idx, parent) {
   var expId = 'flip-ex-' + uid;
   var expHtml = '<div class="cb-sec">Position'
     + (imgSrc ? '<span class="flip-exp-btn" onclick="flipCard(\''+expId+'\')">&#8635; photo</span>' : '') + '</div>'
-    + '<div class="viz-flip" id="'+expId+'"' + (imgSrc?' onclick="flipCard(\''+expId+'\')" style="cursor:pointer"':'') + '>'
+    + '<div class="viz-flip' + (imgSrc ? ' flipped' : '') + '" id="'+expId+'"' + (imgSrc?' onclick="flipCard(\''+expId+'\')" style="cursor:pointer"':'') + '>'
     + '<div class="flip-inner">'
     + '<div class="flip-face front"><div class="viz-fig-inner">'+figSvg+'</div></div>'
     + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" style="width:100%;height:100%;object-fit:cover" loading="lazy"></div>':'')
@@ -764,13 +778,16 @@ function renderLibCard(s, idx, parent) {
   var timerHtml = '';
   if (s.timer>0) timerHtml='<div class="timer-row"><button class="t-btn" id="tb-'+uid+'" onclick="startTimer(event,\''+uid+'\','+s.timer+')">&#9654; '+s.timer+'s</button><div class="t-track"><div class="t-fill '+fillClass+'" id="tf-'+uid+'"></div></div><div class="t-lbl" id="tl-'+uid+'">'+s.timer+'s</div></div>';
   var stepsHtml = s.steps.map(function(st,j){ return '<li><span class="snum">0'+(j+1)+'</span><span>'+st+'</span></li>'; }).join('');
-  var thumbHtml = '<div class="flip-wrap' + (imgSrc?' has-img':'') + '" id="flip-th-'+uid+'"' + (imgSrc?' onclick="event.stopPropagation();flipCard(\'flip-th-'+uid+'\')"':'') + '>'
+  var thumbHtml = '<div class="flip-wrap' + (imgSrc?' has-img flipped':'') + '" id="flip-th-'+uid+'"' + (imgSrc?' onclick="event.stopPropagation();flipCard(\'flip-th-'+uid+'\')"':'') + '>'
     + '<div class="flip-inner"><div class="flip-face front">'+figSvg+(imgSrc?'<span class="flip-hint">&#8635;</span>':'')+'</div>'
     + (imgSrc?'<div class="flip-face back"><img src="'+imgSrc+'" loading="lazy" onerror="this.closest(\'.flip-wrap\').classList.remove(\'has-img\')"></div>':'')
     + '</div></div>';
 
   var card = document.createElement('div');
   card.className = 'scard'; card.id = 'card-'+uid;
+  card.setAttribute('data-name', s.name.toLowerCase());
+  card.setAttribute('data-targets', (s.targets||'').toLowerCase());
+  card.setAttribute('data-muscles', (s.muscles||[]).join(' ').toLowerCase());
   card.innerHTML = '<div class="ct" onclick="toggleCard(\''+uid+'\')">'+thumbHtml
     +'<div class="ct-body"><div class="ct-name">'+s.name+'</div><div class="ct-targets">'+s.targets+'</div>'
     +'<div class="ct-pills"><span class="cpill '+pClass+'">'+phaseLabel+'</span><span class="cpill cp-n">'+s.reps+'</span>'
@@ -826,23 +843,23 @@ function makeFig(phase, hlFn, poseFn) {
 
 function hl(sel, c, d, f) {
   var Z = {
-    chest:     '<path d="M34 36 Q50 33 66 36 Q68 50 50 54 Q32 50 34 36Z" fill="'+d+'.45)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
-    shoulders: '<ellipse cx="29" cy="38" rx="10" ry="9" fill="'+d+'.5)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/><ellipse cx="71" cy="38" rx="10" ry="9" fill="'+d+'.5)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
+    chest:     '<path d="M34 36 Q50 33 66 36 Q68 50 50 54 Q32 50 34 36Z" fill="'+d+'.65)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
+    shoulders: '<ellipse cx="29" cy="38" rx="10" ry="9" fill="'+d+'.72)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/><ellipse cx="71" cy="38" rx="10" ry="9" fill="'+d+'.72)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
     traps:     '<path d="M40 29 Q50 25 60 29 Q64 35 50 37 Q36 35 40 29Z" fill="'+d+'.55)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
-    uback:     '<path d="M34 36 Q50 33 66 36 L65 60 Q50 58 35 60Z" fill="'+d+'.4)" stroke="'+c+'" stroke-width="1.2" filter="url(#'+f+')"/>',
-    lback:     '<path d="M36 60 Q50 57 64 60 L65 78 Q50 76 35 78Z" fill="'+d+'.45)" stroke="'+c+'" stroke-width="1.2" filter="url(#'+f+')"/>',
+    uback:     '<path d="M34 36 Q50 33 66 36 L65 60 Q50 58 35 60Z" fill="'+d+'.62)" stroke="'+c+'" stroke-width="1.2" filter="url(#'+f+')"/>',
+    lback:     '<path d="M36 60 Q50 57 64 60 L65 78 Q50 76 35 78Z" fill="'+d+'.65)" stroke="'+c+'" stroke-width="1.2" filter="url(#'+f+')"/>',
     biceps:    '<path d="M20 40 Q16 52 18 64" fill="none" stroke="'+c+'" stroke-width="7" stroke-linecap="round" filter="url(#'+f+')"/>',
     triceps:   '<path d="M33 38 Q22 48 18 64" fill="none" stroke="'+c+'" stroke-width="6" stroke-linecap="round" filter="url(#'+f+')"/>',
     forearms:  '<path d="M16 64 Q13 76 15 88" fill="none" stroke="'+c+'" stroke-width="6" stroke-linecap="round" filter="url(#'+f+')"/>',
-    abs:       '<path d="M36 50 Q50 47 64 50 L63 78 Q50 76 37 78Z" fill="'+d+'.45)" stroke="'+c+'" stroke-width="1.2" filter="url(#'+f+')"/>',
-    hipflex:   '<path d="M38 74 Q50 70 62 74 L61 90 Q50 88 39 90Z" fill="'+d+'.5)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
-    glutes:    '<path d="M35 78 Q50 82 65 78 L64 96 Q50 100 36 96Z" fill="'+d+'.5)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
+    abs:       '<path d="M36 50 Q50 47 64 50 L63 78 Q50 76 37 78Z" fill="'+d+'.65)" stroke="'+c+'" stroke-width="1.2" filter="url(#'+f+')"/>',
+    hipflex:   '<path d="M38 74 Q50 70 62 74 L61 90 Q50 88 39 90Z" fill="'+d+'.72)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
+    glutes:    '<path d="M35 78 Q50 82 65 78 L64 96 Q50 100 36 96Z" fill="'+d+'.72)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
     quads:     '<path d="M37 96 Q34 108 36 118" fill="none" stroke="'+c+'" stroke-width="8" stroke-linecap="round" filter="url(#'+f+')" opacity=".9"/><path d="M63 96 Q66 108 64 118" fill="none" stroke="'+c+'" stroke-width="8" stroke-linecap="round" filter="url(#'+f+')" opacity=".5"/>',
     hams:      '<path d="M40 80 Q37 100 36 118" fill="none" stroke="'+c+'" stroke-width="5" stroke-linecap="round" filter="url(#'+f+')"/><path d="M60 80 Q63 100 64 118" fill="none" stroke="'+c+'" stroke-width="5" stroke-linecap="round" filter="url(#'+f+')" opacity=".5"/>',
     calves:    '<path d="M36 118 Q35 132 37 150" fill="none" stroke="'+c+'" stroke-width="7" stroke-linecap="round" filter="url(#'+f+')"/><path d="M64 118 Q65 132 63 150" fill="none" stroke="'+c+'" stroke-width="7" stroke-linecap="round" filter="url(#'+f+')" opacity=".5"/>',
     shins:     '<path d="M38 118 Q36 130 37 150" fill="none" stroke="'+c+'" stroke-width="4" stroke-linecap="round" filter="url(#'+f+')"/>',
-    adductors: '<path d="M44 82 Q50 78 56 82 L54 118 Q50 116 46 118Z" fill="'+d+'.5)" stroke="'+c+'" stroke-width="1.2" filter="url(#'+f+')"/>',
-    abductors: '<ellipse cx="34" cy="88" rx="9" ry="12" fill="'+d+'.4)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
+    adductors: '<path d="M44 82 Q50 78 56 82 L54 118 Q50 116 46 118Z" fill="'+d+'.72)" stroke="'+c+'" stroke-width="1.2" filter="url(#'+f+')"/>',
+    abductors: '<ellipse cx="34" cy="88" rx="9" ry="12" fill="'+d+'.62)" stroke="'+c+'" stroke-width="1.3" filter="url(#'+f+')"/>',
     spine:     '<path d="M48 29 Q46 52 47 78 L53 78 Q54 52 52 29Z" fill="'+d+'.55)" stroke="'+c+'" stroke-width="1" filter="url(#'+f+')"/>',
     neck:      '<rect x="44" y="26" width="12" height="8" rx="3" fill="'+d+'.7)" stroke="'+c+'" stroke-width="1.5" filter="url(#'+f+')"/>',
   };
