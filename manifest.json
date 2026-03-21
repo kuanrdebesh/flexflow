@@ -1,0 +1,26 @@
+{
+  "name": "FlexFlow — Stretch Planner",
+  "short_name": "FlexFlow",
+  "description": "Smart stretch planner. Select muscles trained, generate your pre and post workout routine.",
+  "start_url": "/flexflow/",
+  "display": "standalone",
+  "background_color": "#07080f",
+  "theme_color": "#07080f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "fitness"],
+  "screenshots": []
+}

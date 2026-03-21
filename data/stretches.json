@@ -1,0 +1,3243 @@
+[
+  {
+    "id": "act-chest-band-pullaway",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "crossShoulder",
+    "name": "Band Chest Warm-Up (Pull-Apart)",
+    "targets": "Pec Minor · Serratus Anterior · Posterior Deltoid",
+    "muscles": [
+      "chest",
+      "shoulders"
+    ],
+    "equipment": [
+      "band",
+      "bodyweight"
+    ],
+    "reps": "20 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Band: hold a resistance band at shoulder width with both hands, arms extended forward.",
+      "Pull the band apart until your arms are fully extended to each side — squeeze the rear delts.",
+      "Control the return — don't let the band snap back.",
+      "Bodyweight alternative: perform wide arm circles with emphasis on the backstroke.",
+      "Keep the movement controlled and feel the chest and front shoulder opening up."
+    ],
+    "why": "Before any pressing movement, the pec minor and serratus need to be primed to allow proper scapular movement. Pull-aparts also activate the antagonist rear delts, creating reciprocal inhibition that allows the chest to contract more fully during pressing.",
+    "tip": "Use a band with very light resistance — this is prep, not training. Full range of motion matters more than resistance."
+  },
+  {
+    "id": "act-chest-pushup-plus",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "chestDoor",
+    "name": "Push-Up Plus",
+    "targets": "Serratus Anterior · Pec Minor · Chest",
+    "muscles": [
+      "chest",
+      "shoulders"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "12 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Start in a standard push-up position at the top — arms fully extended.",
+      "Without bending the elbows, push your upper back toward the ceiling — protract the scapulae fully.",
+      "Hold the protracted position for 1 second, then lower the shoulder blades back down.",
+      "This is the 'plus' — it's a small movement but trains the serratus directly.",
+      "Add a full push-up rep between each if you want a combined activation."
+    ],
+    "why": "The push-up plus isolates the serratus anterior — the muscle responsible for keeping the scapula flat against the ribcage during pressing. Weak serratus is a primary cause of shoulder impingement. Activating it before bench press or overhead work improves scapular stability under load.",
+    "tip": "The plus movement (scapular protraction) is the most important part — don't rush past it. If you feel it behind the shoulder blade you're doing it right."
+  },
+  {
+    "id": "act-chest-db-fly-light",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "chestDoor",
+    "name": "Light Dumbbell Fly",
+    "targets": "Pectoralis Major · Anterior Deltoid · Bicep Tendon",
+    "muscles": [
+      "chest",
+      "shoulders",
+      "biceps"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "15 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Lie on a bench, dumbbells held above the chest, slight bend in the elbows.",
+      "Use 20–30% of your working weight — this is activation only.",
+      "Lower the dumbbells in a wide arc until you feel a gentle stretch across the chest.",
+      "Squeeze the chest to bring the dumbbells back together at the top.",
+      "Focus on feeling the pec stretch and contraction rather than the weight."
+    ],
+    "why": "Light flies take the pec major through its full range of motion under minimal load, stimulating blood flow and muscle activation before heavier pressing. The stretch position primes the pec to fire through its full range during bench press.",
+    "tip": "If you go too heavy here you pre-fatigue the chest. Keep it light enough that 15 reps feels easy — this is priming, not training."
+  },
+  {
+    "id": "act-chest-band-crossover",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "chestDoor",
+    "name": "Band Crossover",
+    "targets": "Pectoralis Major (Sternal) · Anterior Deltoid",
+    "muscles": [
+      "chest",
+      "shoulders"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "12 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band at chest height on one side.",
+      "Stand sideways, grasp the band with the far hand, arm extended.",
+      "Draw your arm across your body in a wide arc, crossing your midline.",
+      "Control the return — feel the pec stretch as the arm goes back.",
+      "Complete all reps on one side then switch."
+    ],
+    "why": "Band crossovers replicate the cable fly movement pattern, activating the sternal head of the pec major through its adduction function. This primes the specific movement pattern used in pressing before load is added.",
+    "tip": "The crossing-the-midline portion is what activates the sternal pec most — don't stop short of centre."
+  },
+  {
+    "id": "act-shoulder-ext-rot",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "crossShoulder",
+    "name": "External Rotation",
+    "targets": "Infraspinatus · Teres Minor · Rotator Cuff",
+    "muscles": [
+      "shoulders"
+    ],
+    "equipment": [
+      "band",
+      "dumbbell"
+    ],
+    "reps": "15 reps / side",
+    "sets": "2–3 sets",
+    "timer": 0,
+    "steps": [
+      "Band: anchor at elbow height, stand sideways, elbow tucked at 90°, rotate forearm away from body.",
+      "Dumbbell: lie on your side, elbow at 90°, rotate the dumbbell upward away from the floor.",
+      "Use very light resistance — this is joint preparation, not strength training.",
+      "Keep the elbow pinned to your side or ribcage throughout — only the forearm moves.",
+      "Control both the outward and inward phases equally."
+    ],
+    "why": "The external rotators (infraspinatus and teres minor) are chronically undertrained relative to the internal rotators. Warming them before pressing or pulling work balances the rotator cuff, reduces impingement risk, and improves shoulder stability under load.",
+    "tip": "If you feel this in the front of the shoulder rather than the back, your weight is too heavy or your elbow is drifting forward."
+  },
+  {
+    "id": "act-shoulder-int-rot",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "crossShoulder",
+    "name": "Internal Rotation",
+    "targets": "Subscapularis · Rotator Cuff",
+    "muscles": [
+      "shoulders"
+    ],
+    "equipment": [
+      "band",
+      "dumbbell"
+    ],
+    "reps": "15 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Band: anchor at elbow height, stand sideways facing the anchor, elbow at 90°, rotate forearm toward your stomach.",
+      "Dumbbell: lie on your back, elbow at 90° bent, lower the dumbbell toward the floor then rotate back up.",
+      "Keep the elbow at 90° and pinned to your side throughout.",
+      "Use very light resistance — subscapularis activation, not strength work.",
+      "Perform after external rotation to balance both directions of the cuff."
+    ],
+    "why": "The subscapularis is the largest and strongest rotator cuff muscle, responsible for internal rotation and anterior shoulder stability. It is directly loaded during bench press and pull movements. Activating it prevents the humeral head from migrating forward under load.",
+    "tip": "Always pair internal rotation warm-up with external rotation — doing one without the other creates imbalance."
+  },
+  {
+    "id": "act-shoulder-band-yt",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "shoulderRoll",
+    "name": "Band Y-T Raise",
+    "targets": "Lower Trap · Rear Delt · Rhomboids · Serratus",
+    "muscles": [
+      "shoulders",
+      "traps",
+      "back"
+    ],
+    "equipment": [
+      "band",
+      "bodyweight"
+    ],
+    "reps": "12 reps each shape",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold a light band (or no band) with both hands, lean forward slightly at the hips.",
+      "Y raise: raise both arms overhead at a slight outward angle — forming a Y shape.",
+      "T raise: raise both arms straight out to the sides at shoulder height — forming a T.",
+      "Lower slowly with control after each rep.",
+      "Perform all Y reps then all T reps, or alternate."
+    ],
+    "why": "Y-T raises target the lower trapezius and serratus anterior — the muscles responsible for upward scapular rotation during overhead pressing. Weakness here is the most common cause of shoulder impingement. These are also excellent postural correction exercises.",
+    "tip": "If using a band, the resistance should be minimal — the value is in the range of motion and muscle activation pattern, not the load."
+  },
+  {
+    "id": "act-shoulder-db-lr",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "crossShoulder",
+    "name": "Dumbbell L-Raise",
+    "targets": "Supraspinatus · Infraspinatus · Full Rotator Cuff",
+    "muscles": [
+      "shoulders"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "10 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand holding a very light dumbbell in one hand, arm at your side.",
+      "Raise the arm to shoulder height in the scapular plane (30° forward of directly to the side).",
+      "At shoulder height, externally rotate the arm so the thumb points up.",
+      "Hold 1 second, lower slowly. This traces an L-shape through the movement.",
+      "The scapular plane position is critical — it's the safest and most effective angle for supraspinatus."
+    ],
+    "why": "The L-raise specifically loads the supraspinatus in its optimal line of pull, making it the most targeted single warm-up exercise for the full rotator cuff. The supraspinatus is the most commonly injured rotator cuff muscle — warming it up before overhead or pressing work is essential.",
+    "tip": "Use 1–2 kg maximum. The supraspinatus is a small muscle — it doesn't need heavy weight to activate effectively."
+  },
+  {
+    "id": "act-traps-shrug-light",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "shoulderRoll",
+    "name": "Light Shrug",
+    "targets": "Upper Traps · Levator Scapulae",
+    "muscles": [
+      "traps",
+      "shoulders"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bodyweight"
+    ],
+    "reps": "15 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Dumbbell: hold light dumbbells at your sides, shrug shoulders straight up toward ears.",
+      "Bodyweight: perform the same movement without weight, adding a 2-second hold at the top.",
+      "Lift straight up — avoid rolling the shoulders forward or backward.",
+      "Hold for 1–2 seconds at the top to fully contract the upper traps.",
+      "Lower slowly with control."
+    ],
+    "why": "Light shrugs elevate the scapula through its full range, activating the upper trapezius and levator scapulae before heavy shrug or row work. The slow controlled tempo at warm-up weight establishes the neuromuscular pattern before heavier loads are added.",
+    "tip": "Shrug straight up, not in circles. Rotational shrugs load the AC joint unnecessarily during a warm-up."
+  },
+  {
+    "id": "act-traps-band-pullapart",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "crossShoulder",
+    "name": "Band Pull-Apart",
+    "targets": "Mid Traps · Rear Delt · Rhomboids",
+    "muscles": [
+      "traps",
+      "shoulders",
+      "back"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "20 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold a resistance band at shoulder width with both hands, arms extended forward at shoulder height.",
+      "Pull the band apart by driving the elbows back and squeezing the shoulder blades together.",
+      "Aim to touch the band to your chest — fully retract the scapulae.",
+      "Control the return to the start position.",
+      "Keep the arms at shoulder height throughout — don't let them drift up or down."
+    ],
+    "why": "Band pull-aparts are one of the most effective and versatile upper back activation exercises. They activate the mid and lower traps, rhomboids, and rear delts simultaneously — the exact muscles needed for scapular stability during any pressing or pulling movement.",
+    "tip": "20 reps should feel moderately challenging but not burning — use a band that allows full range of motion."
+  },
+  {
+    "id": "act-traps-facepull-band",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "crossShoulder",
+    "name": "Band Face Pull",
+    "targets": "Mid/Lower Traps · Rear Delt · External Rotators",
+    "muscles": [
+      "traps",
+      "shoulders",
+      "back"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "15 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band at face height. Grasp with both hands, palms facing each other.",
+      "Pull the band toward your face, leading with the elbows flaring out to the sides.",
+      "As the band reaches your face, externally rotate the forearms so hands move back behind the elbows.",
+      "Hold 1 second at the end range, then control the return.",
+      "The external rotation at the end is critical — don't skip it."
+    ],
+    "why": "Face pulls are the single best exercise for warming up the posterior shoulder and mid/lower trapezius complex. The combination of horizontal abduction and external rotation targets the exact muscles that prevent shoulder impingement and rounded upper back under load.",
+    "tip": "The external rotation at the end position is what makes face pulls different from regular rows — don't omit it."
+  },
+  {
+    "id": "act-traps-scap-retraction",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "rhomboidDoor",
+    "name": "Scapular Retraction Hold",
+    "targets": "Rhomboids · Mid Traps · Lower Traps",
+    "muscles": [
+      "traps",
+      "back"
+    ],
+    "equipment": [
+      "band",
+      "bodyweight"
+    ],
+    "reps": "10 reps × 3 sec hold",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand tall or sit upright. Arms at sides or slightly extended forward.",
+      "Squeeze your shoulder blades together and slightly downward — retract and depress the scapulae.",
+      "Hold the retracted position for 3 seconds, breathing normally.",
+      "Release fully, then repeat.",
+      "Band option: hold a band at hip width in front, pull apart while performing the retraction."
+    ],
+    "why": "Scapular retraction holds isometrically activate the mid and lower trapezius in their shortened position. Most people have chronically protracted (forward) scapulae from desk work and pressing. These holds re-establish the resting retracted position that is the baseline for safe rowing and pulling.",
+    "tip": "The downward component (depression) is as important as the backward retraction — think 'back and down', not just 'back'."
+  },
+  {
+    "id": "act-back-band-row",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "latHang",
+    "name": "Band Row",
+    "targets": "Lats · Rhomboids · Mid Traps · Biceps",
+    "muscles": [
+      "back",
+      "biceps",
+      "traps"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "15 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band at chest height. Stand facing the anchor, grasp with both hands.",
+      "Step back until the band has light tension. Arms extended forward.",
+      "Row both hands toward your lower chest, driving the elbows back and squeezing the shoulder blades.",
+      "Hold 1 second at the end, then extend arms with control.",
+      "Keep the torso still — don't rock backward to assist the movement."
+    ],
+    "why": "Band rows activate the entire back pulling chain — lats, rhomboids, mid traps, and biceps — before loading them with heavy rows or pulldowns. Starting with light band rows establishes the scapular retraction and lat engagement pattern.",
+    "tip": "Focus on initiating the movement by retracting the shoulder blade, not by pulling with the bicep."
+  },
+  {
+    "id": "act-back-scap-pushup",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "rhomboidDoor",
+    "name": "Scapular Push-Up",
+    "targets": "Serratus Anterior · Lower Traps · Rhomboids",
+    "muscles": [
+      "back",
+      "shoulders"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "12 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Start in a push-up plank position, arms fully extended and locked.",
+      "Without bending the elbows, let the chest drop toward the floor by squeezing the shoulder blades together.",
+      "Then push back up by driving the shoulder blades apart — fully protracting the scapulae.",
+      "This is a small movement — the range is only a few centimetres.",
+      "Perform slowly and feel the shoulder blades moving independently."
+    ],
+    "why": "Scapular push-ups train the serratus anterior and lower trapezius in their primary function — controlling scapular movement. These muscles stabilise the scapula during all pulling movements. Activating them before rows or pulldowns improves both safety and lat engagement.",
+    "tip": "Keep the arms completely straight. If you bend the elbows this becomes a regular push-up and you lose the scapular isolation."
+  },
+  {
+    "id": "act-back-db-pullover-light",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "latHang",
+    "name": "Light DB Pullover",
+    "targets": "Latissimus Dorsi · Teres Major · Serratus",
+    "muscles": [
+      "back",
+      "shoulders",
+      "chest"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "12 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Lie on a bench, one dumbbell held with both hands above the chest.",
+      "Use 20–25% of your working lat weight — this is activation only.",
+      "Lower the dumbbell behind your head in a wide arc, feeling the lat stretch.",
+      "Engage the lats to pull the dumbbell back over the chest.",
+      "Keep a slight bend in the elbows throughout."
+    ],
+    "why": "The pullover takes the lat through its full range of motion under minimal load — from full overhead stretch to full contraction. This primes the lat's lengthening-to-shortening pattern before any vertical pulling work.",
+    "tip": "The stretch at the bottom is the most important part. Pause briefly there to fully load the lat before pulling back."
+  },
+  {
+    "id": "act-back-dead-hang",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "latHang",
+    "name": "Dead Hang",
+    "targets": "Lats · Shoulder Capsule · Grip · Spinal Decompression",
+    "muscles": [
+      "back",
+      "shoulders",
+      "forearms"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "3 × 20 sec",
+    "sets": "3 holds",
+    "timer": 20,
+    "steps": [
+      "Hang from a pull-up bar with an overhand grip, shoulder width.",
+      "Let your body fully hang — don't engage the lats or pull the shoulders down.",
+      "Breathe slowly and let gravity decompress the spine and open the shoulder capsule.",
+      "After 15 seconds, gently engage the lats (pull shoulders down slightly) for the last 5 seconds.",
+      "Rest 20 seconds between hangs."
+    ],
+    "why": "Dead hangs decompress the spine, open the shoulder capsule, and pre-stretch the lat before loading it. Grip strength is also activated, which improves the neural connection to the back muscles. The traction effect from hanging is particularly valuable before heavy deadlifts or rows.",
+    "tip": "If you can't hang for 20 seconds, use an assisted hang (feet lightly touching the floor) until your grip strengthens."
+  },
+  {
+    "id": "act-biceps-band-curl",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "bicepWall",
+    "name": "Light Band Curl",
+    "targets": "Biceps Brachii · Brachialis",
+    "muscles": [
+      "biceps",
+      "forearms"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "20 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand on a resistance band, hold both ends with an underhand grip.",
+      "Curl both arms up simultaneously, keeping elbows pinned to your sides.",
+      "Supinate (rotate palms up fully) as you curl — this maximises bicep contraction.",
+      "Lower slowly with full elbow extension at the bottom.",
+      "Use a light band — 20 reps should feel moderately easy."
+    ],
+    "why": "Light band curls prime the bicep's two primary functions — elbow flexion and supination — before loading them with heavy curls. The band's resistance profile (increasing at peak contraction) is ideal for activation as it matches the bicep's strength curve.",
+    "tip": "Fully extending the elbow at the bottom is as important as curling to the top — half reps don't fully activate the bicep."
+  },
+  {
+    "id": "act-biceps-db-supination",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "bicepWall",
+    "name": "DB Supination Curl",
+    "targets": "Biceps · Supinator · Brachioradialis",
+    "muscles": [
+      "biceps",
+      "forearms"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "12 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold a light dumbbell in one hand, starting with a neutral grip (hammer position).",
+      "As you curl up, rotate the forearm to a fully supinated (palm up) position at the top.",
+      "Hold the supinated position for 1 second, squeezing the bicep.",
+      "Lower while rotating back to the neutral grip.",
+      "Perform all reps on one arm then switch."
+    ],
+    "why": "The supination component is what makes this different from a standard curl. The bicep's most powerful function is supination, not just flexion. Warming up the supination motion primes the bicep for its full range of contribution during rows and pulling movements, not just curl patterns.",
+    "tip": "The rotation from neutral to supinated should feel like opening a jar — deliberate and controlled."
+  },
+  {
+    "id": "act-biceps-band-hammer",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "bicepWall",
+    "name": "Band Hammer Curl",
+    "targets": "Brachialis · Brachioradialis · Bicep Long Head",
+    "muscles": [
+      "biceps",
+      "forearms"
+    ],
+    "equipment": [
+      "band",
+      "dumbbell"
+    ],
+    "reps": "15 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Band: stand on the band, hold with a neutral (hammer) grip.",
+      "Dumbbell: hold with neutral grip, thumbs pointing up throughout.",
+      "Curl up while keeping the neutral wrist position — no supination.",
+      "Lower slowly with full elbow extension.",
+      "The neutral grip specifically targets the brachialis which lies under the bicep."
+    ],
+    "why": "The brachialis is actually a stronger elbow flexor than the bicep but is often undertrained because most curls use supination which shifts emphasis to the bicep. The hammer position directly targets the brachialis, giving the elbow joint broader muscular support before heavy curling.",
+    "tip": "Keep the wrists perfectly neutral throughout — any rotation shifts the load away from the brachialis."
+  },
+  {
+    "id": "act-biceps-wall-slide",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "bicepWall",
+    "name": "Wall Slide + Bicep Flex",
+    "targets": "Biceps · Anterior Shoulder · Elbow Joint Capsule",
+    "muscles": [
+      "biceps",
+      "shoulders"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "10 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand with your back flat against a wall, arms bent at 90° with backs of hands touching the wall.",
+      "Slowly slide your arms up the wall (like a field goal signal), keeping contact throughout.",
+      "At the top, extend arms fully overhead while maintaining wall contact.",
+      "Slide back down to 90°, then flex the biceps hard at the bottom position.",
+      "This combines shoulder mobility and bicep activation."
+    ],
+    "why": "Wall slides open the anterior shoulder capsule and activate the lower traps, while the bicep flex at the bottom primes the muscle for loaded work. The combination addresses both the shoulder complex and the bicep's attachment at the shoulder joint simultaneously.",
+    "tip": "If you can't keep both hands on the wall throughout, you have anterior shoulder tightness — focus more on the stretch component."
+  },
+  {
+    "id": "act-triceps-band-pushdown",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "tricepOH",
+    "name": "Band Pushdown",
+    "targets": "Triceps Lateral Head · Medial Head",
+    "muscles": [
+      "triceps"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "20 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band overhead. Grasp with both hands, elbows at your sides, forearms parallel to the floor.",
+      "Push the band down until your arms are fully extended, squeezing the triceps at the bottom.",
+      "Control the return to the start position — don't let the band pull your elbows up.",
+      "Keep the elbows pinned to your sides throughout.",
+      "Use very light resistance — this is activation."
+    ],
+    "why": "Band pushdowns warm up the lateral and medial heads of the tricep in their primary function — elbow extension — before pressing work. The band's resistance curve increases at full extension, matching the tricep's strength curve perfectly for activation purposes.",
+    "tip": "Full extension at the bottom is essential — don't stop 10° short. The tricep's full contraction happens at complete elbow extension."
+  },
+  {
+    "id": "act-triceps-db-kickback",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "tricepOH",
+    "name": "Light DB Kickback",
+    "targets": "Triceps Long Head · Lateral Head",
+    "muscles": [
+      "triceps"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "15 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold a very light dumbbell, hinge forward at the hips, upper arm parallel to the floor.",
+      "Extend the forearm back until the arm is fully straight, squeezing the tricep.",
+      "Hold 1 second at full extension.",
+      "Lower the forearm slowly back to 90°.",
+      "Keep the upper arm completely still — only the forearm moves."
+    ],
+    "why": "Kickbacks warm up the tricep in a shortened position (elbow extended behind the body), which is the hardest position for the tricep to reach full contraction. Priming this position before pressing work improves lockout strength and prevents the elbow fatigue that limits heavy pressing sets.",
+    "tip": "The slower the better here — this is not an explosive movement. Slow kickbacks with light weight activate more motor units than fast kickbacks with heavy weight."
+  },
+  {
+    "id": "act-triceps-band-overhead",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "tricepOH",
+    "name": "Band Overhead Tricep Extension",
+    "targets": "Triceps Long Head",
+    "muscles": [
+      "triceps",
+      "back"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "15 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band low or stand on it. Hold both ends behind your head, elbows pointing up.",
+      "Extend both arms overhead, fully straightening the elbows.",
+      "Lower slowly back to the starting position behind the head.",
+      "Keep the elbows pointing forward and close to the head throughout.",
+      "Use light resistance — this specifically targets the long head."
+    ],
+    "why": "The long head of the tricep crosses the shoulder joint and is only fully stretched when the arm is overhead. Pushdowns and kickbacks don't reach this head in its lengthened position. The overhead extension primes the long head which is the largest and most powerful tricep head.",
+    "tip": "The overhead position also gives the lat a gentle dynamic stretch as a bonus — two-for-one for back day."
+  },
+  {
+    "id": "act-triceps-diamond-pu",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "tricepOH",
+    "name": "Diamond Push-Up",
+    "targets": "Triceps · Anterior Deltoid · Chest",
+    "muscles": [
+      "triceps",
+      "chest",
+      "shoulders"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "10 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Start in a push-up position with hands forming a diamond shape (thumbs and index fingers touching).",
+      "Lower your chest toward your hands, keeping elbows close to the body.",
+      "Push back up to full extension, squeezing the triceps at the top.",
+      "Modify by performing on your knees if 10 full reps is too challenging.",
+      "Focus on the tricep squeeze at the top of each rep."
+    ],
+    "why": "Diamond push-ups place the highest tricep activation of any bodyweight exercise due to the close hand position eliminating chest contribution. As a compound movement, they also warm up the anterior deltoid and chest simultaneously, making them efficient for any pressing day warm-up.",
+    "tip": "If the hand position causes wrist discomfort, move the hands slightly further apart — even a close push-up (hands shoulder-width) hits the tricep effectively."
+  },
+  {
+    "id": "act-forearms-wrist-roller",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "forearmStr",
+    "name": "Wrist Circles + Pumps",
+    "targets": "Forearm Flexors · Extensors · Wrist Joint",
+    "muscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "20 reps each direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Extend both arms forward, elbows locked, and draw large circles with both wrists.",
+      "10 circles clockwise, 10 counter-clockwise.",
+      "Then pump the wrists up and down — 15 full flexion/extension reps.",
+      "Follow with 10 full pronation-supination rotations (palms down to palms up).",
+      "Finish with 10 side-to-side wrist deviations."
+    ],
+    "why": "The wrist joint has 8 carpal bones that must glide against each other. Under load without warm-up these bones compress rather than glide, increasing carpal ligament strain risk. Circles and pumps push synovial fluid into all joint spaces and activate the forearm flexors and extensors through their accessory functions.",
+    "tip": "This takes less than 90 seconds and should be the absolute first thing you do on any grip-heavy training day."
+  },
+  {
+    "id": "act-forearms-band-flex",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "forearmStr",
+    "name": "Band Wrist Flexion",
+    "targets": "Flexor Carpi Radialis · Flexor Digitorum",
+    "muscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "20 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand on one end of a band, hold the other end with one hand, palm facing up.",
+      "Rest your forearm on your thigh or a flat surface.",
+      "Curl the wrist upward (flexion) against the band resistance, full range of motion.",
+      "Lower slowly back to the starting position.",
+      "Complete all reps then switch to the other hand."
+    ],
+    "why": "Band wrist flexion isolates the forearm flexors which are the primary gripping muscles. Activating them before any pulling work — rows, deadlifts, curls — primes the grip that connects you to the bar and reduces forearm fatigue during working sets.",
+    "tip": "The forearm flexors are often the limiting factor in pulling strength before the target muscle fatigues. Activating them reduces this interference."
+  },
+  {
+    "id": "act-forearms-db-wrist-curl",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "forearmStr",
+    "name": "DB Wrist Curl + Extension",
+    "targets": "Forearm Flexors and Extensors",
+    "muscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "15 reps each direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit on a bench, forearm resting on your thigh, wrist hanging off the knee.",
+      "Flexion: palm up, curl the wrist upward — 15 reps.",
+      "Extension: flip to palm down, extend the wrist upward — 15 reps.",
+      "Use a very light dumbbell (1–3kg) — this is activation only.",
+      "Move through the full range in both directions."
+    ],
+    "why": "Training both flexors and extensors equally is critical for elbow health. Neglecting the extensors while training the flexors creates a strength imbalance that is the primary cause of lateral epicondylitis (tennis elbow). This activation sets a balanced baseline before loading.",
+    "tip": "Always do both directions — flexion AND extension. Most people only do flexion and wonder why they develop elbow pain."
+  },
+  {
+    "id": "act-forearms-grip-squeeze",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "forearmStr",
+    "name": "Grip Squeeze + Hold",
+    "targets": "Flexor Digitorum · Intrinsic Hand Muscles",
+    "muscles": [
+      "forearms"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "3 × 10 sec holds",
+    "sets": "3 holds",
+    "timer": 10,
+    "steps": [
+      "Make a tight fist with one hand, squeezing as hard as possible.",
+      "Hold the squeeze for 10 seconds, then open the hand fully.",
+      "Spread the fingers wide and hold for 5 seconds.",
+      "Repeat 3 times per hand.",
+      "Optional: use a soft rubber ball or grip trainer for added resistance."
+    ],
+    "why": "Grip activation before pulling work improves the neural connection to the forearm muscles and activates the intrinsic hand muscles that stabilise the finger tendons under load. A properly activated grip reduces the chance of grip failure limiting a set before the target muscle fatigues.",
+    "tip": "Opening the hand fully between squeezes is as important as the squeeze itself — it prevents the forearm flexors from cramping during working sets."
+  },
+  {
+    "id": "act-neck-nod-tilt",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "chinTuck",
+    "name": "Neck Nods + Lateral Tilts",
+    "targets": "Cervical Flexors · Extensors · Scalenes",
+    "muscles": [
+      "neck",
+      "traps"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "10 reps each direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit or stand tall. Slowly nod the head forward (chin to chest) then back — 10 reps.",
+      "Lateral tilts: right ear toward right shoulder, then left — 10 reps each side.",
+      "Keep the movement slow and controlled — this is activation, not stretching.",
+      "Keep the shoulders completely still throughout.",
+      "Increase the range of motion gradually over the reps."
+    ],
+    "why": "Neck nods and tilts actively contract the cervical flexors, extensors, and scalenes through their full range, activating the deep cervical stabilisers (longus colli, longus capitis) that brace every cervical vertebra during any loaded overhead, shrug, or trap movement.",
+    "tip": "The deep cervical flexors are the core muscles of the neck. Activating them before heavy trap or overhead work reduces the risk of cervical compression under load."
+  },
+  {
+    "id": "act-neck-rotation",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "neckFlex",
+    "name": "Slow Neck Rotation",
+    "targets": "SCM · Upper Traps · Cervical Rotators",
+    "muscles": [
+      "neck",
+      "traps"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "8 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit or stand tall with shoulders completely relaxed and down.",
+      "Slowly rotate your head to the right as far as comfortable — pause 1 second.",
+      "Rotate to the left — pause 1 second.",
+      "Each full rotation (right + left) counts as one rep.",
+      "Increase the rotational range gradually over the 8 reps."
+    ],
+    "why": "Neck rotation activates the SCM and cervical rotators — muscles that stabilise the head position during any exercise where the neck is under axial load. Warm rotating the cervical spine before shrugs, overhead press, or deadlifts reduces the risk of cervical strain.",
+    "tip": "If you hear clicking or grinding on rotation, slow down further and add more rotational range gradually rather than forcing end range immediately."
+  },
+  {
+    "id": "act-neck-band-resist",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "chinTuck",
+    "name": "Band Neck Resistance",
+    "targets": "Deep Cervical Stabilisers · Scalenes · SCM",
+    "muscles": [
+      "neck"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "10 reps × 3 sec each direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold a light band against your forehead. Provide gentle resistance as you nod forward.",
+      "Nod against the band resistance — hold 3 seconds, release.",
+      "Then hold the band against the back of your head, resist as you push back.",
+      "Finally, hold against the side of the head, resist lateral tilt in each direction.",
+      "Use only 10–15% of maximum force — this is deep stabiliser activation, not strength training."
+    ],
+    "why": "Light band resistance against the cervical spine activates the deep cervical stabilisers (longus colli) that cannot be reached with passive stretching or mobilisation. These muscles control fine cervical movement and protect the vertebrae from shear forces during heavy loading.",
+    "tip": "Very light resistance only. The deep cervical muscles respond to low-load high-rep activation — heavy resistance works the superficial muscles instead."
+  },
+  {
+    "id": "act-neck-chin-tuck-rep",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "chinTuck",
+    "name": "Chin Tuck Reps",
+    "targets": "Deep Cervical Flexors · Suboccipitals",
+    "muscles": [
+      "neck",
+      "traps"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "15 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit or stand tall, shoulders relaxed.",
+      "Draw the chin straight back — not down, directly backward — making a double chin.",
+      "Hold 2 seconds, then release fully.",
+      "Repeat for 15 reps.",
+      "Add gentle backward pressure with two fingers on the chin for increased activation."
+    ],
+    "why": "Chin tuck reps repeatedly contract the deep cervical flexors, activating the suboccipital muscles at the base of the skull. These muscles work isometrically in virtually every exercise to maintain head position. Activating them before heavy training prevents the forward head drift under load that stresses the cervical discs.",
+    "tip": "This also serves as the most important postural reset exercise. If you do only one neck activation, make it this one."
+  },
+  {
+    "id": "act-abs-dead-bug",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "cobraAbs",
+    "name": "Dead Bug",
+    "targets": "Transverse Abdominis · Rectus · Hip Flexors · Lower Back",
+    "muscles": [
+      "abs",
+      "hipflexors"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "10 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Lie on your back, arms extended to the ceiling, hips and knees at 90°.",
+      "Press your lower back flat into the floor and keep it there throughout.",
+      "Lower your right arm overhead and extend your left leg simultaneously.",
+      "Return to start without letting the lower back arch.",
+      "Alternate sides for 10 reps each."
+    ],
+    "why": "Dead bugs are the most effective core activation exercise because they train anti-extension — the primary function of the core during compound lifts. By forcing the lower back flat against the floor while the limbs move, they activate the transverse abdominis and multifidus before any squat, deadlift, or overhead work.",
+    "tip": "The lower back must stay completely flat throughout. If it arches, reduce the range of motion of the arm and leg — quality over range."
+  },
+  {
+    "id": "act-abs-plank-shoulder",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "cobraAbs",
+    "name": "Plank Shoulder Tap",
+    "targets": "Core · Serratus · Anti-Rotation",
+    "muscles": [
+      "abs",
+      "shoulders"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "10 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Start in a high plank position, hands directly below shoulders, body in a straight line.",
+      "Without rotating the hips, lift one hand and tap the opposite shoulder.",
+      "Return the hand to the floor and repeat on the other side.",
+      "The goal is zero hip rotation — brace the core hard to resist it.",
+      "Widen the feet slightly if hip rotation is difficult to control."
+    ],
+    "why": "Plank shoulder taps train anti-rotation — resisting rotational force — which is the core's primary stabilising function during unilateral movements. The single-arm support creates a rotational demand that the obliques and transverse abdominis must counteract, making this one of the most functional core activation exercises.",
+    "tip": "Slower is harder — a fast tap reduces the anti-rotation demand. Pause 1 second with the hand on the shoulder for maximum activation."
+  },
+  {
+    "id": "act-abs-band-pallof",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "spinalTwist",
+    "name": "Band Pallof Press",
+    "targets": "Obliques · Transverse Abdominis · Anti-Rotation",
+    "muscles": [
+      "abs"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "12 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band at chest height. Stand sideways to the anchor, feet shoulder-width.",
+      "Hold the band at your sternum with both hands.",
+      "Press the band straight out in front of you — resist the band's pull to rotate you.",
+      "Hold 1–2 seconds fully extended, then return to the chest.",
+      "Complete all reps facing one direction then switch sides."
+    ],
+    "why": "The Pallof press is a pure anti-rotation exercise that directly activates the obliques and transverse abdominis in their stabilising function. Unlike crunches which train flexion, this trains the core to resist forces — which is what it does during every standing compound lift.",
+    "tip": "The further from the anchor you stand, the harder the anti-rotation demand. Start close and move further away as you become more comfortable."
+  },
+  {
+    "id": "act-abs-bird-dog",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "cobraAbs",
+    "name": "Bird Dog",
+    "targets": "Erector Spinae · Glutes · Transverse Abdominis · Multifidus",
+    "muscles": [
+      "abs",
+      "glutes",
+      "back"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "10 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Start on all fours, wrists under shoulders, knees under hips.",
+      "Extend your right arm forward and left leg back simultaneously.",
+      "Hold 2 seconds — the body should form a straight line from hand to heel.",
+      "Return to start without losing the neutral spine.",
+      "Alternate sides for 10 reps each."
+    ],
+    "why": "Bird dogs activate the multifidus and erector spinae alongside the transverse abdominis and glutes — the deep stabiliser chain that protects the spine during loaded movement. This exercise is unique in activating both the anterior (abs) and posterior (back) core chains simultaneously.",
+    "tip": "Don't let the lower back arch or the hips rotate during the extension. If they do, reduce the range of motion until you can maintain perfect position."
+  },
+  {
+    "id": "act-hip-march",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "legSwing",
+    "name": "Standing Hip March",
+    "targets": "Psoas · Iliacus · Hip Flexors",
+    "muscles": [
+      "hipflexors",
+      "quads"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "20 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand tall, core engaged, hands on hips.",
+      "Drive one knee up to hip height, as if marching in place.",
+      "Hold the knee up for 1 second, squeezing the hip flexor.",
+      "Lower with control and repeat on the other side.",
+      "Increase the knee drive height gradually over the reps."
+    ],
+    "why": "Standing hip marches specifically activate the psoas and iliacus — the primary hip flexors — in their concentric function. After sitting, these muscles are shortened and partially inactive. Marching re-establishes the hip flexion pattern before any squat, lunge, or deadlift movement where they stabilise the hip.",
+    "tip": "The 1-second hold at the top is crucial — it forces a full isometric psoas contraction rather than just a momentum-driven knee swing."
+  },
+  {
+    "id": "act-hip-band-kickback",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "legSwing",
+    "name": "Band Hip Flexion",
+    "targets": "Psoas · Iliacus · TFL",
+    "muscles": [
+      "hipflexors",
+      "quads"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "15 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band low behind you, loop it around one ankle.",
+      "Stand facing the anchor, slight forward lean for balance.",
+      "Drive the banded knee up and forward against the band resistance.",
+      "Hold 1 second at the top, then lower with control.",
+      "Complete all reps on one side then switch."
+    ],
+    "why": "Band hip flexion activates the psoas against resistance in its primary movement pattern — hip flexion. The resistance helps activate the deep psoas fibres that passive marches sometimes miss, particularly at end-range hip flexion where the psoas is most challenged.",
+    "tip": "Keep the torso upright — leaning back defeats the purpose by reducing the psoas demand."
+  },
+  {
+    "id": "act-hip-db-step",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "lunge",
+    "name": "DB Step-Through",
+    "targets": "Hip Flexors · Glutes · Quads",
+    "muscles": [
+      "hipflexors",
+      "glutes",
+      "quads"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bodyweight"
+    ],
+    "reps": "12 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand holding light dumbbells, step forward into a lunge with the right leg.",
+      "Instead of returning to the start, step through and lunge with the left leg forward.",
+      "Continue alternating in a travelling pattern.",
+      "Use 20–30% of working lunge weight.",
+      "Focus on the hip flexor stretch in the trailing leg and activation in the leading leg."
+    ],
+    "why": "Step-throughs combine hip flexor activation with glute and quad engagement in a dynamic pattern that closely mimics the movement demands of squats and lunges. The continuous forward motion prevents the brief reset that regular lunges allow, keeping the hip flexors under constant low-load activation.",
+    "tip": "Keep the torso upright and the front knee tracking over the second toe on each step."
+  },
+  {
+    "id": "act-hip-frog-pump",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "hipCircle",
+    "name": "Frog Pump",
+    "targets": "Hip Flexors · Adductors · Glutes",
+    "muscles": [
+      "hipflexors",
+      "glutes",
+      "adductors"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "20 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Lie on your back, bring the soles of your feet together with knees splayed out (butterfly position).",
+      "Drive your hips straight up, squeezing the glutes at the top.",
+      "Lower slowly, keeping the feet in the butterfly position throughout.",
+      "The wide-foot position activates the hip flexors and adductors differently than a standard bridge.",
+      "Focus on the glute squeeze at the top."
+    ],
+    "why": "The frog pump activates the hip flexors in a lengthened position — the opposite of their shortened post-sitting state — while also activating the glutes and adductors. This combination addresses the hip complex comprehensively before any lower body training.",
+    "tip": "This can feel awkward at first — the butterfly foot position is unusual. Persist with it; the hip activation it produces is unique to this position."
+  },
+  {
+    "id": "act-glutes-bridge",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "piriformis",
+    "name": "Glute Bridge",
+    "targets": "Gluteus Maximus · Hamstrings · Core",
+    "muscles": [
+      "glutes",
+      "hamstrings"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "20 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Lie on your back, knees bent, feet flat on the floor hip-width apart.",
+      "Drive the hips straight up by squeezing the glutes — not by extending the lower back.",
+      "At the top, the body should form a straight line from knees to shoulders.",
+      "Hold 1–2 seconds at the top, squeezing the glutes hard.",
+      "Lower slowly with control."
+    ],
+    "why": "Glute bridges are the most fundamental glute activation exercise. After any sitting, the glutes are neurologically inhibited (reciprocal inhibition from the hip flexors). Bridges re-establish the glute firing pattern before any squat or hip hinge, preventing the quads from compensating for inactive glutes under heavy load.",
+    "tip": "The squeeze at the top is more important than the height of the bridge. Focus on maximum glute contraction, not maximum hip height."
+  },
+  {
+    "id": "act-glutes-band-walk",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "sideStep",
+    "name": "Band Lateral Walk",
+    "targets": "Glute Med · Glute Min · TFL",
+    "muscles": [
+      "glutes",
+      "abductors"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "15 steps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Place a resistance band just above the knees or around the ankles.",
+      "Stand in a quarter-squat position — knees slightly bent, hips back.",
+      "Step sideways, maintaining the squat position and keeping tension in the band.",
+      "Step 15 times to the right, then 15 times back to the left.",
+      "Keep the toes forward and resist the knees caving inward."
+    ],
+    "why": "The glute medius is the primary stabiliser of the pelvis during any single-leg phase of walking, running, or squatting. Weakness here directly causes knee valgus (caving in) and hip drop under load. Band walks are the most effective single activation exercise for the glute medius before any lower body training.",
+    "tip": "The quarter-squat position is critical — walking upright reduces glute med activation by 40%. Stay low throughout the movement."
+  },
+  {
+    "id": "act-glutes-db-rdl-light",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "hamstringStand",
+    "name": "Light DB Romanian Deadlift",
+    "targets": "Glute Max · Hamstrings · Erector Spinae",
+    "muscles": [
+      "glutes",
+      "hamstrings",
+      "back"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "12 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold light dumbbells in front of the thighs, feet hip-width apart.",
+      "Hinge at the hips — push them back while lowering the dumbbells down the legs.",
+      "Keep the back flat throughout and a slight bend in the knees.",
+      "Lower until you feel a hamstring stretch, then drive the hips forward to return.",
+      "Use 20–25% of your working RDL weight."
+    ],
+    "why": "The RDL movement pattern is fundamental to deadlift and hinge mechanics. Performing it with very light weight before heavy deadlifts establishes the hip hinge motor pattern, activates the glutes and hamstrings in their lengthening-to-shortening function, and primes the erector spinae for axial loading.",
+    "tip": "Think 'hips back, not down' — the movement is a horizontal hip shift, not a vertical squat."
+  },
+  {
+    "id": "act-glutes-clamshell",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "piriformis",
+    "name": "Clamshell",
+    "targets": "Glute Med · Glute Min · Hip External Rotators",
+    "muscles": [
+      "glutes",
+      "abductors"
+    ],
+    "equipment": [
+      "band",
+      "bodyweight"
+    ],
+    "reps": "20 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Lie on your side, hips stacked, knees bent at 45°.",
+      "Band option: place a resistance band just above the knees.",
+      "Keeping the feet together, raise the top knee as high as possible — like a clamshell opening.",
+      "Hold 1 second at the top, then lower with control.",
+      "Don't let the pelvis rock backward — keep the hips stacked throughout."
+    ],
+    "why": "Clamshells specifically target the glute medius and minimus in their external rotation function — the exact action needed to prevent knee valgus during squats. The side-lying position isolates these muscles better than standing exercises, making clamshells the preferred activation exercise before any squat or leg press work.",
+    "tip": "Add a band above the knees to increase resistance and feedback. If the band makes the hips roll back, remove it and focus on form first."
+  },
+  {
+    "id": "act-quads-tke",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "quadStand",
+    "name": "Terminal Knee Extension (TKE)",
+    "targets": "VMO · Vastus Medialis · Knee Stabilisers",
+    "muscles": [
+      "quads"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "20 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band behind you at knee height. Loop it around the back of one knee.",
+      "Stand with a slight bend in the knee, the band pulling the knee slightly backward.",
+      "Straighten the knee fully against the band resistance — squeeze the quad at full extension.",
+      "Slowly allow the band to flex the knee back to the starting position.",
+      "Complete all reps on one leg then switch."
+    ],
+    "why": "The TKE specifically targets the VMO (vastus medialis oblique) — the teardrop-shaped quad muscle just above the inner knee. The VMO is the last portion of the quad to activate and the first to inhibit after injury or inactivity. It is critical for knee tracking and patellar stability during any squat or leg press movement.",
+    "tip": "The TKE is also a key rehabilitation exercise for patellar tendinopathy and patellofemoral syndrome. If you have knee pain during squats, this warm-up is non-negotiable."
+  },
+  {
+    "id": "act-quads-wall-sit",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "quadStand",
+    "name": "Wall Sit",
+    "targets": "Quadriceps · Patellar Tendon · Knee Joint",
+    "muscles": [
+      "quads"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "2 × 30 sec",
+    "sets": "2 holds",
+    "timer": 30,
+    "steps": [
+      "Stand with your back against a wall, feet hip-width apart about 60cm from the wall.",
+      "Slide down until your knees are at 90° — thighs parallel to the floor.",
+      "Hold this position for 30 seconds.",
+      "The knee should be directly above the ankle — adjust foot position if needed.",
+      "Keep the back flat against the wall throughout."
+    ],
+    "why": "Wall sits isometrically activate all four quadricep heads under moderate load before heavier squat work. The 90° knee angle provides patellar tendon loading that warms up the tendon-bone interface, reducing the risk of tendon irritation during heavy squatting. Wall sits also establish proper knee tracking before dynamic loading.",
+    "tip": "If 30 seconds is too easy, add a calf raise at the bottom position or hold a light dumbbell on each thigh."
+  },
+  {
+    "id": "act-quads-db-lunge-light",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "lunge",
+    "name": "Light DB Reverse Lunge",
+    "targets": "Quads · Glutes · Hip Flexors",
+    "muscles": [
+      "quads",
+      "glutes",
+      "hipflexors"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bodyweight"
+    ],
+    "reps": "12 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold very light dumbbells or use bodyweight. Stand tall.",
+      "Step backward with one foot into a lunge position.",
+      "Lower the back knee toward the floor, front thigh parallel to the floor.",
+      "Drive through the front heel to return to standing.",
+      "The reverse lunge places less stress on the knee than a forward lunge."
+    ],
+    "why": "The reverse lunge specifically activates the quads in their deceleration function — the eccentric loading pattern that occurs during the descent phase of a squat. Priming this deceleration pattern before heavy squats reduces the strain on the patellar tendon during the most demanding portion of the movement.",
+    "tip": "Reverse lunges are safer than forward lunges as a warm-up because they put less anterior knee force. Use them as the standard pre-squat activation movement."
+  },
+  {
+    "id": "act-quads-step-up",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "lunge",
+    "name": "Bodyweight Step-Up",
+    "targets": "Quads · VMO · Glutes · Balance",
+    "muscles": [
+      "quads",
+      "glutes"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "15 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Find a step, box, or bench at knee height.",
+      "Step up with one foot, driving through the heel to extend the knee fully.",
+      "Stand tall at the top, squeezing the glute of the working leg.",
+      "Lower with control, then repeat.",
+      "Don't push off the bottom foot — all the work should come from the top leg."
+    ],
+    "why": "Step-ups activate the quads in a single-leg context, which requires significantly more VMO and glute med recruitment than bilateral squats. This unilateral activation exposes and corrects any left-right imbalance in quad activation before it becomes a loaded problem.",
+    "tip": "The single-leg emphasis means any weakness in one leg is immediately obvious. Use this as a diagnostic as well as an activation — if one side feels significantly weaker, spend extra time on it."
+  },
+  {
+    "id": "act-hams-nordic-eccentric",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "seatedHam",
+    "name": "Slow Eccentric Nordic Curl",
+    "targets": "Biceps Femoris · Semimembranosus · Popliteus",
+    "muscles": [
+      "hamstrings"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "5 slow reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Kneel on a soft surface, have a partner hold your ankles or anchor them under a bar.",
+      "Keeping your body straight from knees to head, slowly lower yourself toward the floor.",
+      "Lower as slowly as possible — aim for 4–5 seconds on the way down.",
+      "When you can no longer control the descent, catch yourself with your hands.",
+      "Push back to the starting position using your hands and repeat."
+    ],
+    "why": "The eccentric Nordic curl is the most effective hamstring activation exercise and also the most evidence-based exercise for hamstring injury prevention. The slow lowering phase eccentrically loads the hamstrings at long muscle lengths — exactly the condition under which hamstring strains occur during sprinting and heavy deadlifts.",
+    "tip": "Start with 5 reps only — this is surprisingly demanding even at activation intensity. Doing too many pre-fatigues the hamstrings before your working sets."
+  },
+  {
+    "id": "act-hams-band-leg-curl",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "lyingHam",
+    "name": "Band Leg Curl",
+    "targets": "Hamstrings · Popliteus · Gastrocnemius",
+    "muscles": [
+      "hamstrings",
+      "calves"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "15 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band low. Loop it around one ankle while lying face down.",
+      "Curl the banded leg toward your glutes against the band resistance.",
+      "Hold 1 second at the top, then extend the leg slowly.",
+      "The band provides resistance through the full range of knee flexion.",
+      "Complete all reps on one side then switch."
+    ],
+    "why": "Band leg curls activate the hamstrings in knee flexion — one of their two primary functions (the other being hip extension). Most lower body warm-ups focus on the hip extension function. Adding the knee flexion activation ensures the hamstrings are primed across their entire function before any curling or deadlift work.",
+    "tip": "Flex the foot (toes toward shin) during the curl to add a gastrocnemius component. Point the foot to isolate the hamstrings more."
+  },
+  {
+    "id": "act-hams-db-rdl-light",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "hamstringStand",
+    "name": "Light DB Romanian Deadlift",
+    "targets": "Hamstrings · Glutes · Erector Spinae",
+    "muscles": [
+      "hamstrings",
+      "glutes",
+      "back"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "12 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold light dumbbells in front of the thighs, feet hip-width apart.",
+      "Hinge at the hips, keeping the back flat, until you feel a hamstring stretch.",
+      "Drive the hips forward to return to standing, squeezing the glutes at the top.",
+      "Use 20–25% of your working RDL weight.",
+      "Focus on the hamstring lengthening and shortening sensation throughout."
+    ],
+    "why": "The RDL pattern activates the hamstrings in their hip extension function — the lengthening eccentric phase is particularly important for activating the proximal hamstring attachment near the ischial tuberosity, which is the site of most hamstring strains.",
+    "tip": "Feel for the hamstring stretch at the bottom — if you don't feel it, you're not hinging enough at the hip."
+  },
+  {
+    "id": "act-hams-good-morning-bw",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "hamstringStand",
+    "name": "Bodyweight Good Morning",
+    "targets": "Hamstrings · Erectors · Glutes",
+    "muscles": [
+      "hamstrings",
+      "back",
+      "glutes"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "15 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand with feet hip-width apart, hands clasped behind your head.",
+      "Keeping the knees slightly bent, hinge forward at the hips — leading with your chest.",
+      "Lower until your torso is parallel to the floor or you feel a hamstring stretch.",
+      "Drive the hips forward and stand tall, squeezing the glutes at the top.",
+      "The movement should feel identical to an RDL — just without any weight in your hands."
+    ],
+    "why": "Good mornings specifically load the hamstrings and erector spinae together in the hip hinge pattern under zero external load. This makes them ideal as the first warm-up movement before deadlifts, as they activate the posterior chain without any spinal compression or grip demand.",
+    "tip": "Hands behind the head shifts the centre of mass slightly, increasing the hamstring and erector demand compared to free-hanging arms."
+  },
+  {
+    "id": "act-adduc-band-walk",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "sideStep",
+    "name": "Band Lateral Adduction",
+    "targets": "Adductor Longus · Gracilis · Pectineus",
+    "muscles": [
+      "adductors"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "15 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Anchor a band low on one side. Loop it around the ankle furthest from the anchor.",
+      "Stand sideways, step the banded foot across and in front of the standing foot.",
+      "Return to the start position against band resistance.",
+      "The movement is a medial (inward) leg sweep against resistance.",
+      "Complete all reps on one side then switch."
+    ],
+    "why": "Band adduction directly activates the adductor longus and gracilis in their primary function — bringing the leg across the midline. These muscles are eccentrically loaded during every wide-stance movement and rarely activated directly in warm-up routines, making them a common source of groin strains.",
+    "tip": "Keep the standing leg slightly bent for balance. If you lose balance, perform the movement more slowly."
+  },
+  {
+    "id": "act-adduc-sumo-squat-bw",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "adductorSumo",
+    "name": "Bodyweight Sumo Squat",
+    "targets": "Adductors · Glutes · Quads · Hip Joint",
+    "muscles": [
+      "adductors",
+      "glutes",
+      "quads"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "20 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand with feet wider than shoulder width, toes turned out 45°.",
+      "Squat down until thighs are parallel or below — keeping the chest up and back straight.",
+      "At the bottom, gently push the knees outward with the elbows.",
+      "Drive through the heels and inner thighs to return to standing.",
+      "Increase the depth gradually over the 20 reps as the adductors loosen."
+    ],
+    "why": "Sumo squats place the adductors under their greatest eccentric demand of any bodyweight movement, making them the most efficient adductor activation exercise before any wide-stance or lower body training. The added elbow push at the bottom also mobilises the hip joint capsule simultaneously.",
+    "tip": "The elbow-to-knee push at the bottom is a bonus mobility drill for the hip capsule — don't skip it."
+  },
+  {
+    "id": "act-adduc-db-sumo",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "adductorSumo",
+    "name": "DB Sumo Squat",
+    "targets": "Adductors · Glutes · Inner Thigh",
+    "muscles": [
+      "adductors",
+      "glutes",
+      "quads"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "15 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold a single dumbbell vertically in both hands, hanging between the legs.",
+      "Take a wide sumo stance, toes turned out 45°.",
+      "Squat until the dumbbell nearly touches the floor, keeping the chest up.",
+      "Drive through the heels and inner thighs to return.",
+      "Use 20–30% of your working sumo squat weight."
+    ],
+    "why": "Adding a dumbbell to the sumo squat increases the adductor demand progressively before heavy work. The vertical dumbbell position encourages the torso to stay more upright, placing a greater emphasis on the adductors and inner thighs than a standard goblet squat.",
+    "tip": "The torso should stay as vertical as possible — this maximises adductor activation vs quad activation."
+  },
+  {
+    "id": "act-adduc-lateral-lunge",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "sideStep",
+    "name": "Lateral Lunge",
+    "targets": "Adductors · Quads · Hip Flexors · Hip Joint",
+    "muscles": [
+      "adductors",
+      "quads",
+      "hipflexors"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "12 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand with feet together. Step one foot wide to the side.",
+      "Bend the stepping knee and sink into a lateral lunge — the opposite leg stays straight.",
+      "Push the knee outward over the toes, keeping the chest up.",
+      "Drive through the bent leg's heel to return to standing.",
+      "Alternate sides each rep or complete all reps on one side."
+    ],
+    "why": "Lateral lunges place the adductors of the straight leg under a passive stretch while the adductors of the bent leg work concentrically to return to standing. This combination of eccentric loading and active contraction makes them the most complete adductor activation movement.",
+    "tip": "The deeper the lunge, the greater the adductor stretch. Work to progressively deeper positions over the warm-up reps."
+  },
+  {
+    "id": "act-abduc-band-clamshell",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "piriformis",
+    "name": "Band Clamshell",
+    "targets": "Glute Med · Glute Min · Hip External Rotators",
+    "muscles": [
+      "abductors",
+      "glutes"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "20 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Place a resistance band just above the knees. Lie on your side, hips stacked, knees bent at 45°.",
+      "Keeping the feet together, raise the top knee as high as possible against the band.",
+      "Hold 1 second at the top — feel the outer glute contract.",
+      "Lower slowly with control.",
+      "Complete all reps on one side then switch."
+    ],
+    "why": "The band adds resistance to the clamshell, significantly increasing glute med and min activation compared to the bodyweight version. The glute medius is the primary hip abductor and the main stabiliser preventing knee valgus during any squat or single-leg movement.",
+    "tip": "If you feel the movement in the front of the hip rather than the outer glute, your hip is internally rotating. Focus on rotating the femur outward from the hip socket."
+  },
+  {
+    "id": "act-abduc-side-lying-raise",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "sideLyingAbd",
+    "name": "Side-Lying Hip Raise",
+    "targets": "Glute Medius · TFL · Abductors",
+    "muscles": [
+      "abductors"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "20 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Lie on your side, body in a straight line, bottom arm extended.",
+      "Raise the top leg to about 45° — keeping it in line with the body.",
+      "Hold 1 second at the top, then lower with control.",
+      "Don't let the leg drift forward or backward — keep it in the frontal plane.",
+      "Complete all reps on one side then switch."
+    ],
+    "why": "The straight-leg side raise activates the glute medius and TFL in their pure abduction function — without any hip flexion component that comes with raised leg variations. This isolates the abductor activation better than most standing exercises, making it ideal before any lateral movement training.",
+    "tip": "A slight internal rotation of the leg (toes pointing slightly down) increases glute medius activation. Try both positions and feel the difference."
+  },
+  {
+    "id": "act-abduc-band-squat-walk",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "sideStep",
+    "name": "Band Squat Walk",
+    "targets": "Glute Med · Abductors · Quads · TFL",
+    "muscles": [
+      "abductors",
+      "glutes",
+      "quads"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "12 steps / direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Place a band just above the knees or around the ankles. Take a quarter-squat position.",
+      "Maintaining the squat, step sideways — step out, then bring the trailing foot in.",
+      "Take 12 steps to the right, then 12 steps back to the left.",
+      "Keep the squat depth consistent and resist the knees caving inward.",
+      "The squat position is critical — upright walking reduces abductor activation significantly."
+    ],
+    "why": "Band squat walks combine abductor activation with quad loading in the exact posture used during squats. This functional combination is more sport- and training-specific than isolated abductor exercises, making it the preferred warm-up before any squat or lower body compound movement.",
+    "tip": "The lower the squat, the greater the glute med activation. But prioritise maintaining form over depth — a shallow squat with perfect knee tracking is better than a deep squat with caving knees."
+  },
+  {
+    "id": "act-abduc-db-side-lunge",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "sideStep",
+    "name": "DB Side Lunge",
+    "targets": "Abductors · Adductors · Quads · Hip Complex",
+    "muscles": [
+      "abductors",
+      "adductors",
+      "quads"
+    ],
+    "equipment": [
+      "dumbbell",
+      "bodyweight"
+    ],
+    "reps": "12 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold a light dumbbell at your chest or use bodyweight. Feet together.",
+      "Step one foot wide to the side, bend that knee and sink into a lateral lunge.",
+      "The straight leg's abductors are stretched while the bent leg's abductors stabilise.",
+      "Drive through the bent leg to return.",
+      "The dumbbell adds load to increase both the abductor and adductor activation."
+    ],
+    "why": "The side lunge with a dumbbell activates both abductors and adductors in the same movement — the abductors of the bent leg work concentrically to stabilise and push back, while the adductors of the straight leg are stretched. This bilateral hip activation prepares the complete hip complex for any lateral or lower body training.",
+    "tip": "Hold the dumbbell as a goblet (both hands at chest) for the best balance and most upright torso position."
+  },
+  {
+    "id": "act-calves-raise-slow",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "calfWall",
+    "name": "Slow Calf Raise",
+    "targets": "Gastrocnemius · Soleus · Achilles Tendon",
+    "muscles": [
+      "calves"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "20 slow reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand at the edge of a step or on flat ground, feet hip-width apart.",
+      "Rise up onto the balls of your feet as high as possible.",
+      "Hold 2 seconds at the top, squeezing the calves.",
+      "Lower slowly over 3 seconds — below the step level if possible for a full stretch.",
+      "The slow tempo is what makes this activation rather than a strength exercise."
+    ],
+    "why": "Slow calf raises progressively load the Achilles tendon and gastrocnemius-soleus complex before any jumping, running, or loaded calf work. The tempo loading is critical — slow raises stimulate the tendon's viscoelastic properties, improving its stiffness and energy return capacity for subsequent explosive work.",
+    "tip": "The full range of motion — both the complete plantarflexion at the top AND the stretch below parallel at the bottom — is essential. Half reps only warm up half the muscle."
+  },
+  {
+    "id": "act-calves-band-flex",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "calfWall",
+    "name": "Band Plantarflexion",
+    "targets": "Gastrocnemius · Soleus · Ankle Joint",
+    "muscles": [
+      "calves"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "20 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit with one leg extended. Loop a band around the ball of the foot.",
+      "Point the foot (plantarflex) against the band resistance — full range.",
+      "Return the foot to neutral (dorsiflexed position) with control.",
+      "Complete all reps on one foot then switch.",
+      "Focus on the full range at both ends — maximum point and maximum flex."
+    ],
+    "why": "Seated band plantarflexion warms up the calf complex with the knee slightly bent, which specifically targets the soleus (since the gastrocnemius is partially slackened). This ensures both calf muscles are primed before the standing calf raises, which primarily target the gastrocnemius.",
+    "tip": "The dorsiflexion return phase is as important as the plantarflexion — this warms up the tibialis anterior simultaneously, reducing the calf-shin imbalance."
+  },
+  {
+    "id": "act-calves-db-raise-seated",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "soleus",
+    "name": "Seated DB Calf Raise",
+    "targets": "Soleus · Posterior Tibialis · Ankle Complex",
+    "muscles": [
+      "calves"
+    ],
+    "equipment": [
+      "dumbbell"
+    ],
+    "reps": "20 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit on a bench, knees bent at 90°, feet flat on the floor.",
+      "Place a light dumbbell on each thigh just above the knee.",
+      "Rise up onto the balls of your feet, squeezing the calves at the top.",
+      "Lower slowly with full heel contact on the floor.",
+      "The bent knee isolates the soleus from the gastrocnemius."
+    ],
+    "why": "With the knee bent, the gastrocnemius is effectively slackened and the soleus bears the full load. The soleus is the primary ankle stabiliser and is critically involved in all standing and loaded calf work. It responds best to higher rep, moderate load activation — exactly what this exercise provides.",
+    "tip": "The soleus is more important for injury prevention than the gastrocnemius for most gym exercises. If you only have time for one seated calf exercise, make it this one."
+  },
+  {
+    "id": "act-calves-single-leg",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "calfWall",
+    "name": "Single-Leg Calf Raise",
+    "targets": "Gastrocnemius · Soleus · Ankle Stabilisers · Balance",
+    "muscles": [
+      "calves"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "15 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand on one foot at the edge of a step, the other foot held up.",
+      "Rise as high as possible on the ball of the standing foot.",
+      "Hold 1 second at the top.",
+      "Lower slowly below the step level for a full Achilles stretch.",
+      "Use a wall or railing for balance if needed, but try not to lean on it."
+    ],
+    "why": "Single-leg calf raises expose any left-right asymmetry in calf strength and ankle stability immediately. They also require significantly more stabiliser activation than bilateral raises. As an activation exercise, they identify any weakness that might limit performance or increase injury risk during unilateral lower body work.",
+    "tip": "If you can't complete 15 reps on one leg, that side needs dedicated attention. Note the asymmetry and address it with additional single-leg work."
+  },
+  {
+    "id": "act-shins-tib-raise",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "tibialisWalk",
+    "name": "Tibialis Raise",
+    "targets": "Tibialis Anterior · Extensor Digitorum · Ankle Dorsiflexors",
+    "muscles": [
+      "shins"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "20 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit on a bench or stand with back against a wall, heels on the floor.",
+      "Raise the toes and forefoot as high as possible — maximum dorsiflexion.",
+      "Hold 1–2 seconds at the top, squeezing the shin muscles.",
+      "Lower slowly back to the floor.",
+      "Standing variation: stand with heels on a slight elevation for greater range."
+    ],
+    "why": "Tibialis anterior raises directly activate the shin muscles before any running, jumping, or squat work. The tibialis anterior controls ankle dorsiflexion — the ankle motion that determines squat depth. Activating it before squats improves ankle mobility and reduces the anterior shin soreness that accompanies tibialis-loaded training.",
+    "tip": "Tibialis raises are also the primary prevention exercise for shin splints. If you run as part of your training, add these before every session."
+  },
+  {
+    "id": "act-shins-heel-walk",
+    "phase": "activation",
+    "priority": 1,
+    "fig": "tibialisWalk",
+    "name": "Heel Walk",
+    "targets": "Tibialis Anterior · Ankle Dorsiflexors · Peroneus Tertius",
+    "muscles": [
+      "shins"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "30 steps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Walk forward on your heels only — toes raised completely off the ground.",
+      "Keep the toes pulled up (dorsiflexed) with every step.",
+      "Walk 15 steps forward, then 15 steps backward.",
+      "Maintain an upright posture throughout.",
+      "Add a 2-second toe-raise between steps for extra activation."
+    ],
+    "why": "Heel walks force sustained isometric contraction of the tibialis anterior through every step, activating motor units that are otherwise dormant. The continuous loading pattern primes the tibialis for the repeated dorsiflexion demand of running, box jumps, and the squat bottom position.",
+    "tip": "The backward heel walk activates the shin muscles differently to the forward walk — include both directions for complete activation."
+  },
+  {
+    "id": "act-shins-band-dorsiflex",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "dorsiflex",
+    "name": "Band Dorsiflexion",
+    "targets": "Tibialis Anterior · Extensor Hallucis · Ankle Stability",
+    "muscles": [
+      "shins"
+    ],
+    "equipment": [
+      "band"
+    ],
+    "reps": "20 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit with one leg extended. Loop a band around the top of the foot.",
+      "Anchor the band in front of you (step on it or attach to something low).",
+      "Pull the foot toward you (dorsiflex) against the band resistance — full range.",
+      "Lower with control back to the neutral or slightly pointed position.",
+      "Complete all reps on one foot then switch."
+    ],
+    "why": "Band dorsiflexion directly resists the tibialis anterior's primary action, providing targeted activation under resistance. This is more specific than heel walks for activating the tibialis in its pure dorsiflexion function, making it valuable before any squat or ankle-demanding work.",
+    "tip": "Combine this with band plantarflexion in the same sitting position for a complete ankle warm-up in under 3 minutes."
+  },
+  {
+    "id": "act-shins-toe-tap",
+    "phase": "activation",
+    "priority": 2,
+    "fig": "tibialisWalk",
+    "name": "Rapid Toe Tap",
+    "targets": "Tibialis Anterior · Peroneals · Ankle Reactivity",
+    "muscles": [
+      "shins"
+    ],
+    "equipment": [
+      "bodyweight"
+    ],
+    "reps": "30 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand with one heel on the floor, toe raised.",
+      "Rapidly tap the toe down and immediately raise it back up — as fast as possible.",
+      "Keep the heel on the floor throughout — only the forefoot moves.",
+      "30 fast taps on each foot.",
+      "This should feel like a rapid tapping rather than a controlled raise."
+    ],
+    "why": "Rapid toe taps train the reactive firing speed of the tibialis anterior — important for the deceleration and ankle stabilisation that occurs during any impact activity. The higher-velocity activation is different from slow raises and warms up the fast-twitch fibers of the shin muscles that control ankle stability during jumping and running.",
+    "tip": "The faster the taps, the more reactive the activation. Aim for maximum speed while keeping the heel completely still."
+  },
+  {
+    "id": "pre-arm-circle",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "armCircle",
+    "name": "Arm Circles",
+    "targets": "Chest · Shoulders · Rotator Cuff · Biceps",
+    "muscles": [
+      "chest",
+      "shoulders",
+      "biceps",
+      "triceps"
+    ],
+    "reps": "15 reps / direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand with feet hip-width apart, arms extended to the sides.",
+      "Begin small forward circles and progressively grow to full wingspan.",
+      "After 15 reps forward, reverse to backward circles at the same progression.",
+      "Keep core braced — don't let momentum rock your torso.",
+      "For extra bicep priming, supinate (palm up) on the forward phase."
+    ],
+    "why": "The shoulder capsule lubricates through movement. Progressive arm circles pump synovial fluid into the joint, warming cartilage and tendons before pressing loads. Forward circles prime the anterior capsule; backward circles prime the posterior capsule for rows.",
+    "tip": "Progress small → medium → large to systematically open the shoulder capsule before loading it."
+  },
+  {
+    "id": "pre-shoulder-roll",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "shoulderRoll",
+    "name": "Shoulder Rolls",
+    "targets": "Trapezius · Deltoids · Rotator Cuff",
+    "muscles": [
+      "traps",
+      "shoulders"
+    ],
+    "reps": "15 rolls / direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand tall, arms loose at your sides.",
+      "Roll both shoulders up, back, and down in a large arc — 15 backward rolls.",
+      "Exaggerate the lift at the top and depression at the bottom.",
+      "Reverse to forward rolls for 15 reps.",
+      "Increase speed for the last 5 reps of each direction."
+    ],
+    "why": "The upper trapezius is typically in a chronically elevated state. Backward rolls actively contract then release the upper trap through its full range, resetting resting tone before loading. This reduces trap impingement risk and improves scapular rhythm during overhead movements.",
+    "tip": "Backward rolls contract then release the upper trap — ideal prep before heavy overhead or pulling work."
+  },
+  {
+    "id": "pre-neck-roll",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "neckRoll",
+    "name": "Neck Rolls",
+    "targets": "Cervical Spine · Upper Traps · Scalenes",
+    "muscles": [
+      "traps",
+      "neck"
+    ],
+    "reps": "5 rolls / direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Sit or stand tall with shoulders relaxed and pressed down.",
+      "Drop your right ear toward your right shoulder.",
+      "Slowly roll your chin down to your chest, then to the left shoulder.",
+      "Continue the arc gently — avoid aggressive backward extension.",
+      "Reverse direction after 5 circles."
+    ],
+    "why": "The scalenes and levator scapulae attach from the neck to the first two ribs and scapula. In any overhead or trap exercise they become tight stabilisers. Neck rolls move them through their full shortening-lengthening cycle, restoring rotational range before loading.",
+    "tip": "Press one hand on the opposite shoulder downward to increase the lateral stretch before rolling."
+  },
+  {
+    "id": "pre-torso-twist",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "torsoTwist",
+    "name": "Torso Twists",
+    "targets": "Thoracic Spine · Obliques · Lats · Chest",
+    "muscles": [
+      "back",
+      "abs",
+      "chest",
+      "traps"
+    ],
+    "reps": "12 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand feet slightly wider than hip-width, arms extended to the sides.",
+      "Rotate upper body to the right as far as comfortable — pause briefly.",
+      "Swing smoothly to the left, mirroring the motion.",
+      "Let hips follow slightly but keep them mostly square.",
+      "Gradually increase speed and range — last reps should be energetic."
+    ],
+    "why": "The thoracic spine should produce 30-35 degrees of rotation per side. After sitting or sleeping, facet joints compress this. Twists mobilise these joints and warm the obliques. A stiff T-spine forces lumbar compensation which creates injury risk under load.",
+    "tip": "A dowel across your shoulders provides feedback and ensures even rotation through the thoracic spine."
+  },
+  {
+    "id": "pre-cat-cow",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "catCow",
+    "name": "Cat-Cow",
+    "targets": "Thoracic & Lumbar Spine · Core · Hip Flexors",
+    "muscles": [
+      "back",
+      "abs",
+      "hipflexors",
+      "glutes"
+    ],
+    "reps": "10 cycles",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Start on all fours — wrists under shoulders, knees under hips.",
+      "Cow: inhale, drop your belly toward the floor, lift tailbone and chest.",
+      "Cat: exhale, round your spine fully upward, tuck chin and pelvis.",
+      "Flow smoothly between the two — one full breath per position.",
+      "Increase range of motion with each cycle."
+    ],
+    "why": "Cat-cow is the most efficient single movement for restoring spinal segmental mobility. The cow phase decompresses the anterior disc and lengthens the abdominals. The cat phase releases the thoracolumbar fascia. Together they restore the neutral-spine position needed for safe loading.",
+    "tip": "Pause 2 seconds at both end ranges to accumulate time-under-stretch in spinal extensors and flexors."
+  },
+  {
+    "id": "pre-leg-swing",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "legSwing",
+    "name": "Leg Swings",
+    "targets": "Hamstrings · Hip Flexors · Glutes · Quads",
+    "muscles": [
+      "hamstrings",
+      "quads",
+      "glutes",
+      "hipflexors"
+    ],
+    "reps": "10 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand beside a wall or rack, holding lightly for balance.",
+      "Swing your inside leg forward as high as comfortable, then backward.",
+      "Keep torso upright and standing leg slightly bent.",
+      "Gradually increase range — don't force it on the first few reps.",
+      "Switch sides and repeat."
+    ],
+    "why": "Dynamic leg swings use momentum to temporarily exceed the passive range of motion - something static stretching cannot do. Hip flexors and hamstrings are in reciprocal inhibition: as hip flexors contract on the forward swing, hamstrings automatically release. This primes the neuromuscular pattern for squats.",
+    "tip": "Flex the foot (toes up) during the forward swing — adds a neural flossing component to the hamstring prep."
+  },
+  {
+    "id": "pre-hip-circle",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "hipCircle",
+    "name": "Hip Circles",
+    "targets": "Hip Capsule · Glutes · Adductors · Abductors",
+    "muscles": [
+      "glutes",
+      "adductors",
+      "abductors",
+      "hipflexors"
+    ],
+    "reps": "10 circles / direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand feet hip-width apart, hands on your hips.",
+      "Draw a large circle with your hips, rotating through full range.",
+      "Perform 10 circles clockwise, then 10 counter-clockwise.",
+      "Focus on maximising the circular path — push through stiff quadrants.",
+      "Add a slight squat at the base of each circle for more glute engagement."
+    ],
+    "why": "The hip moves in three planes simultaneously during compound lifts. Circles systematically load all 6 degrees of hip freedom, stimulating synovial fluid production and activating the short hip rotators (piriformis, obturators) that stabilise the joint under load.",
+    "tip": "The lateral push-out phase directly activates the TFL and glute medius — key stabilisers for all leg work."
+  },
+  {
+    "id": "pre-lunge",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "lunge",
+    "name": "Walking Lunges",
+    "targets": "Quads · Hip Flexors · Glutes · Hamstrings",
+    "muscles": [
+      "quads",
+      "glutes",
+      "hamstrings",
+      "hipflexors"
+    ],
+    "reps": "12 reps / leg",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand tall, core engaged, hands on hips or behind your head.",
+      "Step forward with right leg into a deep lunge — front knee over ankle.",
+      "Lower back knee to just above the floor.",
+      "Drive through the front heel and step the back leg through into the next lunge.",
+      "Maintain an upright torso throughout."
+    ],
+    "why": "Walking lunges simultaneously warm the quad concentrically, lengthen the rear hip flexor eccentrically, and activate the front glute. The most comprehensive single lower-body prep movement. The unilateral nature also reveals left-right asymmetry in range before it becomes a loaded problem.",
+    "tip": "Add a torso twist toward the front leg to simultaneously open the thoracic spine."
+  },
+  {
+    "id": "pre-inchworm",
+    "phase": "pre",
+    "priority": 2,
+    "fig": "inchworm",
+    "name": "Inchworm Walkout",
+    "targets": "Hamstrings · Core · Shoulders · Calves",
+    "muscles": [
+      "hamstrings",
+      "back",
+      "shoulders",
+      "calves"
+    ],
+    "reps": "8 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand tall, feet hip-width apart.",
+      "Hinge forward at the hips and place both hands on the floor.",
+      "Walk your hands forward until you reach a full push-up plank.",
+      "Walk your feet back toward your hands, keeping legs as straight as tolerable.",
+      "Return to standing and repeat."
+    ],
+    "why": "The inchworm combines a travelling hamstring stretch with a shoulder warm-up. The walk-out phase puts the hamstrings under a long-lever load, preparing them for the eccentric demand of deadlifts. The plank position at the midpoint activates the core and rotator cuff before pressing work.",
+    "tip": "Maximise the hamstring stretch during the foot-walk phase by keeping knees straight — that's the key moment."
+  },
+  {
+    "id": "pre-ankle-circle",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "ankleCircle",
+    "name": "Ankle Circles",
+    "targets": "Ankle Joint · Calves · Achilles · Tibialis",
+    "muscles": [
+      "calves",
+      "shins"
+    ],
+    "reps": "10 circles / direction / foot",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand on one foot, hold a wall for balance.",
+      "Draw maximum-range circles with the raised foot — 10 clockwise.",
+      "Reverse to 10 counter-clockwise.",
+      "Slow down on the dorsiflexion (top) phase to target the tibialis.",
+      "Switch feet. Follow with 15 toe-tap pulses per foot."
+    ],
+    "why": "Ankle mobility directly controls squat depth. Restricted dorsiflexion forces heel rise, anterior knee translation, and lumbar flexion under load. Circles warm the talar dome, stimulate Achilles tendon elastic properties, and activate the tibialis anterior before any lower-body work.",
+    "tip": "Pausing 1 second on the dorsiflexion phase of each circle directly activates the tibialis anterior."
+  },
+  {
+    "id": "pre-side-step",
+    "phase": "pre",
+    "priority": 2,
+    "fig": "sideStep",
+    "name": "Lateral Side-Step Squats",
+    "targets": "Adductors · Abductors · Glutes · Quads",
+    "muscles": [
+      "adductors",
+      "abductors",
+      "glutes",
+      "quads"
+    ],
+    "reps": "10 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand with feet together, hands on hips.",
+      "Step one foot wide to the side and squat down into it.",
+      "Push through the outside foot and return to start.",
+      "Alternate sides, keeping hips low throughout.",
+      "Progress wider stance each rep to increase adductor range."
+    ],
+    "why": "Side-step squats warm the frontal-plane hip muscles - adductors and abductors - rarely engaged during sagittal-plane warm-ups like lunges. The non-stepping leg stays straight, creating a passive adductor stretch while the stepping side glute medius fires eccentrically.",
+    "tip": "Allow the non-squatting leg to stay straight — this creates a lateral stretch of the standing-side adductor."
+  },
+  {
+    "id": "pre-wrist-circle",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "wristCircle",
+    "name": "Wrist Circles",
+    "targets": "Wrists · Forearms · Elbow Flexors",
+    "muscles": [
+      "forearms",
+      "biceps"
+    ],
+    "reps": "10 circles / direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Hold arms out in front, hands relaxed.",
+      "Circle both wrists simultaneously — clockwise for 10 reps.",
+      "Reverse to counter-clockwise for 10 reps.",
+      "Then pronate/supinate alternately 10 times.",
+      "Finish with 10 gentle wrist flexion/extension pumps."
+    ],
+    "why": "The wrist has 8 carpal bones that must glide smoothly against each other. Under grip load without warm-up, these bones compress rather than glide, increasing carpal ligament strain risk. Circles pump fluid into joint spaces and activate the forearm flexors and extensors.",
+    "tip": "The biceps brachii supinates the forearm — wrist circles prime this function before curls or pulling work."
+  },
+  {
+    "id": "pre-spiderman",
+    "phase": "pre",
+    "priority": 2,
+    "fig": "spiderStretch",
+    "name": "Spiderman Stretch",
+    "targets": "Hip Flexors · Adductors · Thoracic Spine",
+    "muscles": [
+      "hipflexors",
+      "adductors",
+      "back"
+    ],
+    "reps": "6 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Start in a high push-up plank position.",
+      "Step your right foot to the outside of your right hand.",
+      "Drop your right elbow toward the floor and hold 1–2 seconds.",
+      "Return elbow to hand, step foot back to plank.",
+      "Alternate sides each rep."
+    ],
+    "why": "The Spiderman stretch combines hip flexor opening with adductor lengthening and thoracic rotation in a single ground-based movement. The hip-to-hand position creates a deep hip flexor stretch in the rear leg while the front leg adductors are maximally challenged.",
+    "tip": "Rotating the inside knee outward while in the low position increases the adductor stretch dramatically."
+  },
+  {
+    "id": "pre-tibialis-walk",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "tibialisWalk",
+    "name": "Heel Walks",
+    "targets": "Tibialis Anterior · Ankle Dorsiflexors",
+    "muscles": [
+      "shins"
+    ],
+    "reps": "30 steps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Walk forward on your heels only — toes raised off the ground entirely.",
+      "Keep toes pulled up (dorsiflexed) with every step.",
+      "Walk 15 steps forward, 15 steps back.",
+      "Maintain an upright posture throughout.",
+      "Rest 30 seconds between sets."
+    ],
+    "why": "The tibialis anterior controls ankle angle in squats and prevents shin splints. Heel walks force sustained isometric contraction, activating motor units that are otherwise dormant. The most direct preparation before calf raises, box jumps, or any tibialis-specific training.",
+    "tip": "Add tempo: 2 seconds to lift, 1 to land — increases motor activation of the tibialis anterior."
+  },
+  {
+    "id": "pre-tricep-swing",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "tricepOverhead",
+    "name": "Overhead Tricep Pendulum Swings",
+    "targets": "Triceps Long Head · Elbow Joint · Lat",
+    "muscles": [
+      "triceps",
+      "back",
+      "shoulders"
+    ],
+    "reps": "12 swings / arm",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Raise one arm overhead, elbow bent, hand behind head.",
+      "Let the forearm swing forward and backward like a pendulum — loose, rhythmic.",
+      "On the back-swing, assist gently with the other hand for a brief end-range touch.",
+      "Progressively increase range of motion over 12 reps.",
+      "Switch arms. Keep the upper arm stable — only the forearm moves."
+    ],
+    "why": "The triceps long head crosses the shoulder joint, meaning it is only accessible in a dynamically overhead position. Static arm circles do reach the triceps as a secondary mover but never place the long head at its end range. The pendulum swing takes the long head through its full shortening-to-lengthening cycle repeatedly, priming the elbow extension pattern before any pressing or pushdown work.",
+    "tip": "The long head is the tricep most responsible for the appearance of upper arm size — and the most neglected in warm-up. This directly primes it."
+  },
+  {
+    "id": "pre-wrist-pumps",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "wristCircle",
+    "name": "Wrist Pumps & Forearm Rolls",
+    "targets": "Forearm Flexors · Extensors · Pronators · Supinators",
+    "muscles": [
+      "forearms",
+      "biceps"
+    ],
+    "reps": "15 pumps each direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Extend both arms forward, elbows locked, palms down.",
+      "Pump wrists up and down rapidly — 15 full flexion/extension reps.",
+      "Rotate to palms up and repeat 15 more pumps.",
+      "Then do 10 full pronation-supination rotations (palms down to palms up).",
+      "Finish with 10 wrist circles each direction."
+    ],
+    "why": "The forearm wrist circle covers the joint capsule, but wrist pumps specifically activate the forearm flexors and extensors through their full contractile range before loading. Pronation-supination rotations warm the radioulnar joint — the articulation responsible for the forearm rotation used in curls, rows, and any grip work. Without this, the joint compresses under load rather than gliding.",
+    "tip": "Forearm pumps before heavy pulling or grip work cut down the accumulated fatigue that causes forearm \"pumping out\" mid-set."
+  },
+  {
+    "id": "pre-neck-nods",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "neckRoll",
+    "name": "Neck Nods & Lateral Tilts",
+    "targets": "Cervical Flexors · Extensors · Scalenes · SCM",
+    "muscles": [
+      "neck",
+      "traps"
+    ],
+    "reps": "8 reps each direction",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand tall. Slowly nod head forward (chin to chest) then back — 8 reps.",
+      "Add gentle lateral tilts — right ear to shoulder, left ear to shoulder — 8 reps.",
+      "Then slow half-circles: chin to chest, tilt right, centre back, tilt left.",
+      "Keep shoulders completely still throughout — isolate the neck.",
+      "Increase range of motion progressively."
+    ],
+    "why": "The neck roll covers the same territory but as a passive arc. Nods and tilts are active: the cervical flexors and extensors are contracting and releasing through their full range, which activates the deep cervical stabilisers (longus colli, longus capitis) that brace the cervical spine under any loaded overhead or shrug movement. Active contraction through range primes these deep stabilisers in a way passive rolling does not.",
+    "tip": "The deep cervical flexors are the core muscles of the neck — they stabilise every vertebra during any overhead or heavy trap movement. Nods activate them directly."
+  },
+  {
+    "id": "pre-good-morning",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "hamstringStand",
+    "name": "Good Morning",
+    "targets": "Hamstrings · Glutes · Lower Back · Hip Hinge Pattern",
+    "muscles": [
+      "hamstrings",
+      "glutes",
+      "back"
+    ],
+    "reps": "12 reps",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand with feet hip-width apart, hands clasped behind your head.",
+      "Keeping a soft bend in the knees, hinge forward at the hips — chest leading down.",
+      "Lower until your torso is roughly parallel to the floor or you feel the hamstrings engage.",
+      "Drive the hips forward and stand tall — squeeze the glutes at the top.",
+      "Increase the range of motion gradually over the reps as the posterior chain warms up."
+    ],
+    "why": "Good mornings prime the entire posterior chain — hamstrings, glutes, and erectors — in the hip hinge pattern before any squat or deadlift work. As a dynamic movement they differ from the static RDL: the continuous rhythmic motion lubricates the hip joint and progressively lengthens the hamstrings without holding a stretch.",
+    "tip": "The movement should feel like a controlled pendulum — smooth and rhythmic, not jerky. If the lower back rounds, reduce the depth until hip mobility improves."
+  },
+  {
+    "id": "pre-side-lunge",
+    "phase": "pre",
+    "priority": 1,
+    "fig": "sideStep",
+    "name": "Dynamic Side Lunge",
+    "targets": "Adductors · Abductors · Glutes · Hip Joint",
+    "muscles": [
+      "adductors",
+      "abductors",
+      "glutes",
+      "quads"
+    ],
+    "reps": "10 reps / side",
+    "sets": "2 sets",
+    "timer": 0,
+    "steps": [
+      "Stand tall with feet together. Step one foot wide to the side.",
+      "Bend the stepping knee and sink into a lateral lunge — the opposite leg stays straight.",
+      "At the bottom, pause briefly and push the bent knee outward with your elbow.",
+      "Drive through the bent leg's heel to return to standing.",
+      "Alternate sides each rep — right lunge, return, left lunge, return."
+    ],
+    "why": "Dynamic side lunges move the hip through its frontal plane range of motion — the direction most neglected in standard warm-ups. The adductors of the straight leg are dynamically lengthened while the glutes and abductors of the bent leg are activated. The elbow-to-knee push at the bottom simultaneously mobilises the hip capsule.",
+    "tip": "The elbow push at the bottom is the key detail — it provides a brief loaded stretch to the inner thigh and hip capsule that passive lunges miss. Don't skip it."
+  },
+  {
+    "id": "post-chest-door",
+    "phase": "post",
+    "priority": 1,
+    "fig": "chestDoor",
+    "name": "Chest Doorway Stretch",
+    "targets": "Pectorals · Anterior Deltoid · Biceps",
+    "muscles": [
+      "chest",
+      "shoulders",
+      "biceps"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Place your forearm vertically against a doorframe or rack upright.",
+      "Position elbow at shoulder height (90° angle).",
+      "Step through the doorway, rotating your chest away from your arm.",
+      "Feel the stretch across the pec and front of the shoulder.",
+      "Adjust elbow height: lower = lower pec, higher = upper pec."
+    ],
+    "why": "The sternal pec head is the largest portion. After pressing it is shortened and engorged. The doorway position places it at full length while keeping the scapula retracted. Stretching within 5 minutes of exercise is the optimal window for actual tissue length change.",
+    "tip": "Try three elbow positions (low, mid, high) for 15 sec each to sweep the full pectoral fan."
+  },
+  {
+    "id": "post-cross-shoulder",
+    "phase": "post",
+    "priority": 1,
+    "fig": "crossShoulder",
+    "name": "Cross-Body Shoulder Stretch",
+    "targets": "Posterior Deltoid · Rotator Cuff · Teres Minor",
+    "muscles": [
+      "shoulders",
+      "traps"
+    ],
+    "reps": "35 sec / side",
+    "sets": "2 holds",
+    "timer": 35,
+    "steps": [
+      "Bring one arm straight across your chest at shoulder height.",
+      "Hook your other forearm under the elbow to support and pull.",
+      "Keep the shoulder blade from elevating — resist the urge to shrug.",
+      "Turn your head gently away for a neck component.",
+      "Hold, then switch arms."
+    ],
+    "why": "The posterior deltoid and teres minor are the primary external rotators. Tight posterior capsule is the number-one cause of shoulder impingement in gym-goers. This stretch directly addresses that by internally rotating the humerus under a cross-body load.",
+    "tip": "Drop the arm to ~70° below shoulder — the posterior capsule is maximally challenged at that angle."
+  },
+  {
+    "id": "post-tricep-overhead",
+    "phase": "post",
+    "priority": 1,
+    "fig": "tricepOverhead",
+    "name": "Overhead Tricep Stretch",
+    "targets": "Triceps Long Head · Lat · Serratus",
+    "muscles": [
+      "triceps",
+      "back"
+    ],
+    "reps": "35 sec / side",
+    "sets": "2 holds",
+    "timer": 35,
+    "steps": [
+      "Raise one arm overhead and bend the elbow, dropping your hand behind your head.",
+      "Use your other hand to gently push the bent elbow further behind the head.",
+      "Keep chin level — don't let your head jut forward.",
+      "Feel the stretch deep in the upper arm and lateral ribcage.",
+      "Hold, then switch arms."
+    ],
+    "why": "The tricep long head crosses the shoulder joint. It only reaches full stretch with shoulder in flexion AND elbow flexed simultaneously. Standard pressing movements shorten the long head - the overhead position is the only way to reverse this. The lat and serratus are co-stretched in this position.",
+    "tip": "Leaning slightly to the opposite side also stretches the lat and serratus for a richer release."
+  },
+  {
+    "id": "post-bicep-wall",
+    "phase": "post",
+    "priority": 1,
+    "fig": "bicepWall",
+    "name": "Wall Bicep Stretch",
+    "targets": "Biceps · Anterior Shoulder · Elbow Joint",
+    "muscles": [
+      "biceps",
+      "shoulders"
+    ],
+    "reps": "35 sec / side",
+    "sets": "2 holds",
+    "timer": 35,
+    "steps": [
+      "Stand beside a wall, arm extended back at shoulder height, palm against wall.",
+      "Slowly rotate your body away from the wall, keeping the arm pinned.",
+      "Turn until you feel a stretch from shoulder down through the bicep.",
+      "Keep elbow slightly unlocked to protect the joint.",
+      "Hold and breathe. Switch sides."
+    ],
+    "why": "The biceps performs elbow flexion and forearm supination. The wall stretch places the arm in extension and pronation, fully reversing both shortenings simultaneously. Chronic shortening without stretching contributes to both elbow and shoulder tendinopathy.",
+    "tip": "Lowering the arm slightly below shoulder engages the long head of the bicep more fully."
+  },
+  {
+    "id": "post-trap-neck",
+    "phase": "post",
+    "priority": 1,
+    "fig": "trapNeck",
+    "name": "Neck Lateral Trap Stretch",
+    "targets": "Upper Traps · Levator Scapulae · Scalenes",
+    "muscles": [
+      "traps",
+      "neck"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Sit tall, one hand clasped behind your lower back.",
+      "Tilt your head to the opposite side, ear toward shoulder.",
+      "Use your free hand to gently add traction on top of the head.",
+      "Depress (push down) the clasped shoulder for a deeper stretch.",
+      "Hold, release, and switch sides."
+    ],
+    "why": "The levator scapulae runs from C1-C4 to the superior angle of the scapula. Heavy shrug work contracts it powerfully. The clasped-behind-back position prevents the shoulder from elevating, ensuring the full stretch length rather than being absorbed by a shrug.",
+    "tip": "Rotating the head 20–30° down (chin toward chest) adds the scalene — great for desk-related tightness."
+  },
+  {
+    "id": "post-child-pose",
+    "phase": "post",
+    "priority": 1,
+    "fig": "childPose",
+    "name": "Child's Pose",
+    "targets": "Lats · Lower Back · Thoracic Spine · Glutes",
+    "muscles": [
+      "back",
+      "glutes",
+      "shoulders"
+    ],
+    "reps": "60 sec",
+    "sets": "2 holds",
+    "timer": 60,
+    "steps": [
+      "Start on all fours, then push hips back toward your heels.",
+      "Extend arms forward, rest forehead on the mat.",
+      "Walk hands left to target the right lat, then right for the left lat.",
+      "Let your chest sink toward the floor with each exhale.",
+      "Breathe deeply — 5-second inhale, 5-second exhale."
+    ],
+    "why": "Child pose stretches the entire posterior chain while allowing passive spinal decompression. After heavy back work, the erector spinae are in protective tension. The kneeling position removes axial load from the spine, allowing the discs to rehydrate.",
+    "tip": "Widening your knees adds an inner-hip and groin release alongside the back decompression."
+  },
+  {
+    "id": "post-lat-hang",
+    "phase": "post",
+    "priority": 2,
+    "fig": "latHang",
+    "name": "Overhead Lat Stretch",
+    "targets": "Latissimus Dorsi · Teres Major · Thoracic Spine",
+    "muscles": [
+      "back",
+      "shoulders"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Grab a rack upright at just above shoulder height with one hand.",
+      "Step back and lean away, dropping your hip on the same side.",
+      "Hinge at the hips and lean your torso away from the arm.",
+      "Add a slight chest-to-sky rotation for a deeper stretch.",
+      "Hold and breathe, then switch sides."
+    ],
+    "why": "The lat originates from the lower thoracic vertebrae, the entire lumbar, and the iliac crest. It can only be fully stretched when the arm is elevated AND the hip is dropped on the same side. Child pose catches the mid lat; this catches the superior attachment.",
+    "tip": "Bend your knees and sit your hips back to allow a greater trunk lean and more complete lat lengthening."
+  },
+  {
+    "id": "post-hamstring-stand",
+    "phase": "post",
+    "priority": 1,
+    "fig": "hamstringStand",
+    "name": "Standing Hamstring Stretch",
+    "targets": "Hamstrings · Glutes · Lower Back",
+    "muscles": [
+      "hamstrings",
+      "glutes"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Extend one leg forward, heel on the floor, toes up.",
+      "Hinge at the hips (not the waist) and lean forward over the front leg.",
+      "Place hands on the front thigh for support; keep back flat.",
+      "Feel the pull behind the knee and up into the glute.",
+      "Switch legs. Deepen the hinge with each breath."
+    ],
+    "why": "The hamstrings are in eccentric tension during every squat, deadlift, and lunge. Chronic shortening causes posterior pelvic tilt and lower back pain. The standing hinge specifically targets the medial hamstrings by keeping the pelvis anterior tilted.",
+    "tip": "A flat back targets the hamstring belly; a rounded spine loads the lumbar. Think \"long spine\" throughout."
+  },
+  {
+    "id": "post-quad-stand",
+    "phase": "post",
+    "priority": 1,
+    "fig": "quadStand",
+    "name": "Standing Quad Stretch",
+    "targets": "Quadriceps · Hip Flexors",
+    "muscles": [
+      "quads",
+      "hipflexors"
+    ],
+    "reps": "45 sec / side",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Stand on one leg, hold a wall for balance if needed.",
+      "Bend the opposite knee and grab your ankle or foot behind you.",
+      "Pull heel toward glute while pushing hips slightly forward.",
+      "Keep knees together and stand upright — don't lean forward.",
+      "Hold 30–45 seconds, then switch."
+    ],
+    "why": "The rectus femoris crosses both the knee and hip. Simply bending the knee does not fully stretch it - the hip must also be in extension. The standing quad stretch achieves both. The posterior pelvic tilt cue adds the hip flexor component, targeting the psoas.",
+    "tip": "Tucking your pelvis (posterior tilt) slightly as you hold also brings the hip flexor into the stretch."
+  },
+  {
+    "id": "post-hip-flexor-kneel",
+    "phase": "post",
+    "priority": 1,
+    "fig": "hipFlexKneel",
+    "name": "Kneeling Hip Flexor Stretch",
+    "targets": "Hip Flexors · Psoas · Quads",
+    "muscles": [
+      "hipflexors",
+      "quads"
+    ],
+    "reps": "45 sec / side",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Kneel on your left knee with your right foot forward at 90°.",
+      "Keep torso upright and brace your core.",
+      "Drive hips forward until you feel a stretch deep in the left hip/groin.",
+      "Raise your left arm overhead and lean slightly right to increase depth.",
+      "Hold, then switch sides."
+    ],
+    "why": "The psoas major is the only muscle connecting the lumbar spine directly to the femur. It is chronically shortened by sitting and further shortened during squats. Chronic psoas tension is the most common structural cause of lower back pain in gym lifters.",
+    "tip": "Squeeze the glute of the kneeling leg actively — this \"unlocks\" the hip flexor and deepens the stretch."
+  },
+  {
+    "id": "post-piriformis",
+    "phase": "post",
+    "priority": 1,
+    "fig": "piriformis",
+    "name": "Piriformis / Figure-4 Stretch",
+    "targets": "Piriformis · Glutes · External Hip Rotators",
+    "muscles": [
+      "glutes",
+      "adductors"
+    ],
+    "reps": "45 sec / side",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Lie on your back, knees bent, feet flat.",
+      "Cross your right ankle over your left knee (figure-4 position).",
+      "Reach through the gap and clasp behind your left thigh.",
+      "Gently pull your left thigh toward your chest.",
+      "Hold and breathe. Switch sides."
+    ],
+    "why": "The piriformis is a small but powerful external hip rotator sitting directly over the sciatic nerve. After squats it is heavily loaded as a hip stabiliser. When shortened and inflamed it compresses the sciatic nerve, causing gluteal pain. The figure-4 is the only simple supine piriformis stretch.",
+    "tip": "Flex the top foot (toes toward shin) to protect the knee and increase the external rotation component."
+  },
+  {
+    "id": "post-calf-wall",
+    "phase": "post",
+    "priority": 1,
+    "fig": "calfWall",
+    "name": "Wall Calf Stretch",
+    "targets": "Gastrocnemius · Soleus · Achilles Tendon",
+    "muscles": [
+      "calves"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Place both hands on a wall, one foot back 60–90 cm.",
+      "Straight-leg: keep back leg straight, press heel to floor — targets gastrocnemius.",
+      "Bent-leg: slightly bend back knee, heel still down — targets soleus.",
+      "Lean hips gently toward the wall.",
+      "Do both variations (20 sec each) before switching sides."
+    ],
+    "why": "The gastrocnemius crosses both the knee and ankle. With the knee straight it is at greatest length. Chronic gastrocnemius tightness is a primary contributor to Achilles tendinopathy and plantar fasciitis. This stretch targets the gastrocnemius - the soleus requires a bent knee.",
+    "tip": "The bent-knee version targets the soleus — neglecting it is a major contributor to ankle mobility limitations."
+  },
+  {
+    "id": "post-adductor-sumo",
+    "phase": "post",
+    "priority": 1,
+    "fig": "adductorSumo",
+    "name": "Sumo Adductor Stretch",
+    "targets": "Adductors · Inner Thigh · Hip Joint",
+    "muscles": [
+      "adductors"
+    ],
+    "reps": "45 sec",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Stand with feet wide (wider than shoulder-width), toes turned out 45°.",
+      "Squat down until thighs are parallel or lower.",
+      "Place elbows on inner thighs and gently press outward.",
+      "Keep chest up and back straight.",
+      "Hold and breathe — let hips sink with each exhale."
+    ],
+    "why": "The five adductor muscles run from the pubic bone to various points on the femur. They are eccentrically loaded in every squat and lunge. The sumo position is the only standing stretch that places all five adductor muscles at sufficient length simultaneously.",
+    "tip": "Rocking side-to-side in this position targets each adductor individually and increases overall range."
+  },
+  {
+    "id": "post-abs-cobra",
+    "phase": "post",
+    "priority": 1,
+    "fig": "cobraAbs",
+    "name": "Cobra / Sphinx Stretch",
+    "targets": "Rectus Abdominis · Hip Flexors · Lumbar Spine",
+    "muscles": [
+      "abs",
+      "hipflexors"
+    ],
+    "reps": "45 sec",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Lie face down, hands under your shoulders.",
+      "Sphinx: press forearms down and lift chest — gentle spinal curve.",
+      "Cobra: straighten arms further to increase extension (if comfortable).",
+      "Keep hips and thighs pressed into the floor.",
+      "Hold, breathe, and let your belly relax downward."
+    ],
+    "why": "Any core work creates a shortening bias across the anterior abdominal wall. Cobra reverses this by extending the spine while the hip stays fixed. The anterior hip capsule and hip flexors are simultaneously stretched, addressing the chronic tightness from sit-up patterns and squat sessions.",
+    "tip": "Walking hands slightly to one side laterally flexes the spine for a deeper oblique stretch."
+  },
+  {
+    "id": "post-forearm",
+    "phase": "post",
+    "priority": 1,
+    "fig": "forearmStr",
+    "name": "Forearm Flexor & Extensor Stretch",
+    "targets": "Forearm Flexors · Extensors · Wrist Tendons",
+    "muscles": [
+      "forearms"
+    ],
+    "reps": "30 sec / position / side",
+    "sets": "2 holds",
+    "timer": 30,
+    "steps": [
+      "Extend one arm forward, palm facing up.",
+      "Use your other hand to gently pull fingers downward — flexor stretch. Hold 30 sec.",
+      "Flip the palm down, pull fingers upward toward you — extensor stretch. Hold 30 sec.",
+      "Switch arms.",
+      "Keep elbow fully extended throughout both positions."
+    ],
+    "why": "Forearm flexors and extensors are loaded in every pulling and pressing movement. Both connect via tendons at the medial and lateral epicondyle. Chronically tight forearms without stretching is the most common cause of both medial and lateral epicondylitis in gym lifters.",
+    "tip": "Neglecting the extensors is a major contributor to lateral epicondylitis (tennis elbow) — always do both directions."
+  },
+  {
+    "id": "post-tibialis-kneel",
+    "phase": "post",
+    "priority": 1,
+    "fig": "tibKneel",
+    "name": "Kneeling Tibialis Stretch",
+    "targets": "Tibialis Anterior · Extensor Digitorum",
+    "muscles": [
+      "shins"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Kneel on a soft surface, tops of feet flat on the floor.",
+      "Sit back onto your heels — feel the stretch along the front of the shin.",
+      "For one side: extend one leg back, top of foot on floor.",
+      "Use your hand to gently push the foot further into plantarflexion.",
+      "Hold, then switch sides."
+    ],
+    "why": "The tibialis anterior is the antagonist to the calf complex. After tibialis raises or squat sessions it is loaded isometrically. The kneeling position places the ankle in full plantarflexion - the exact opposite of tibialis contraction - stretching it completely.",
+    "tip": "Pointing the toes while kneeling deepens the stretch into the extensor digitorum and toe extensors."
+  },
+  {
+    "id": "post-it-band",
+    "phase": "post",
+    "priority": 1,
+    "fig": "itBand",
+    "name": "IT Band Cross-Leg Stretch",
+    "targets": "IT Band · TFL · Glute Medius",
+    "muscles": [
+      "abductors"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Stand near a wall for balance.",
+      "Cross the right foot in front of the left.",
+      "Shift your right hip out to the side and lean your torso away.",
+      "Feel the pull along the outer hip and thigh.",
+      "Hold, then switch sides."
+    ],
+    "why": "The IT band is fascia and cannot be stretched - but the TFL and glute medius that feed tension into it can be. After unilateral leg work the TFL is shortened. The cross-leg position creates a lateral pelvic tilt placing the TFL and IT band proximal attachments under passive tension.",
+    "tip": "Extending the arm of the stretching side overhead and reaching away deepens the lateral chain stretch significantly."
+  },
+  {
+    "id": "post-thoracic-extension",
+    "phase": "post",
+    "priority": 1,
+    "fig": "thoracicExt",
+    "name": "Thoracic Extension over Chair/Foam Roller",
+    "targets": "Thoracic Erectors · Mid-Back · Intercostals",
+    "muscles": [
+      "back"
+    ],
+    "reps": "45 sec — 3 spinal segments",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Sit in a chair, place the top of the backrest at your mid-back (T6–T8 region).",
+      "Clasp hands behind your head to support the neck — never pull on it.",
+      "Slowly extend backwards over the edge, letting gravity open the thoracic spine.",
+      "Hold 15 sec, then slide up one vertebra and repeat — work 3 segments total.",
+      "Alternatively, use a foam roller on the floor for the same effect."
+    ],
+    "why": "The 12 thoracic vertebrae should each have approximately 3 degrees of extension. After pressing, rowing, or deadlift work these segments are compressed into flexion. Thoracic extension over a pivot applies a targeted force at a specific vertebral level. Fundamental to shoulder health and breathing mechanics.",
+    "tip": "The thoracic spine is the most under-mobilised region for gym lifters. Every vertebral level has its own stiffness — work each one separately rather than one long passive hold."
+  },
+  {
+    "id": "post-seated-spinal-twist",
+    "phase": "post",
+    "priority": 1,
+    "fig": "spinalTwist",
+    "name": "Seated Spinal Twist",
+    "targets": "Thoracic Rotators · Rhomboids · Obliques · Mid-Trap",
+    "muscles": [
+      "back",
+      "abs"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Sit tall on the floor, both legs extended.",
+      "Bend your right knee and cross it over the left leg, foot flat on the floor.",
+      "Place your left elbow on the outside of the right knee as a lever.",
+      "Rotate your torso to the right as far as comfortable — look over your right shoulder.",
+      "Hold, then switch sides — each exhale, deepen the rotation 2–3°."
+    ],
+    "why": "The rhomboids and mid-trapezius are the most undertreated muscles in back training. They retract the scapula during every rowing movement but are almost never stretched. The seated twist is the most effective single stretch for them — the elbow lever prevents the shoulder from compensating.",
+    "tip": "This is the best single stretch for the rhomboids and mid-traps — muscles that work intensely during all rows and pull-downs but are virtually never stretched directly."
+  },
+  {
+    "id": "post-rhomboid-doorway",
+    "phase": "post",
+    "priority": 2,
+    "fig": "rhomboidDoor",
+    "name": "Doorway Rhomboid Stretch",
+    "targets": "Rhomboids · Mid-Trapezius · Serratus Anterior",
+    "muscles": [
+      "back",
+      "shoulders"
+    ],
+    "reps": "40 sec",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Stand in a doorway or hold a rack upright at hip height with both hands.",
+      "Step back until your arms are fully extended — let your weight hang forward.",
+      "Round your upper back deliberately, letting the shoulder blades spread apart.",
+      "Drop your head between your arms and tuck your chin to your chest.",
+      "Hold and breathe — feel the stretch across the entire upper-mid back."
+    ],
+    "why": "The rhomboids lie between the spine and the medial border of the scapula. To stretch them, the scapulae must protract by rounding the upper back. Most post-workout stretches keep the chest open, which is the wrong direction for rhomboids.",
+    "tip": "The key is rounding the upper back actively — if you stay flat, you get lat stretch, not rhomboid. Think \"cat pose\" through the thoracic spine while hanging."
+  },
+  {
+    "id": "post-cat-stretch-back",
+    "phase": "post",
+    "priority": 2,
+    "fig": "qlStretch",
+    "name": "Kneeling Back Extension Stretch",
+    "targets": "Lumbar Erectors · QL · Thoracolumbar Fascia",
+    "muscles": [
+      "back"
+    ],
+    "reps": "45 sec",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Kneel on all fours, wrists under shoulders, knees under hips.",
+      "Sit your hips back toward your heels while keeping both arms extended forward.",
+      "Walk hands slightly left to target the right side of the lower back, hold 20 sec.",
+      "Walk hands right to target the left QL, hold 20 sec.",
+      "Return to centre and breathe into the lower back for a final 15 sec hold."
+    ],
+    "why": "The quadratus lumborum connects the 12th rib to the iliac crest. It is the primary lumbar stabiliser in all heavy compound lifts. Chronic QL tightness manifests as lateral lower back pain. The lateral arm walkout specifically stretches the QL on the opposite side — something straight child pose misses.",
+    "tip": "The quadratus lumborum (QL) is the most common source of lower back tightness after deadlifts and rows — the lateral walkout is essential, not optional."
+  },
+  {
+    "id": "post-wall-tricep-press",
+    "phase": "post",
+    "priority": 2,
+    "fig": "wallTricep",
+    "name": "Wall Tricep Press Stretch",
+    "targets": "Lateral Head · Lateral Elbow · Anconeus",
+    "muscles": [
+      "triceps"
+    ],
+    "reps": "35 sec / side",
+    "sets": "2 holds",
+    "timer": 35,
+    "steps": [
+      "Stand side-on to a wall, arm extended straight at shoulder height, palm flat on wall.",
+      "Keep elbow locked straight — the stretch is at the lateral elbow and outer tricep.",
+      "Slowly rotate your body away from the wall without bending the elbow.",
+      "You should feel a distinct pull along the outer edge of the upper arm.",
+      "Hold, then switch sides."
+    ],
+    "why": "The lateral head of the triceps only crosses the elbow. Stretching it requires combined shoulder extension and forearm supination under a fixed-elbow condition. The wall press achieves this by pinning the wrist while the body rotates away.",
+    "tip": "This isolates the lateral head specifically — the only stretch that does. Most people have never felt this one before. Go slowly on the first rep."
+  },
+  {
+    "id": "post-behind-back-tricep",
+    "phase": "post",
+    "priority": 2,
+    "fig": "behindTricep",
+    "name": "Behind-Back Tricep Stretch",
+    "targets": "Medial Head · Elbow Joint Capsule · Anconeus",
+    "muscles": [
+      "triceps"
+    ],
+    "reps": "35 sec / side",
+    "sets": "2 holds",
+    "timer": 35,
+    "steps": [
+      "Reach one arm behind your back from below (as if scratching your lower back).",
+      "Use your other hand to gently push the bent elbow toward the centre of your back.",
+      "Keep your chest up — don't hunch forward to compensate.",
+      "You should feel the stretch deep inside the upper arm near the elbow.",
+      "Hold, then switch arms."
+    ],
+    "why": "The medial head is the deepest of the three tricep heads. It can only be fully lengthened when the shoulder is in internal rotation and the elbow is maximally flexed simultaneously. Standard overhead stretches fail to reach this head entirely.",
+    "tip": "The medial head sits deepest of the three heads and is the hardest to isolate. This is the only position that reliably reaches it — don't skip it after high-volume tricep work."
+  },
+  {
+    "id": "post-cross-chest-tricep",
+    "phase": "post",
+    "priority": 2,
+    "fig": "crossTricep",
+    "name": "Cross-Chest Tricep Stretch",
+    "targets": "Lateral Head · Medial Head · Posterior Shoulder",
+    "muscles": [
+      "triceps",
+      "shoulders"
+    ],
+    "reps": "35 sec / side",
+    "sets": "2 holds",
+    "timer": 35,
+    "steps": [
+      "Bring one arm straight across your chest, elbow slightly bent (not the shoulder stretch — lower the arm 10–15°).",
+      "Hook your opposite forearm under the elbow and pull across and slightly downward.",
+      "Externally rotate the working arm (turn palm up) to shift load toward the lateral head.",
+      "Feel the stretch along the back of the upper arm, not the posterior shoulder.",
+      "Hold, switch. If you feel it in the shoulder, lower the arm slightly."
+    ],
+    "why": "The angle is the key variable. At shoulder height this becomes a posterior deltoid stretch. At 10-15 degrees below shoulder height with elbow bent, the line of pull shifts to the lateral and medial tricep heads. External rotation of the forearm further engages the lateral head.",
+    "tip": "The angle distinction matters: arm at shoulder height = posterior deltoid stretch. Arm 10–15° lower with elbow bent = lateral and medial tricep heads. Small adjustment, completely different target."
+  },
+  {
+    "id": "post-floor-chest",
+    "phase": "post",
+    "priority": 2,
+    "fig": "upperPec",
+    "name": "Upper Pec / High-Arm Doorway Stretch",
+    "targets": "Upper Pectoralis (Clavicular Head) · Anterior Deltoid",
+    "muscles": [
+      "chest",
+      "shoulders"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Stand in a doorframe. Place your arm high — elbow above shoulder height on the frame.",
+      "Step through and rotate your chest away until you feel the stretch high near the collarbone.",
+      "This is distinct from the mid-pec version — the elevated arm position is essential.",
+      "Alternative: lie face down, place palm beside chest and gently push the torso up, hips down.",
+      "Hold, breathe, and switch sides."
+    ],
+    "why": "The pectoralis major clavicular head runs at roughly 30 degrees upward from the sternum to the humerus. To stretch it, the arm must be elevated above shoulder level. Standard doorway stretches at shoulder height miss this head almost entirely, leaving the upper pec chronically shortened after incline pressing.",
+    "tip": "Most people only stretch the mid pec. The clavicular head runs from the collarbone — you must raise the arm above shoulder level to reach it. Three different arm heights = three different pec regions."
+  },
+  {
+    "id": "post-pec-minor",
+    "phase": "post",
+    "priority": 2,
+    "fig": "pecMinor",
+    "name": "Pec Minor / Low-Arm Chest Stretch",
+    "targets": "Pectoralis Minor · Lower Pec (Costal Head) · Serratus Anterior",
+    "muscles": [
+      "chest",
+      "shoulders"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Stand beside a wall. Place your arm low — hand at hip height, elbow pointing behind you.",
+      "Lean your body forward and away from the wall, rotating the chest open.",
+      "Feel the stretch low across the pec toward the lower ribs — not the front of the shoulder.",
+      "Add a slight forward body lean to increase tension on the pec minor.",
+      "Hold, then switch sides."
+    ],
+    "why": "The pec minor is a separate muscle from the pec major, running from the 3rd-5th ribs to the coracoid process. Its action is to pull the scapula forward and downward. After pressing it is shortened and compresses the brachial plexus. It is a primary cause of rounded shoulders in gym lifters.",
+    "tip": "The pec minor sits underneath the pec major — it pulls the shoulder blade forward and down. Bench press shortens it chronically and it's a primary cause of rounded shoulders. Most stretching routines miss it entirely."
+  },
+  {
+    "id": "post-prayer-stretch",
+    "phase": "post",
+    "priority": 2,
+    "fig": "prayerStr",
+    "name": "Prayer & Reverse Prayer Stretch",
+    "targets": "Pronator Teres · Forearm Flexors · Wrist Flexors · Supinator",
+    "muscles": [
+      "forearms"
+    ],
+    "reps": "30 sec / position",
+    "sets": "2 holds",
+    "timer": 30,
+    "steps": [
+      "Prayer: press palms together in front of your chest, fingers pointing up.",
+      "Slowly lower your joined hands toward your waist while keeping palms pressed — feel the wrist flexors and pronators.",
+      "Reverse prayer: flip hands so fingers point down, backs of hands together.",
+      "Gently lift the reversed hands toward your chest — stretches the extensors and supinator.",
+      "Hold each position 30 seconds."
+    ],
+    "why": "Prayer position stretches the wrist flexors and pronators simultaneously. Reverse prayer is one of the only positions that reaches the supinator muscle, chronically shortened by hammer curls and neutral-grip pulling.",
+    "tip": "Reverse prayer is one of the only positions that reaches the supinator muscle directly — critical after heavy curls, chin-ups, or any supination-heavy movement."
+  },
+  {
+    "id": "post-supination-stretch",
+    "phase": "post",
+    "priority": 2,
+    "fig": "supinationStr",
+    "name": "Passive Supination Stretch",
+    "targets": "Pronator Teres · Pronator Quadratus · Brachioradialis",
+    "muscles": [
+      "forearms",
+      "biceps"
+    ],
+    "reps": "35 sec / side",
+    "sets": "2 holds",
+    "timer": 35,
+    "steps": [
+      "Extend one arm in front at shoulder height, elbow locked, palm facing down (pronated).",
+      "Use your other hand to grasp the back of the extended wrist.",
+      "Gently rotate the forearm palm-up (supination), assisting with the gripping hand.",
+      "Hold at end range — feel the stretch in the outer forearm below the elbow.",
+      "Hold, then switch arms."
+    ],
+    "why": "The pronator teres is chronically shortened in anyone who grips heavily. When shortened it not only limits forearm supination but also compresses the median nerve in the proximal forearm - a common cause of forearm fatigue and numbness during high-rep pulling work.",
+    "tip": "The pronator teres is chronically shortened in anyone who grips heavily. Releasing it improves both bicep peak contraction and wrist comfort significantly."
+  },
+  {
+    "id": "post-chin-tuck",
+    "phase": "post",
+    "priority": 1,
+    "fig": "chinTuck",
+    "name": "Chin Tuck (Suboccipital Release)",
+    "targets": "Cervical Extensors · Suboccipital Muscles · Upper Traps",
+    "muscles": [
+      "neck",
+      "traps"
+    ],
+    "reps": "30 sec × 3 reps",
+    "sets": "3 holds",
+    "timer": 30,
+    "steps": [
+      "Sit or stand tall with shoulders back and down.",
+      "Draw your chin straight back — not downward, directly backward — making a \"double chin\".",
+      "Place two fingers on your chin and gently apply backward pressure.",
+      "You should feel a stretch at the base of your skull and upper neck.",
+      "Hold 30 seconds, release fully, repeat 3 times."
+    ],
+    "why": "The suboccipital muscles at the base of the skull are the most chronically tight group in the human body. They work isometrically in virtually every exercise to maintain head position against load. After any heavy traps or overhead work these muscles are in acute protective tension.",
+    "tip": "The suboccipital muscles at the base of the skull are the most chronically tight group for anyone doing overhead pressing or heavy traps — and almost never stretched. This is their direct fix."
+  },
+  {
+    "id": "post-neck-extension",
+    "phase": "post",
+    "priority": 2,
+    "fig": "neckFlex",
+    "name": "Neck Flexor Stretch",
+    "targets": "Cervical Flexors · Sternohyoid · Anterior Neck",
+    "muscles": [
+      "neck"
+    ],
+    "reps": "30 sec",
+    "sets": "2 holds",
+    "timer": 30,
+    "steps": [
+      "Sit tall. Place one hand gently on your chest/collarbone to anchor the skin.",
+      "Slowly tilt your head back, leading with your chin toward the ceiling.",
+      "Keep your mouth closed — don't let your jaw hang open.",
+      "Feel a gentle stretch along the front of the throat and anterior neck.",
+      "Hold, return slowly, and repeat."
+    ],
+    "why": "The anterior neck flexors are shortened during any exercise where the chin is tucked or the head pushed forward. Un-stretched, they contribute to forward-head posture that progressively loads the cervical spine with extra effective head weight per centimetre of forward displacement.",
+    "tip": "The anterior neck flexors shorten during any exercise where you brace or tuck your chin. This counters the forward-head posture exaggerated by heavy lifting."
+  },
+  {
+    "id": "post-scm-stretch",
+    "phase": "post",
+    "priority": 2,
+    "fig": "scmStr",
+    "name": "SCM Stretch",
+    "targets": "Sternocleidomastoid · Scalenes · Anterior Neck",
+    "muscles": [
+      "neck"
+    ],
+    "reps": "30 sec / side",
+    "sets": "2 holds",
+    "timer": 30,
+    "steps": [
+      "Sit tall. Place one hand on your collarbone on the side to be stretched.",
+      "Tilt your head back and to the opposite side simultaneously.",
+      "Rotate your chin slightly upward and away from the stretching side.",
+      "Feel a distinct pull along the diagonal rope-like muscle on the side of your neck.",
+      "Hold gently — this muscle responds to light sustained pressure, not force. Switch sides."
+    ],
+    "why": "The SCM runs from the sternum and clavicle to the mastoid process. After heavy trap and overhead pressing work it goes into protective tension. Chronic SCM tightness causes restricted cervical rotation, jaw tension, and headaches.",
+    "tip": "SCM tightness causes headaches, jaw tension, and restricted rotation — common after heavy trap or shrug sessions. Light pressure held for 60 seconds outperforms aggressive stretching here."
+  },
+  {
+    "id": "post-seated-hamstring",
+    "phase": "post",
+    "priority": 2,
+    "fig": "seatedHam",
+    "name": "Seated Hamstring Stretch",
+    "targets": "Semimembranosus · Semitendinosus · Medial Hamstrings",
+    "muscles": [
+      "hamstrings"
+    ],
+    "reps": "45 sec / side",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Sit on the floor, one leg extended, the other foot tucked to inner thigh (hurdle position).",
+      "Hinge forward at the hips — keep your back flat, not rounded.",
+      "Reach toward your extended foot, holding wherever you can reach without rounding.",
+      "For a medial bias: slightly internally rotate the extended leg (toes pointing slightly inward).",
+      "Hold and breathe — deepen with each exhale. Switch sides."
+    ],
+    "why": "The medial hamstrings and the lateral hamstring have different attachment points at the knee and require different leg rotation angles. Internal leg rotation biases the medial group — the most common source of posterior knee tightness after leg curls and RDLs.",
+    "tip": "Internal rotation targets the medial hamstrings (semimembranosus and semitendinosus). External rotation shifts to the biceps femoris. Your standing hamstring stretch only hits one angle — you need both."
+  },
+  {
+    "id": "post-lying-hamstring",
+    "phase": "post",
+    "priority": 2,
+    "fig": "lyingHam",
+    "name": "Supine Lying Hamstring Stretch",
+    "targets": "Biceps Femoris (Long & Short Head) · Sciatic Nerve Floss",
+    "muscles": [
+      "hamstrings",
+      "glutes"
+    ],
+    "reps": "45 sec / side",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Lie on your back, one leg flat on the floor.",
+      "Raise the other leg, holding behind the thigh or calf (or use a towel around the foot).",
+      "Keep the raised leg as straight as comfortable — flex the foot (toes back) for more intensity.",
+      "For biceps femoris: externally rotate the leg slightly (toes point outward).",
+      "Hold, lower slowly, switch sides."
+    ],
+    "why": "The lying position decompresses the lumbar spine while stretching, making it safer after heavy deadlift sessions. The external leg rotation targets the biceps femoris — the most commonly injured hamstring muscle in gym training.",
+    "tip": "The lying position decompresses the lumbar spine while stretching — safer and often more effective than standing versions after heavy deadlift or squat sessions. The external rotation targets the lateral hamstring (biceps femoris) specifically."
+  },
+  {
+    "id": "post-pigeon-pose",
+    "phase": "post",
+    "priority": 1,
+    "fig": "pigeonPose",
+    "name": "Pigeon Pose",
+    "targets": "Glute Medius · Glute Minimus · Piriformis · Hip External Rotators",
+    "muscles": [
+      "abductors",
+      "glutes"
+    ],
+    "reps": "60 sec / side",
+    "sets": "2 holds",
+    "timer": 60,
+    "steps": [
+      "From all fours, bring your right knee forward behind your right wrist.",
+      "Slide your right foot toward your left hand — more horizontal shin = deeper stretch.",
+      "Extend the left leg straight back, top of foot on the floor.",
+      "Lower your hips toward the floor evenly — use a folded towel under the right hip if needed.",
+      "Hold upright or fold forward over the front leg. Switch sides."
+    ],
+    "why": "The glute medius and minimus are critical pelvis stabilisers. Pigeon achieves the specific combination of hip flexion, external rotation, and abduction that fully lengthens the glute medius at its ilium origin. No standing stretch approximates this depth.",
+    "tip": "Pigeon pose is the gold standard for glute med and min. The IT band cross-leg stretch is a quick standing approximation — pigeon is the full version. After heavy squats or leg press, this should be non-negotiable."
+  },
+  {
+    "id": "post-sidelying-abductor",
+    "phase": "post",
+    "priority": 2,
+    "fig": "sideLyingAbd",
+    "name": "Side-Lying Abductor Stretch",
+    "targets": "TFL · Glute Medius · IT Band (Proximal Origin)",
+    "muscles": [
+      "abductors"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Lie on your right side, legs stacked, right knee bent for stability.",
+      "Raise your left leg and bring it forward, letting it drop toward the floor in front of you.",
+      "The left hip rolls forward — feel the stretch along the outer left hip and TFL.",
+      "For more intensity, use your hand to press the knee further toward the floor.",
+      "Hold, then switch sides."
+    ],
+    "why": "The TFL originates at the anterior superior iliac spine and inserts into the IT band. The side-lying position allows the hip to roll into adduction and slight internal rotation — the exact opposite of TFL action — stretching it at its ASIS origin.",
+    "tip": "This isolates the TFL at its origin near the hip — something the standing IT band cross doesn't fully reach. Essential after abductor machine or wide-stance squat sessions."
+  },
+  {
+    "id": "post-downward-dog",
+    "phase": "post",
+    "priority": 2,
+    "fig": "downDog",
+    "name": "Downward Dog Calf Stretch",
+    "targets": "Gastrocnemius (Both Heads) · Achilles Tendon · Hamstrings",
+    "muscles": [
+      "calves",
+      "hamstrings"
+    ],
+    "reps": "45 sec",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Start in a push-up plank position.",
+      "Push hips up and back to form an inverted V shape.",
+      "Press both heels toward the floor — they don't need to touch, just reach.",
+      "Pedal the heels alternately for the first 20 seconds to loosen both sides.",
+      "Then hold both heels down simultaneously for the final 25 seconds."
+    ],
+    "why": "Downward dog provides bilateral gastrocnemius stretch with knees fully extended. Body weight provides consistent progressive tension. The inverted position also decompresses the ankle joint from below, allowing the Achilles to lengthen without compressive standing load.",
+    "tip": "Downward dog stretches the gastrocnemius with the knee straight. The wall calf stretch is often done with too much knee bend, accidentally targeting the soleus instead — this is the dedicated gastroc version."
+  },
+  {
+    "id": "post-seated-towel-calf",
+    "phase": "post",
+    "priority": 2,
+    "fig": "soleus",
+    "name": "Seated Bent-Knee Soleus Stretch",
+    "targets": "Soleus · Achilles Tendon (Distal) · Posterior Tibialis",
+    "muscles": [
+      "calves"
+    ],
+    "reps": "45 sec / side",
+    "sets": "2 holds",
+    "timer": 45,
+    "steps": [
+      "Sit on the floor with one leg extended and a towel or band looped around the ball of your foot.",
+      "Bend the knee of the stretching leg to 20–30° — this removes the gastrocnemius from the equation.",
+      "Pull the towel to dorsiflex your foot (toes toward shin) with the knee bent.",
+      "Feel the stretch deep and low in the calf, closer to the ankle than the wall version.",
+      "Hold, then switch sides."
+    ],
+    "why": "The soleus originates below the knee on the posterior tibia and fibula. Because it does not cross the knee, it is completely unaffected by knee position in most stretches. With the knee bent, the gastrocnemius goes slack and the soleus becomes the limiting structure.",
+    "tip": "The soleus only fully stretches when the knee is bent — it attaches below the knee unlike the gastrocnemius. Straight-leg stretches miss it almost entirely. This is the fix for persistent ankle stiffness."
+  },
+  {
+    "id": "post-seated-toe-ext",
+    "phase": "post",
+    "priority": 2,
+    "fig": "toeExt",
+    "name": "Seated Toe Extension Stretch",
+    "targets": "Extensor Digitorum Longus · Extensor Hallucis · Anterior Shin",
+    "muscles": [
+      "shins"
+    ],
+    "reps": "35 sec / side",
+    "sets": "2 holds",
+    "timer": 35,
+    "steps": [
+      "Sit in a chair. Cross one foot over the opposite knee.",
+      "Hold the top of your foot and gently curl all toes downward (plantarflex them).",
+      "Then use your other hand to push the entire foot into plantarflexion (pointing the foot).",
+      "Feel the stretch along the top of the foot and running up the shin.",
+      "Hold, then switch feet."
+    ],
+    "why": "The extensor digitorum longus and extensor hallucis longus are heavily loaded in tibialis raises and work requiring sustained dorsiflexion. This stretch targets the toe extensors specifically — they have a different line of pull from the tibialis anterior.",
+    "tip": "The extensor digitorum and hallucis longus lift your toes during dorsiflexion. They're heavily loaded in tibialis raises and running — this is their direct release, distinct from the kneeling shin stretch which targets the tibialis anterior."
+  },
+  {
+    "id": "post-dorsiflexion-wall",
+    "phase": "post",
+    "priority": 2,
+    "fig": "dorsiflex",
+    "name": "Wall Ankle Dorsiflexion Stretch",
+    "targets": "Tibialis Anterior · Ankle Joint Capsule · Peroneals",
+    "muscles": [
+      "shins",
+      "calves"
+    ],
+    "reps": "40 sec / side",
+    "sets": "2 holds",
+    "timer": 40,
+    "steps": [
+      "Stand facing a wall, about 10 cm away. Place one foot forward, toes touching the wall.",
+      "Keeping the heel flat on the floor, drive your knee toward the wall.",
+      "Move your foot back from the wall to increase the stretch on the anterior ankle.",
+      "This tests and develops ankle dorsiflexion range — the most important single ankle motion.",
+      "Hold, then switch sides."
+    ],
+    "why": "If the knee cannot reach the wall with the foot 10 cm back, the ankle joint capsule is restricted — not just the calf muscles. Joint capsule restriction does not respond to calf stretches; it requires direct joint mobilisation under dorsiflexion load.",
+    "tip": "If your knee can't reach the wall with your foot 10 cm back, your ankle mobility is meaningfully restricted — a direct contributor to knee caving during squats. Work this daily until you can pass it comfortably."
+  }
+]
