@@ -406,6 +406,107 @@ body {
   letter-spacing:.5px;
 }
 
+
+/* ── THEME SECTION ── */
+.theme-preview {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin:28px 0 8px;
+}
+.theme-card {
+  border-radius:10px;
+  overflow:hidden;
+  border:1px solid transparent;
+}
+.theme-card.dark  { background:#07080f; border-color:#1e1f30; }
+.theme-card.light { background:#f2f4f8; border-color:#d0d4de; }
+.tc-bar {
+  padding:10px 14px;
+  display:flex; align-items:center; gap:8px;
+  border-bottom:1px solid transparent;
+}
+.theme-card.dark  .tc-bar { background:#0d0e1a; border-color:#1e1f30; }
+.theme-card.light .tc-bar { background:#ffffff; border-color:#d0d4de; }
+.tc-dot {
+  width:7px; height:7px; border-radius:50%;
+}
+.tc-logo-flex { font-weight:900; font-size:13px; }
+.theme-card.dark  .tc-logo-flex { color:#f0f0f8; }
+.theme-card.light .tc-logo-flex { color:#0d0f1a; }
+.tc-logo-flow { font-weight:900; font-size:13px; color:#4a9eff; }
+.tc-body { padding:12px 14px; display:flex; flex-direction:column; gap:8px; }
+.tc-muscle-row { display:flex; gap:5px; flex-wrap:wrap; }
+.tc-chip {
+  font-size:8px; font-weight:700; letter-spacing:.5px;
+  padding:3px 7px; border-radius:3px;
+  font-family:'JetBrains Mono',monospace;
+}
+.tc-chip.selected.dark  { background:rgba(74,158,255,.12); color:#4a9eff; border:1px solid rgba(74,158,255,.28); }
+.tc-chip.selected.light { background:rgba(21,101,168,.1);  color:#1565a8; border:1px solid rgba(21,101,168,.28); }
+.tc-chip.plain.dark     { background:#111220; color:#585870; border:1px solid #1e1f30; }
+.tc-chip.plain.light    { background:#edf0f5; color:#7a7d96; border:1px solid #d0d4de; }
+.tc-card {
+  border-radius:5px;
+  padding:10px 12px;
+}
+.tc-card.dark  { background:#0d0e1a; border:1px solid #1e1f30; }
+.tc-card.light { background:#ffffff; border:1px solid #d0d4de; }
+.tc-phase {
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px; letter-spacing:1.5px;
+  font-weight:700; margin-bottom:6px;
+}
+.tc-phase.act.dark  { color:#fbbf24; }
+.tc-phase.act.light { color:#b45309; }
+.tc-phase.pre.dark  { color:#4a9eff; }
+.tc-phase.pre.light { color:#1565a8; }
+.tc-ex { font-size:10px; font-weight:700; margin-bottom:2px; }
+.tc-card.dark  .tc-ex { color:#f0f0f8; }
+.tc-card.light .tc-ex { color:#0d0f1a; }
+.tc-sub { font-size:8px; }
+.tc-card.dark  .tc-sub { color:#9494b0; }
+.tc-card.light .tc-sub { color:#3a3d52; }
+.tc-badge {
+  display:inline-block; font-size:7px; font-weight:700;
+  padding:2px 6px; border-radius:2px; margin-top:5px;
+  font-family:'JetBrains Mono',monospace; letter-spacing:.5px;
+}
+.tc-badge.act.dark  { background:rgba(251,191,36,.1);  color:#fbbf24; border:1px solid rgba(251,191,36,.25); }
+.tc-badge.act.light { background:rgba(180,83,9,.08);   color:#b45309; border:1px solid rgba(180,83,9,.22); }
+.tc-badge.pre.dark  { background:rgba(74,158,255,.12); color:#4a9eff; border:1px solid rgba(74,158,255,.28); }
+.tc-badge.pre.light { background:rgba(21,101,168,.1);  color:#1565a8; border:1px solid rgba(21,101,168,.28); }
+.tc-footer {
+  padding:8px 14px;
+  display:flex; gap:6px;
+  border-top:1px solid transparent;
+}
+.theme-card.dark  .tc-footer { border-color:#1e1f30; }
+.theme-card.light .tc-footer { border-color:#d0d4de; }
+.tc-nav {
+  flex:1; text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:7px; letter-spacing:.5px;
+  padding:4px 0;
+}
+.tc-nav.on.dark  { color:#4a9eff; }
+.tc-nav.on.light { color:#1565a8; }
+.tc-nav.off.dark  { color:#585870; }
+.tc-nav.off.light { color:#7a7d96; }
+.tc-mode-label {
+  text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; letter-spacing:1px;
+  margin-top:10px; margin-bottom:4px;
+}
+.tc-mode-label.dark  { color:#585870; }
+.tc-mode-label.light { color:#7a7d96; }
+.tc-moon { font-size:14px; }
+@media(max-width:500px){
+  .theme-preview { grid-template-columns:1fr 1fr; gap:10px; }
+  .tc-logo-flex, .tc-logo-flow { font-size:11px; }
+}
+
 </style>
 </head>
 <body>
@@ -638,6 +739,103 @@ body {
       <div>
         <div class="step-title">Library search</div>
         <div class="step-text">Browse all 126 exercises in the Library tab. Search by name or muscle group to find specific movements, see their instructions, and add them to your plan manually.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- THEME SECTION -->
+<div class="section">
+  <div class="section-eye">Appearance</div>
+  <h2 class="section-title">Dark mode.<br><em>Light mode.</em></h2>
+  <p class="section-sub">FlexFlow is designed for both. Switch anytime using the Theme button in the bottom nav — your preference is saved automatically.</p>
+
+  <div class="theme-preview">
+
+    <!-- DARK MODE CARD -->
+    <div class="theme-card dark">
+      <div class="tc-bar">
+        <div class="tc-dot" style="background:#4a9eff"></div>
+        <span class="tc-logo-flex">Flex</span><span class="tc-logo-flow">Flow</span>
+      </div>
+      <div class="tc-body">
+        <div class="tc-muscle-row">
+          <span class="tc-chip selected dark">Chest</span>
+          <span class="tc-chip selected dark">Shoulders</span>
+          <span class="tc-chip plain dark">Back</span>
+          <span class="tc-chip plain dark">Biceps</span>
+        </div>
+        <div class="tc-card dark">
+          <div class="tc-phase act dark">● ACTIVATION</div>
+          <div class="tc-ex">Band Chest Warm-Up</div>
+          <div class="tc-sub">Pec Minor · Serratus Anterior</div>
+          <span class="tc-badge act dark">ACTIVATION</span>
+        </div>
+        <div class="tc-card dark">
+          <div class="tc-phase pre dark">● PRE-WORKOUT</div>
+          <div class="tc-ex">Arm Circles</div>
+          <div class="tc-sub">Chest · Shoulders · Biceps</div>
+          <span class="tc-badge pre dark">DYNAMIC</span>
+        </div>
+      </div>
+      <div class="tc-footer">
+        <div class="tc-nav on dark">PLANNER</div>
+        <div class="tc-nav off dark">SAVED</div>
+        <div class="tc-nav off dark">LIBRARY</div>
+        <div class="tc-nav off dark">🌙</div>
+      </div>
+    </div>
+
+    <!-- LIGHT MODE CARD -->
+    <div class="theme-card light">
+      <div class="tc-bar">
+        <div class="tc-dot" style="background:#1565a8"></div>
+        <span class="tc-logo-flex">Flex</span><span class="tc-logo-flow" style="color:#1565a8">Flow</span>
+      </div>
+      <div class="tc-body">
+        <div class="tc-muscle-row">
+          <span class="tc-chip selected light">Chest</span>
+          <span class="tc-chip selected light">Shoulders</span>
+          <span class="tc-chip plain light">Back</span>
+          <span class="tc-chip plain light">Biceps</span>
+        </div>
+        <div class="tc-card light">
+          <div class="tc-phase act light">● ACTIVATION</div>
+          <div class="tc-ex">Band Chest Warm-Up</div>
+          <div class="tc-sub">Pec Minor · Serratus Anterior</div>
+          <span class="tc-badge act light">ACTIVATION</span>
+        </div>
+        <div class="tc-card light">
+          <div class="tc-phase pre light">● PRE-WORKOUT</div>
+          <div class="tc-ex">Arm Circles</div>
+          <div class="tc-sub">Chest · Shoulders · Biceps</div>
+          <span class="tc-badge pre light">DYNAMIC</span>
+        </div>
+      </div>
+      <div class="tc-footer">
+        <div class="tc-nav on light">PLANNER</div>
+        <div class="tc-nav off light">SAVED</div>
+        <div class="tc-nav off light">LIBRARY</div>
+        <div class="tc-nav off light">☀</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="steps" style="margin-top:24px">
+    <div class="step">
+      <div class="step-num">◉</div>
+      <div>
+        <div class="step-title">Switch anytime</div>
+        <div class="step-text">Tap the Theme button in the bottom navigation bar. Your preference is saved — the app opens in the same mode next time.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">◉</div>
+      <div>
+        <div class="step-title">Designed for both</div>
+        <div class="step-text">Every colour, contrast, and highlight is tuned separately for dark and light mode. The gold activation colour, steel blue pre-workout, and emerald post-workout all adapt cleanly.</div>
       </div>
     </div>
   </div>
