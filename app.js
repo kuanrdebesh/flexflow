@@ -144,6 +144,12 @@ var IMAGE_STRETCHES = {
   'Post-Workout' : 'images/Post-Workout.png',
   'post-scm-stretch' : 'images/post-scm-stretch.png',
   'act-adduc-band-walk' : 'images/act-adduc-band-walk.png',
+  'post-90-90-hip' : 'images/post-90-90-hip.png',
+  'post-frog-pose' : 'images/post-frog-pose.png',
+  'post-seated-runners' : 'images/post-seated-runners.png',
+  'pre-90-90-hip' : 'images/pre-90-90-hip.png',
+  'pre-frog-pulses' : 'images/pre-frog-pulses.png',
+  'pre-lunge-to-hamstring' : 'images/pre-lunge-to-hamstring.png',
 };
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
