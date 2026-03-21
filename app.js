@@ -273,11 +273,8 @@ function clearAll() {
 // Greedily picks stretches that maximise new muscles covered.
 // maxPer = approximate max items to return
 function optimisedSelect(candidates, muscles, maxPer, shuffle) {
-  // When shuffle=true, randomise within equal-coverage groups
-  // so same muscles/mode gives a different valid plan each time
   var list = candidates.slice();
   if (shuffle) {
-    // Sort by coverage DESC but randomly break ties within same score
     list.sort(function(a, b) {
       var diff = b.covers.length - a.covers.length;
       if (diff !== 0) return diff;
@@ -288,29 +285,23 @@ function optimisedSelect(candidates, muscles, maxPer, shuffle) {
   var covered = {};
   var selected = [];
 
-  // First pass: take items with highest unique new coverage
+  // First pass: coverage-based selection up to maxPer
   list.forEach(function(s) {
     if (selected.length >= maxPer) return;
     var newCoverage = s.covers.filter(function(m){ return !covered[m]; }).length;
-    if (newCoverage > 0 || selected.length < 2) {
+    if (newCoverage > 0) {
       selected.push(s);
       s.covers.forEach(function(m){ covered[m] = true; });
     }
   });
 
-  // Second pass: if not all muscles covered yet and we have budget, add more
-  var stillUncovered = muscles.filter(function(m){ return !covered[m]; });
-  if (stillUncovered.length > 0) {
-    list.forEach(function(s) {
-      if (selected.indexOf(s) >= 0) return;
-      if (selected.length >= maxPer + 2) return;
-      var coversUncovered = s.covers.filter(function(m){ return !covered[m]; }).length;
-      if (coversUncovered > 0) {
-        selected.push(s);
-        s.covers.forEach(function(m){ covered[m] = true; });
-      }
-    });
-  }
+  // Second pass: fill remaining budget from pool regardless of coverage
+  // This ensures single-muscle selections get enough exercises
+  list.forEach(function(s) {
+    if (selected.length >= maxPer) return;
+    if (selected.indexOf(s) >= 0) return;
+    selected.push(s);
+  });
 
   return selected;
 }
@@ -338,17 +329,25 @@ function shufflePlan() {
   });
 
   var act, pre, post;
+  var n = muscles.length;
+  var qCapAct  = Math.max(2, Math.min(n * 2, 8));
+  var qCapPre  = Math.max(2, Math.min(n * 1, 6));
+  var qCapPost = Math.max(3, Math.min(n * 1, 8));
+  var oCapAct  = Math.max(3, Math.min(n * 2, 12));
+  var oCapPre  = Math.max(3, Math.min(n * 2, 10));
+  var oCapPost = Math.max(4, Math.min(n * 2, 14));
+
   if (d === 'quick') {
     var qAct  = allAct.filter(function(s){ return (s.priority||1) === 1; });
     var qPre  = allPre.filter(function(s){ return (s.priority||1) === 1; });
     var qPost = allPost.filter(function(s){ return (s.priority||1) === 1; });
-    act  = optimisedSelect(qAct,  muscles, 2, true);
-    pre  = optimisedSelect(qPre,  muscles, 3, true);
-    post = optimisedSelect(qPost, muscles, 4, true);
+    act  = optimisedSelect(qAct,  muscles, qCapAct,  true);
+    pre  = optimisedSelect(qPre,  muscles, qCapPre,  true);
+    post = optimisedSelect(qPost, muscles, qCapPost, true);
   } else if (d === 'optimised') {
-    act  = optimisedSelect(allAct,  muscles, 4, true);
-    pre  = optimisedSelect(allPre,  muscles, 5, true);
-    post = optimisedSelect(allPost, muscles, 7, true);
+    act  = optimisedSelect(allAct,  muscles, oCapAct,  true);
+    pre  = optimisedSelect(allPre,  muscles, oCapPre,  true);
+    post = optimisedSelect(allPost, muscles, oCapPost, true);
   } else {
     // Detailed: shuffle the order
     allAct.sort(function(){ return Math.random() - 0.5; });
@@ -393,22 +392,28 @@ function generate() {
   allPre.sort(function(a,b){ return b.covers.length - a.covers.length; });
   allPost.sort(function(a,b){ return b.covers.length - a.covers.length; });
 
+  // Dynamic caps: scale with number of muscles selected
+  // min 2 per phase for single muscle, up to reasonable max for full body
+  var n = muscles.length;
+  var qCapAct  = Math.max(2, Math.min(n * 2, 8));
+  var qCapPre  = Math.max(2, Math.min(n * 1, 6));
+  var qCapPost = Math.max(3, Math.min(n * 1, 8));
+  var oCapAct  = Math.max(3, Math.min(n * 2, 12));
+  var oCapPre  = Math.max(3, Math.min(n * 2, 10));
+  var oCapPost = Math.max(4, Math.min(n * 2, 14));
+
   if (depth === 'quick') {
-    // Minimum effective dose — smart selection, tight caps
-    // p1 candidates only, then pick highest coverage
     var qAct  = allAct.filter(function(s){ return (s.priority||1) === 1; });
     var qPre  = allPre.filter(function(s){ return (s.priority||1) === 1; });
     var qPost = allPost.filter(function(s){ return (s.priority||1) === 1; });
-    act  = optimisedSelect(qAct,  muscles, 2);
-    pre  = optimisedSelect(qPre,  muscles, 3);
-    post = optimisedSelect(qPost, muscles, 4);
+    act  = optimisedSelect(qAct,  muscles, qCapAct);
+    pre  = optimisedSelect(qPre,  muscles, qCapPre);
+    post = optimisedSelect(qPost, muscles, qCapPost);
   } else if (depth === 'optimised') {
-    // Best return on time — smart selection, medium caps, all priorities
-    act  = optimisedSelect(allAct,  muscles, 4);
-    pre  = optimisedSelect(allPre,  muscles, 5);
-    post = optimisedSelect(allPost, muscles, 7);
+    act  = optimisedSelect(allAct,  muscles, oCapAct);
+    pre  = optimisedSelect(allPre,  muscles, oCapPre);
+    post = optimisedSelect(allPost, muscles, oCapPost);
   } else {
-    // Detailed: everything, sorted by coverage
     act  = allAct;
     pre  = allPre;
     post = allPost;
