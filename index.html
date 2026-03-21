@@ -897,16 +897,21 @@ body.light .lib-search:focus { border-color:var(--a1); }
 
 /* ── SHUFFLE BUTTON ── */
 .btn-shuffle {
-  width:30px; height:30px;
+  height:30px;
+  padding:0 12px;
   background:transparent;
   border:1px solid var(--bd2);
   border-radius:3px;
   color:var(--text2);
-  font-size:16px;
+  font-size:9px;
+  font-family:'JetBrains Mono',monospace;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
   cursor:pointer;
-  display:flex; align-items:center; justify-content:center;
+  display:flex; align-items:center; gap:5px;
   transition:all .15s;
-  line-height:1;
+  white-space:nowrap;
 }
 .btn-shuffle:hover {
   color:var(--a1);
