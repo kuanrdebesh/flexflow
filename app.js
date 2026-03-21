@@ -69,6 +69,18 @@ var IMAGE_STRETCHES = {
   'act-glutes-clamshell' : 'images/act-glutes-clamshell.png',
   'act-glutes-db-rdl-light' : 'images/act-glutes-db-rdl-light.png',
   'act-glutes-band-walk' : 'images/act-glutes-band-walk.png',
+  'act-abduc-band-clamshell' : 'images/act-abduc-band-clamshell.png',
+  'act-abduc-band-squat-walk' : 'images/act-abduc-band-squat-walk.png',
+  'act-abduc-db-side-lunge' : 'images/act-abduc-db-side-lunge.png',
+  'act-abduc-side-lying-raise' : 'images/act-abduc-side-lying-raise.png',
+  'act-adduc-db-sumo' : 'images/act-adduc-db-sumo.png',
+  'act-adduc-lateral-lunge' : 'images/act-adduc-lateral-lunge.png',
+  'act-adduc-sumo-squat-bw' : 'images/act-adduc-sumo-squat-bw.png',
+  'act-calves-band-flex' : 'images/act-calves-band-flex.png',
+  'act-calves-db-raise-seated' : 'images/act-calves-db-raise-seated.png',
+  'act-calves-raise-slow' : 'images/act-calves-raise-slow.png',
+  'act-calves-single-leg' : 'images/act-calves-single-leg.png',
+  'act-shins-tib-raise' : 'images/act-shins-tib-raise.png',
 };
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
