@@ -18,6 +18,17 @@ var editingPlanId = null;
 // e.g. 'post-pigeon-pose': 'images/post-pigeon-pose.jpg'
 var IMAGE_STRETCHES = {
   'act-chest-band-pullaway': 'images/act-chest-band-pullaway.png',
+  'act-chest-pushup-plus' : 'images/act-chest-pushup-plus.png',
+  'act-chest-db-fly-light' : 'images/act-chest-db-fly-light.png',
+  'act-chest-band-crossover' : 'images/act-chest-band-crossover.png',
+  'act-shoulder-ext-rot' : 'images/act-shoulder-ext-rot.png',
+  'act-shoulder-int-rot' : 'images/act-shoulder-int-rot.png',
+  'act-shoulder-band-yt' : 'images/act-shoulder-band-yt.png',
+  'act-shoulder-db-lr' : 'images/act-shoulder-db-lr.png',
+  'act-traps-shrug-light' : 'images/act-traps-shrug-light.png',
+  'act-traps-band-pullapart' : 'images/act-traps-band-pullapart.png',
+  'act-traps-facepull-band' : 'images/act-traps-facepull-band.png',
+  'act-traps-scap-retraction' : 'images/act-traps-scap-retraction.png'
 };
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
