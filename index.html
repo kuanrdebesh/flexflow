@@ -260,7 +260,7 @@ button{font-family:'Epilogue',sans-serif;}
 .cb-sec .flip-exp-btn{font-size:8px;color:var(--post);cursor:pointer;margin-left:6px;font-weight:400;}
 
 /* VIZ FLIP (expanded) */
-.viz-flip{width:160px;height:160px;perspective:600px;margin-bottom:8px;position:relative;}
+.viz-flip{width:160px;height:200px;perspective:600px;margin-bottom:8px;position:relative;flex-shrink:0;}
 .viz-flip .flip-inner{position:relative;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.4,0,.2,1);min-height:100px;}
 .viz-flip.flipped .flip-inner{transform:rotateY(180deg);}
 .viz-flip .flip-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:3px;background:var(--s3);border:1px solid var(--bd2);}
@@ -651,6 +651,7 @@ button{font-family:'Epilogue',sans-serif;}
   .viz-reps { font-size:10px; }
   .viz-covers-lbl { font-size:9px; }
   .vc-tag { font-size:10px; }
+  .viz-flip { width:120px; height:150px; margin:0 auto 8px; }
   .steps-list li { font-size:13px; line-height:1.65; }
   .snum { font-size:10px; }
   .t-btn { font-size:10px; padding:7px 12px; }
