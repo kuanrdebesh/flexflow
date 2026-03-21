@@ -244,6 +244,82 @@ body {
   .step { grid-template-columns:36px 1fr; gap:16px; }
   .footer-cta { padding:56px 20px; }
 }
+
+/* ── FLIP DEMO ── */
+.flip-demo {
+  margin:32px 0;
+  padding:24px;
+  background:var(--s1);
+  border:1px solid var(--bd);
+  border-radius:8px;
+}
+.flip-demo-label {
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--a1); margin-bottom:16px; text-align:center;
+}
+.flip-demo-cards {
+  display:flex; gap:24px; align-items:center;
+  flex-wrap:wrap;
+}
+.flip-card-demo {
+  width:140px; height:180px; flex-shrink:0;
+  perspective:800px; cursor:pointer;
+}
+.flip-card-inner {
+  width:100%; height:100%;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform .5s cubic-bezier(.4,0,.2,1);
+  border-radius:6px;
+}
+.flip-card-demo.flipped .flip-card-inner {
+  transform:rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position:absolute; inset:0;
+  backface-visibility:hidden;
+  border-radius:6px;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  border:1px solid var(--bd);
+}
+.flip-card-front {
+  background:var(--s2);
+  gap:8px; padding:12px;
+}
+.flip-card-back {
+  background:var(--s2);
+  transform:rotateY(180deg);
+  overflow:hidden;
+}
+.flip-front-label {
+  font-size:10px; font-weight:700;
+  color:var(--text); text-align:center;
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:.5px;
+}
+.flip-hint-label {
+  font-size:9px; color:var(--a1);
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:.5px; animation:pulse-hint 2s ease-in-out infinite;
+}
+@keyframes pulse-hint {
+  0%,100%{opacity:1} 50%{opacity:.3}
+}
+.flip-demo-desc { flex:1; min-width:200px; }
+.flip-desc-title {
+  font-size:15px; font-weight:800;
+  color:var(--text); margin-bottom:8px;
+}
+.flip-desc-text {
+  font-size:13px; color:var(--text2);
+  font-weight:300; line-height:1.65;
+}
+@media(max-width:640px){
+  .flip-demo-cards { flex-direction:column; align-items:flex-start; }
+}
+
 </style>
 </head>
 <body>
@@ -387,6 +463,44 @@ body {
   <h2 class="section-title">Every stretch<br><em>earns its place.</em></h2>
   <p class="section-sub">FlexFlow doesn't just list stretches — it explains why each one matters and how to do it correctly.</p>
 
+
+  <!-- FLIP DEMO -->
+  <div class="flip-demo">
+    <div class="flip-demo-label">TAP THE FIGURE TO FLIP</div>
+    <div class="flip-demo-cards">
+      <div class="flip-card-demo" id="flip-demo-card" onclick="toggleFlip()">
+        <div class="flip-card-inner" id="flip-inner">
+          <div class="flip-card-front">
+            <svg viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg" width="100" height="130">
+              <ellipse cx="50" cy="18" rx="10" ry="11" fill="none" stroke="#9494b0" stroke-width="1.5"/>
+              <line x1="50" y1="29" x2="50" y2="72" stroke="#9494b0" stroke-width="1.5"/>
+              <line x1="50" y1="35" x2="22" y2="55" stroke="#9494b0" stroke-width="1.5"/>
+              <line x1="50" y1="35" x2="78" y2="55" stroke="#9494b0" stroke-width="1.5"/>
+              <line x1="22" y1="55" x2="18" y2="75" stroke="#9494b0" stroke-width="1.5"/>
+              <line x1="78" y1="55" x2="82" y2="75" stroke="#9494b0" stroke-width="1.5"/>
+              <line x1="50" y1="72" x2="38" y2="105" stroke="#9494b0" stroke-width="1.5"/>
+              <line x1="50" y1="72" x2="62" y2="105" stroke="#9494b0" stroke-width="1.5"/>
+              <line x1="38" y1="105" x2="35" y2="125" stroke="#9494b0" stroke-width="1.5"/>
+              <line x1="62" y1="105" x2="65" y2="125" stroke="#9494b0" stroke-width="1.5"/>
+              <ellipse cx="22" cy="46" rx="5" ry="8" fill="rgba(74,158,255,0.35)" stroke="#4a9eff" stroke-width="1.5"/>
+              <ellipse cx="78" cy="46" rx="5" ry="8" fill="rgba(74,158,255,0.35)" stroke="#4a9eff" stroke-width="1.5"/>
+            </svg>
+            <div class="flip-front-label">Biceps Wall Slide</div>
+            <div class="flip-hint-label">&#8635; tap to flip</div>
+          </div>
+          <div class="flip-card-back">
+            <img src="images/act-biceps-wall-slide.png" alt="Biceps Wall Slide" style="width:100%;height:100%;object-fit:cover;border-radius:6px;"/>
+          </div>
+        </div>
+      </div>
+      <div class="flip-demo-desc">
+        <div class="flip-desc-title">Muscle map + reference photo</div>
+        <div class="flip-desc-text">Every exercise card shows an anatomical SVG with the target muscles highlighted in blue. Tap the figure to flip to a real reference photo showing exact position and form.</div>
+        <div class="flip-desc-text" style="margin-top:8px">All 126 exercises have SVG figures. Reference photos are added progressively as the library grows.</div>
+      </div>
+    </div>
+  </div>
+
   <div class="steps" style="margin-top:32px">
     <div class="step">
       <div class="step-num">◉</div>
@@ -426,6 +540,14 @@ body {
   <a href="https://flexflow-8cb.pages.dev/" class="footer-cta-btn" target="_blank">Open FlexFlow &#8594;</a>
   <div class="footer-note">Works in any browser · No account needed · Plans saved locally</div>
 </div>
+
+
+<script>
+function toggleFlip() {
+  var card = document.getElementById('flip-demo-card');
+  card.classList.toggle('flipped');
+}
+</script>
 
 </body>
 </html>
