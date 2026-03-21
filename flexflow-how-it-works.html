@@ -507,6 +507,83 @@ body {
   .tc-logo-flex, .tc-logo-flow { font-size:11px; }
 }
 
+
+/* ── INSTALL SECTION ── */
+.install-steps {
+  display:flex; flex-direction:column; gap:0;
+  margin:28px 0 0;
+}
+.install-step {
+  display:grid;
+  grid-template-columns:40px 1fr;
+  gap:16px;
+  padding:18px 0;
+  border-bottom:1px solid var(--bd);
+  align-items:start;
+}
+.install-step:last-child { border-bottom:none; }
+.install-num {
+  width:28px; height:28px; border-radius:50%;
+  background:var(--a1-dim); border:1px solid var(--a1-line);
+  color:var(--a1);
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0; margin-top:2px;
+}
+.install-title {
+  font-size:15px; font-weight:800;
+  color:var(--text); margin-bottom:5px;
+}
+.install-text {
+  font-size:13px; color:var(--text2);
+  font-weight:300; line-height:1.65;
+}
+.install-tag {
+  display:inline-block;
+  font-family:'JetBrains Mono',monospace;
+  font-size:9px; font-weight:700; letter-spacing:.5px;
+  padding:3px 8px; border-radius:3px; margin:8px 4px 0 0;
+  background:var(--s2); border:1px solid var(--bd2); color:var(--text2);
+}
+.install-tag.ios   { border-color:var(--a1-line); color:var(--a1); background:var(--a1-dim); }
+.install-tag.android { border-color:var(--a2-line); color:var(--a2); background:var(--a2-dim); }
+
+/* Icon preview */
+.icon-preview {
+  margin:20px 0 4px;
+  display:flex; align-items:flex-end; gap:20px;
+  flex-wrap:wrap;
+}
+.icon-slot {
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+}
+.icon-frame {
+  border-radius:18px;
+  overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+.icon-frame.lg { width:72px; height:72px; }
+.icon-frame.sm { width:48px; height:48px; border-radius:12px; }
+.icon-frame.xs { width:32px; height:32px; border-radius:8px; }
+.icon-label {
+  font-family:'JetBrains Mono',monospace;
+  font-size:8px; color:var(--text3); letter-spacing:.5px;
+  text-align:center;
+}
+.icon-name {
+  font-size:9px; color:var(--text2); margin-top:2px;
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:.3px;
+}
+.install-os-row {
+  display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;
+}
+
+@media(max-width:500px){
+  .install-step { grid-template-columns:36px 1fr; gap:12px; }
+}
+
 </style>
 </head>
 <body>
@@ -838,6 +915,108 @@ body {
         <div class="step-text">Every colour, contrast, and highlight is tuned separately for dark and light mode. The gold activation colour, steel blue pre-workout, and emerald post-workout all adapt cleanly.</div>
       </div>
     </div>
+  </div>
+</div>
+
+
+<!-- INSTALL SECTION -->
+<div class="section">
+  <div class="section-eye">Install</div>
+  <h2 class="section-title">Add to your<br><em>home screen.</em></h2>
+  <p class="section-sub">FlexFlow is a Progressive Web App — it installs directly from the browser, no app store needed. Once installed it opens full screen, works offline, and sits on your home screen like any native app.</p>
+
+  <!-- Icon preview -->
+  <div class="icon-preview">
+    <div class="icon-slot">
+      <div class="icon-frame lg"><svg width="72" height="72" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="16" fill="#07080f"/>
+  <rect x="90" y="148" width="42" height="216" rx="8" fill="#4a9eff"/>
+  <rect x="90" y="148" width="148" height="42" rx="8" fill="#4a9eff"/>
+  <rect x="90" y="245" width="112" height="38" rx="8" fill="#4a9eff"/>
+  <rect x="272" y="148" width="42" height="216" rx="8" fill="#34d399"/>
+  <rect x="272" y="148" width="142" height="42" rx="8" fill="#34d399"/>
+  <rect x="272" y="245" width="108" height="38" rx="8" fill="#34d399"/>
+  <circle cx="256" cy="380" r="16" fill="#fbbf24"/>
+</svg></div>
+      <div class="icon-label">Home screen</div>
+      <div class="icon-name">FlexFlow</div>
+    </div>
+    <div class="icon-slot">
+      <div class="icon-frame sm"><svg width="48" height="48" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="10" fill="#07080f"/>
+  <rect x="90" y="148" width="42" height="216" rx="8" fill="#4a9eff"/>
+  <rect x="90" y="148" width="148" height="42" rx="8" fill="#4a9eff"/>
+  <rect x="90" y="245" width="112" height="38" rx="8" fill="#4a9eff"/>
+  <rect x="272" y="148" width="42" height="216" rx="8" fill="#34d399"/>
+  <rect x="272" y="148" width="142" height="42" rx="8" fill="#34d399"/>
+  <rect x="272" y="245" width="108" height="38" rx="8" fill="#34d399"/>
+  <circle cx="256" cy="380" r="16" fill="#fbbf24"/>
+</svg></div>
+      <div class="icon-label">App switcher</div>
+    </div>
+    <div class="icon-slot">
+      <div class="icon-frame xs"><svg width="32" height="32" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="7" fill="#07080f"/>
+  <rect x="90" y="148" width="42" height="216" rx="8" fill="#4a9eff"/>
+  <rect x="90" y="148" width="148" height="42" rx="8" fill="#4a9eff"/>
+  <rect x="90" y="245" width="112" height="38" rx="8" fill="#4a9eff"/>
+  <rect x="272" y="148" width="42" height="216" rx="8" fill="#34d399"/>
+  <rect x="272" y="148" width="142" height="42" rx="8" fill="#34d399"/>
+  <rect x="272" y="245" width="108" height="38" rx="8" fill="#34d399"/>
+  <circle cx="256" cy="380" r="16" fill="#fbbf24"/>
+</svg></div>
+      <div class="icon-label">Notification</div>
+    </div>
+    <div style="flex:1;min-width:160px;">
+      <div style="font-size:12px;color:var(--text2);line-height:1.7;font-weight:300;">
+        The <strong style="color:var(--text);font-weight:700">FF</strong> monogram with gold dot appears on your home screen. Dark background with steel blue and emerald — recognisable at a glance.
+      </div>
+    </div>
+  </div>
+
+  <div class="install-steps">
+
+    <!-- iOS -->
+    <div class="install-step">
+      <div class="install-num">1</div>
+      <div>
+        <div class="install-title">Open in Safari <span class="install-tag ios">iOS</span></div>
+        <div class="install-text">On iPhone or iPad, open <strong style="color:var(--text)">flexflow-8cb.pages.dev</strong> in Safari. Chrome on iOS does not support home screen installation.</div>
+      </div>
+    </div>
+
+    <div class="install-step">
+      <div class="install-num">2</div>
+      <div>
+        <div class="install-title">Tap Share → Add to Home Screen <span class="install-tag ios">iOS</span></div>
+        <div class="install-text">Tap the Share icon (the box with an arrow pointing up) at the bottom of Safari. Scroll down in the share sheet and tap <em>Add to Home Screen</em>. The name will appear as <strong style="color:var(--text)">FlexFlow</strong> — tap Add.</div>
+      </div>
+    </div>
+
+    <div class="install-step">
+      <div class="install-num">3</div>
+      <div>
+        <div class="install-title">Tap Install when prompted <span class="install-tag android">Android</span></div>
+        <div class="install-text">On Android using Chrome, a banner appears at the bottom of the screen saying <em>"Add FlexFlow to Home screen"</em> — tap Install. If the banner doesn't appear, tap the three-dot menu → <em>Add to Home screen</em>.</div>
+      </div>
+    </div>
+
+    <div class="install-step">
+      <div class="install-num">4</div>
+      <div>
+        <div class="install-title">Find it on your home screen</div>
+        <div class="install-text">The FF icon appears on your home screen. Tap it — FlexFlow opens full screen with no browser address bar, exactly like a native app. Your saved plans and preferences carry over automatically.</div>
+      </div>
+    </div>
+
+    <div class="install-step">
+      <div class="install-num">5</div>
+      <div>
+        <div class="install-title">Works offline too</div>
+        <div class="install-text">Once installed, FlexFlow works without an internet connection. All 126 exercises, your saved plans, and the full app are available offline.</div>
+      </div>
+    </div>
+
   </div>
 </div>
 
