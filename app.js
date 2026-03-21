@@ -96,6 +96,21 @@ var IMAGE_STRETCHES = {
   'act-shins-toe-tap' : 'images/act-shins-toe-tap.png',
   'act-shins-band-dorsiflex' : 'images/act-shins-band-dorsiflex.png',
   'act-shins-heel-walk' : 'images/act-shins-heel-walk.png',
+  'post-hamstring-stand' : 'images/post-hamstring-stand.png',
+  'post-lat-hang' : 'images/post-lat-hang.png',
+  'post-child-pose' : 'images/post-child-pose.png',
+  'post-trap-neck' : 'images/post-trap-neck.png',
+  'post-bicep-wall' : 'images/post-bicep-wall.png',
+  'post-tricep-overhead' : 'images/post-tricep-overhead.png',
+  'post-cross-shoulder' : 'images/post-cross-shoulder.png',
+  'post-chest-door' : 'images/post-chest-door.png',
+  'pre-side-lunge' : 'images/pre-side-lunge.png',
+  'pre-good-morning' : 'images/pre-good-morning.png',
+  'pre-neck-nods' : 'images/pre-neck-nods.png',
+  'pre-wrist-pumps' : 'images/pre-wrist-pumps.png',
+  'pre-tricep-swing' : 'images/pre-tricep-swing.png',
+  'pre-tibialis-walk' : 'images/pre-tibialis-walk.png',
+  'pre-spiderman' : 'images/pre-spiderman.png',
 };
 
 // ── MUSCLE GROUPS ─────────────────────────────────────
