@@ -2,7 +2,7 @@
   "name": "FlexFlow — Stretch Planner",
   "short_name": "FlexFlow",
   "description": "Smart stretch planner. Select muscles trained, generate your pre and post workout routine.",
-  "start_url": "/flexflow/",
+  "start_url": "https://flexflow-8cb.pages.dev/",
   "display": "standalone",
   "background_color": "#07080f",
   "theme_color": "#07080f",
