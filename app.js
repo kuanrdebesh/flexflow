@@ -14,6 +14,7 @@ var timers = {};
 var currentPlan = null;
 var editingPlanId = null;
 var EXERCISE_COUNT = 133;
+var activeLibFilters = new Set();
 
 // Stretch IDs that have reference photos in /images/
 // Add entries here as photos are sourced
@@ -167,10 +168,7 @@ var MG = [
     {id:'triceps',    label:'Triceps',          region:'Elbow Extensors'},
     {id:'forearms',   label:'Forearms',         region:'Wrist Flex/Ext'},
     {id:'neck',       label:'Neck',             region:'Cervical'},
-  ]},
-  { tab:'Core', muscles:[
     {id:'abs',        label:'Abs',              region:'Rectus / Obliques'},
-    {id:'hipflexors', label:'Hip Flexors',      region:'Psoas · Iliacus'},
   ]},
   { tab:'Lower', muscles:[
     {id:'glutes',     label:'Glutes',           region:'Gluteus Maximus'},
@@ -180,14 +178,15 @@ var MG = [
     {id:'abductors',  label:'Abductors',        region:'TFL · Glute Med'},
     {id:'calves',     label:'Calves',           region:'Gastrocnemius · Soleus'},
     {id:'shins',      label:'Shins / Tibialis', region:'Tibialis Anterior'},
+    {id:'hipflexors', label:'Hip Flexors',      region:'Psoas · Iliacus'},
   ]},
 ];
 
 // ── PRESETS ───────────────────────────────────────────
 var PRESETS = {
   fullbody: function() { return MG.flatMap(function(g){ return g.muscles.map(function(m){ return m.id; }); }); },
-  upper:    function() { return MG[0].muscles.concat(MG[1].muscles).map(function(m){ return m.id; }); },
-  lower:    function() { return MG[2].muscles.concat(MG[1].muscles).map(function(m){ return m.id; }); },
+  upper:    function() { return MG[0].muscles.map(m => m.id); },
+  lower:    function() { return MG[1].muscles.map(m => m.id); },
 };
 
 // ── BOOT ──────────────────────────────────────────────
@@ -215,7 +214,7 @@ function init() {
   buildLibrary();
   updatePlansBadge();
   document.getElementById('loading').style.display = 'none';
-  var spans = ['ex-count-lib','ex-count-about'];
+  var spans = ['ex-count-about'];
   spans.forEach(function(id){ var el=document.getElementById(id); if(el) el.textContent=EXERCISE_COUNT; });
 }
 
@@ -899,29 +898,95 @@ function buildLibrary() {
   var allMids = [];
   STRETCHES.forEach(function(s){ s.muscles.forEach(function(m){ if(allMids.indexOf(m)<0) allMids.push(m); }); });
   allMids.sort();
-  [{id:'all',label:'All'},{id:'pre',label:'Pre-Workout'},{id:'post',label:'Post-Workout'}]
+  [
+    {id:'all',label:'All'},
+    {id:'pre',label:'Pre-Workout'},
+    {id:'act',label:'Activation'},
+    {id:'post',label:'Post-Workout'}
+  ]
     .concat(allMids.map(function(m){ return {id:'m-'+m,label:m}; }))
     .forEach(function(f){
       var btn = document.createElement('div');
       btn.className = 'lf' + (f.id==='all'?' on':'');
       btn.textContent = f.label;
       btn.onclick = function(){
-        document.querySelectorAll('.lf').forEach(function(x){ x.classList.remove('on'); });
-        btn.classList.add('on'); renderLib(f.id);
-      };
+
+  // toggle logic
+  if (activeLibFilters.has(f.id)) {
+    activeLibFilters.delete(f.id);
+    btn.classList.remove('on');
+  } else {
+    activeLibFilters.add(f.id);
+    btn.classList.add('on');
+  }
+
+  // special case: "all"
+  if (f.id === 'all') {
+    activeLibFilters.clear();
+    document.querySelectorAll('.lf').forEach(function(x){ x.classList.remove('on'); });
+    btn.classList.add('on');
+  } else {
+    // remove "all" if something else is selected
+    activeLibFilters.delete('all');
+    document.querySelectorAll('.lf').forEach(function(x){
+      if (x.textContent === 'All') x.classList.remove('on');
+    });
+  }
+
+  renderLib();
+};
       fe.appendChild(btn);
     });
-  renderLib('all');
+    activeLibFilters.clear();
+    activeLibFilters.add('all');
+    renderLib();
 }
-function renderLib(fid) {
+function renderLib() {
   var ge = document.getElementById('lib-grid');
   ge.innerHTML = '';
-  var list = fid==='pre' ? STRETCHES.filter(function(s){ return s.phase==='pre'; })
-    : fid==='post' ? STRETCHES.filter(function(s){ return s.phase==='post'; })
-    : fid.indexOf('m-')===0 ? STRETCHES.filter(function(s){ return s.muscles.indexOf(fid.slice(2))>=0; })
-    : STRETCHES;
+
+  var list = STRETCHES;
+
+  // ✅ CASE 1: no filters → show all
+  if (activeLibFilters.size === 0 || activeLibFilters.has('all')) {
+    list = STRETCHES;
+  }
+
+  // ✅ CASE 2: apply filters
+  else {
+    list = STRETCHES.filter(function(s){
+      return Array.from(activeLibFilters).every(function(fid){
+
+        if (fid === 'act') return s.phase === 'activation';
+        if (fid === 'pre') return s.phase === 'pre';
+        if (fid === 'post') return s.phase === 'post';
+
+        if (fid.indexOf('m-') === 0) {
+          return s.muscles.indexOf(fid.slice(2)) >= 0;
+        }
+
+        return true;
+      });
+    });
+  }
+
+  var countEl = document.getElementById('ex-count-lib');
+
+  if (countEl) {
+  	var isAll = activeLibFilters.size === 0 || activeLibFilters.has('all');
+  	if (list.length === 0) {
+	    countEl.textContent = '0 stretches found';
+  	} 
+  	else if (isAll) {
+    	countEl.textContent = 'All ' + list.length + ' stretches';
+  	} 
+  	else {
+    	countEl.textContent = list.length + ' stretches found';
+  	}
+  }
   list.forEach(function(s,i){
-    var w = document.createElement('div'); ge.appendChild(w);
+    var w = document.createElement('div');
+    ge.appendChild(w);
     renderLibCard(s, i, w);
   });
 }
