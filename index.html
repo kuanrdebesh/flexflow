@@ -76,7 +76,7 @@ button{font-family:'Epilogue',sans-serif;}
   text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
 .sb-title{font-size:14px;font-weight:700;}
 .sb-sub{font-size:11px;color:var(--muted);font-weight:300;margin-top:2px;line-height:1.5;}
-.section-wrap{padding:9px 12px;border-bottom:1px solid var(--bd);flex-shrink:0;position:relative;}
+.section-wrap{padding:9px 12px;border-bottom:1px solid var(--bd);flex-shrink:0;}
 .section-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;
   text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
 
@@ -91,8 +91,8 @@ button{font-family:'Epilogue',sans-serif;}
 .d-time{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--dim);margin-top:2px;}
 .depth-btn.quick-on{border-color:var(--a3);background:var(--a3-dim);box-shadow:0 0 0 1px var(--a3);}
 .depth-btn.quick-on .d-name{color:var(--a3);}
-.depth-btn.custom-on{border-color:var(--a2);background:var(--a2-dim);}
-.depth-btn.custom-on .d-name{color:var(--a2);}
+.depth-btn.detail-on{border-color:var(--pre);background:var(--pre-a);}
+.depth-btn.detail-on .d-name{color:var(--pre);}
 
 /* PRESETS */
 .preset-row{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
@@ -161,7 +161,7 @@ button{font-family:'Epilogue',sans-serif;}
   font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;}
 .r-mode.quick{background:var(--s2);border:1px solid var(--bd2);color:var(--text2);}
 .r-mode.optimised{background:var(--a2-dim);border:1px solid var(--a2-line);color:var(--a2);}
-.r-mode.custom{background:var(--a2-dim);border:1px solid var(--a2-line);color:var(--a2);}
+.r-mode.detailed{background:var(--a1-dim);border:1px solid var(--a1-line);color:var(--a1);}
 .rpill{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1px;
   text-transform:uppercase;padding:2px 8px;border-radius:2px;}
 .rp-m{background:var(--s2);border:1px solid var(--bd2);color:var(--muted);}
@@ -728,8 +728,8 @@ body.light .btn-gen:hover:not(:disabled) { background:#243f7a; box-shadow:0 0 16
 body.light .mchip.on { border-color:var(--pre); background:rgba(42,125,0,.08); }
 body.light .mchip.on .mc-dot { background:var(--pre); border-color:var(--pre); box-shadow:0 0 5px var(--pre); }
 body.light .mchip.on .mc-name { color:var(--pre); }
-body.light .depth-btn.custom-on { border-color:var(--a2); background:var(--a2-dim); }
-body.light .depth-btn.custom-on .d-name { color:var(--a2); }
+body.light .depth-btn.detail-on { border-color:var(--pre); background:rgba(42,125,0,.08); }
+body.light .depth-btn.detail-on .d-name { color:var(--pre); }
 body.light .preset-btn.on { border-color:var(--pre); background:rgba(42,125,0,.08); }
 body.light .preset-btn.on .p-icon,body.light .preset-btn.on .p-name { color:var(--pre); }
 body.light .mg-tab.on { color:var(--pre); border-color:var(--pre); }
@@ -744,7 +744,7 @@ body.light .btn-plan-run:hover { background:#243f7a; }
 body.light .btn-add-item { color:var(--pre); border-color:rgba(42,125,0,.4); }
 body.light .btn-add-item:hover { background:rgba(42,125,0,.08); }
 body.light .btn-use-alt { background:var(--pre); }
-body.light .r-mode.custom { background:var(--a2-dim); border-color:var(--a2-line); color:var(--a2); }
+body.light .r-mode.detailed { background:rgba(42,125,0,.1); border-color:rgba(42,125,0,.3); color:var(--pre); }
 body.light .lf.on { border-color:var(--pre); color:var(--pre); background:rgba(42,125,0,.08); }
 body.light .toast.ok { border-color:rgba(42,125,0,.5); color:var(--pre); }
 body.light .modal-input:focus { border-color:var(--pre); }
@@ -928,37 +928,31 @@ body.light .lib-search:focus { border-color:var(--a1); }
 }
 
 
-/* ── CUSTOM DEPTH PANEL ── */
-.custom-steppers { display:flex; flex-direction:column; gap:8px; }
-.cst-row { display:flex; align-items:center; justify-content:space-between; }
-.cst-lbl { font-size:12px; font-weight:500; color:var(--text2); }
+/* ── CUSTOM MODE ── */
+.depth-btn.custom-on { border-color:var(--a1); background:var(--a1-dim); box-shadow:0 0 0 1px var(--a1); }
+.depth-btn.custom-on .d-name { color:var(--a1); }
+.section-wrap { position:relative; }
+.custom-panel {
+  position:absolute; left:0; right:0; top:calc(100% - 1px);
+  z-index:60;
+  background:var(--s1);
+  border:1px solid var(--a1);
+  border-top:none;
+  border-radius:0 0 4px 4px;
+  padding:8px 12px 10px;
+  box-shadow:0 8px 24px rgba(0,0,0,.4);
+}
+body.light .custom-panel { background:#fff; }
+.cst-row { display:flex; align-items:center; justify-content:space-between; padding:5px 0; }
+.cst-row + .cst-row { border-top:1px solid var(--bd); }
+.cst-lbl { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; text-transform:uppercase; }
 .cst-lbl.act-lbl  { color:var(--a3); }
 .cst-lbl.pre-lbl  { color:var(--a1); }
 .cst-lbl.post-lbl { color:var(--a2); }
-.cst-ctrl { display:flex; align-items:center; gap:10px; }
-.cst-btn {
-  width:28px; height:28px; border-radius:3px;
-  border:1px solid var(--bd2); background:transparent;
-  color:var(--text2); font-size:16px; line-height:1;
-  cursor:pointer; display:flex; align-items:center; justify-content:center;
-  transition:all .15s;
-}
+.cst-ctrl { display:flex; align-items:center; gap:12px; }
+.cst-btn { width:28px; height:28px; border-radius:3px; border:1px solid var(--bd2); background:transparent; color:var(--text2); font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .15s; }
 .cst-btn:hover { border-color:var(--a1); color:var(--a1); background:var(--a1-dim); }
-.cst-val {
-  font-family:'JetBrains Mono',monospace;
-  font-size:15px; font-weight:700;
-  color:var(--text); min-width:20px; text-align:center;
-}
-.custom-panel {
-  position:absolute; left:0; right:0; top:calc(100% + 2px);
-  z-index:50;
-  background:var(--s1);
-  border:1px solid var(--a1);
-  border-radius:4px;
-  padding:8px 12px;
-  box-shadow:0 6px 20px rgba(0,0,0,.35);
-}
-body.light .custom-panel { background:#fff; box-shadow:0 4px 16px rgba(0,0,0,.15); }
+.cst-val { font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; color:var(--text); min-width:22px; text-align:center; }
 
 </style>
 </head>
@@ -1005,7 +999,7 @@ body.light .custom-panel { background:#fff; box-shadow:0 4px 16px rgba(0,0,0,.15
           <span class="d-desc">Set your own counts</span><span class="d-time">you decide</span>
         </div>
       </div>
-      <!-- CUSTOM DEPTH PANEL - floats as overlay -->
+      <!-- CUSTOM OVERLAY PANEL -->
       <div class="custom-panel" id="custom-panel" style="display:none">
         <div class="cst-row">
           <span class="cst-lbl act-lbl">Activation</span>
@@ -1048,7 +1042,6 @@ body.light .custom-panel { background:#fff; box-shadow:0 4px 16px rgba(0,0,0,.15
       <button class="btn-gen" id="btn-gen" onclick="generate()" disabled>Generate Stretch Plan</button>
       <button class="btn-clr" onclick="clearAll()">Clear selection</button>
     </div>
-
   </div>
   <div class="main" id="main-panel">
     <div class="empty" id="empty-state">

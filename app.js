@@ -239,6 +239,7 @@ function showView(name) {
 function setDepth(d) {
   var prevDepth = depth;
   var panel = document.getElementById('custom-panel');
+  // Clicking Custom again collapses it and reverts to Optimised
   if (d === 'custom' && prevDepth === 'custom') {
     depth = 'optimised';
     document.getElementById('depth-quick').className     = 'depth-btn';
