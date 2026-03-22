@@ -241,10 +241,8 @@ function setDepth(d) {
   var panel = document.getElementById('custom-panel');
   // Clicking Custom again collapses it and reverts to Optimised
   if (d === 'custom' && prevDepth === 'custom') {
-    depth = 'optimised';
-    document.getElementById('depth-quick').className     = 'depth-btn';
-    document.getElementById('depth-optimised').className = 'depth-btn optimised-on';
-    document.getElementById('depth-custom').className    = 'depth-btn';
+    depth = 'custom';
+    document.getElementById('depth-custom').className = 'depth-btn custom-on';
     if (panel) panel.style.display = 'none';
     return;
   }
