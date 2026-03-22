@@ -74,7 +74,20 @@ button{font-family:'Epilogue',sans-serif;}
 	}
 
 /* SIDEBAR */
-.sb{border-right:1px solid var(--bd);background:var(--s1);display:flex;flex-direction:column;
+.sb{
+  border-right:1px solid var(--bd);
+  background:var(--s1);
+  display:flex;
+  flex-direction:column;
+  position:sticky;
+  top:54px;
+  height:calc(100vh - 54px);
+
+  overflow:hidden; /* keep this */
+}
+.sb > *:not(.sb-head):not(.sb-foot){
+  min-height:0;
+}
   position:sticky;top:54px;height:calc(100vh - 54px);overflow:hidden;}
 .sb-head{
   padding:16px 16px 12px;
@@ -90,6 +103,22 @@ button{font-family:'Epilogue',sans-serif;}
   background: var(--s2);
  }
 
+/* Arrows */
+.chev{
+  font-size:12px;
+  color:var(--text2);
+  transition:transform 0.2s ease;
+}
+
+/* collapsed */
+.collapsed .chev{
+  transform:rotate(-90deg);
+}
+
+/* expanded */
+.expanded .chev{
+  transform:rotate(0deg);
+}
 /* collapsed state highlight */
 .sb.collapsed .sb-head{
   background: var(--s2);
@@ -201,6 +230,7 @@ button{font-family:'Epilogue',sans-serif;}
 .muscle-list{
   flex:1;
   overflow-y:auto;
+  min-height:0; /* 🔥 critical */
   padding:10px;
   padding-bottom: calc(120px + env(safe-area-inset-bottom));
 }
@@ -614,7 +644,14 @@ button{font-family:'Epilogue',sans-serif;}
     transition:max-height .3s ease;
     background:var(--s1);
   }
-  .sb.expanded { max-height:none; overflow-y:visible; }
+  .sb.expanded {
+    max-height:calc(100dvh - 54px);
+    overflow:hidden;
+  }
+  .sb.expanded .muscle-list {
+  flex:1;
+  overflow-y:auto;
+  }
 
   /* Sidebar head becomes a tap target to expand */
   .sb-head {
@@ -654,8 +691,9 @@ button{font-family:'Epilogue',sans-serif;}
   /* Sidebar sections inside expanded panel */
   .section-wrap { padding:8px 14px; flex-shrink:0; }
   .muscle-list {
-  max-height:220px;
+  flex:1;
   overflow-y:auto;
+  min-height:0;
   padding:4px 14px 12px;
   }
 
@@ -1136,7 +1174,7 @@ body.light .custom-panel { background:#fff; }
         <div class="sb-sub">Pick everything you worked today.</div>
       </div>
       <span class="sb-sel-summary" id="sb-sel-summary"></span>
-      <span class="sb-toggle">&#8964;</span>
+      <span class="chev">▾</span>
     </div>
     <div class="section-wrap">
       <div class="section-lbl">Routine Depth</div>
@@ -1189,7 +1227,7 @@ body.light .custom-panel { background:#fff; }
     			<div class="preset-title">Auto Muscle Selection</div>
 			    <div class="preset-sub">Quickly select common muscle groups</div>
 		  </div>
-    		<span class="preset-toggle">▶</span>
+    		<span class="chev">▾</span>
   		</div>
 		<div class="preset-body">
 			<div class="preset-radio-list">
