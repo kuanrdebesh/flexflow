@@ -240,18 +240,26 @@ function setDepth(d) {
   var prevDepth = depth;
   var panel = document.getElementById('custom-panel');
   // Clicking Custom again collapses it and reverts to Optimised
-  if (d === 'custom' && prevDepth === 'custom') {
-    depth = 'custom';
-    document.getElementById('depth-custom').className = 'depth-btn custom-on';
-    if (panel) panel.style.display = 'none';
-    return;
+  if (d === 'custom') {
+  depth = 'custom';
+
+  // 🔥 Reset ALL buttons first
+  document.getElementById('depth-quick').className = 'depth-btn';
+  document.getElementById('depth-optimised').className = 'depth-btn';
+
+  // ✅ Activate only custom
+  document.getElementById('depth-custom').className = 'depth-btn custom-on';
+
+  // toggle panel
+  if (panel) {
+    if (panel.style.display === 'none' || panel.style.display === '') {
+      panel.style.display = 'block';
+    } else {
+      panel.style.display = 'none';
+    }
   }
-  depth = d;
-  document.getElementById('depth-quick').className     = 'depth-btn' + (d === 'quick'     ? ' quick-on'     : '');
-  document.getElementById('depth-optimised').className = 'depth-btn' + (d === 'optimised' ? ' optimised-on' : '');
-  document.getElementById('depth-custom').className    = 'depth-btn' + (d === 'custom'    ? ' custom-on'    : '');
-  if (panel) panel.style.display = d === 'custom' ? '' : 'none';
   if (d === 'custom' && !customCapsSet) {
+  console.log("enter 2 and customCapsSet is :"+customCapsSet);  
     var n = Math.max(1, selected ? selected.size : 1);
     customCaps.act  = Math.max(3, Math.min(n * 2, 12));
     customCaps.pre  = Math.max(3, Math.min(n * 2, 10));
@@ -263,6 +271,14 @@ function setDepth(d) {
     if (ep) ep.textContent = customCaps.pre;
     if (eo) eo.textContent = customCaps.post;
   }
+  return;
+}
+  depth = d;
+  document.getElementById('depth-quick').className     = 'depth-btn' + (d === 'quick'     ? ' quick-on'     : '');
+  document.getElementById('depth-optimised').className = 'depth-btn' + (d === 'optimised' ? ' optimised-on' : '');
+  document.getElementById('depth-custom').className    = 'depth-btn' + (d === 'custom'    ? ' custom-on'    : '');
+  if (panel) panel.style.display = d === 'custom' ? '' : 'none';
+  
 }
 
 function adjustCustom(phase, delta) {
