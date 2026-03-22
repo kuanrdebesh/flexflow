@@ -275,16 +275,19 @@ function adjustCustom(phase, delta) {
 
 // ── PRESETS ───────────────────────────────────────────
 function applyPreset(key) {
+  var row = document.getElementById('preset-' + key).closest('.preset-radio-row');
+  var isOn = row && row.classList.contains('on');
   selected.clear();
-  PRESETS[key]().forEach(function(id){ selected.add(id); });
   clearPresetHL();
-  document.getElementById('preset-' + key).classList.add('on');
+  if (!isOn) {
+    PRESETS[key]().forEach(function(id){ selected.add(id); });
+    if (row) row.classList.add('on');
+  }
   renderMuscleList(activeTab);
   updateFooter();
-  //generate();
 }
 function clearPresetHL() {
-  document.querySelectorAll('.preset-btn').forEach(function(b){ b.classList.remove('on'); });
+  document.querySelectorAll('.preset-radio-row').forEach(function(r){ r.classList.remove('on'); });
 }
 
 // ── SIDEBAR ───────────────────────────────────────────

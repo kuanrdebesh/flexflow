@@ -95,15 +95,13 @@ button{font-family:'Epilogue',sans-serif;}
 .depth-btn.detail-on .d-name{color:var(--pre);}
 
 /* PRESETS */
-.preset-row{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
-.preset-btn{display:flex;flex-direction:column;align-items:center;gap:2px;
-  padding:7px 4px;border:1px solid var(--bd);border-radius:3px;
-  background:var(--s2);cursor:pointer;transition:all .13s;user-select:none;}
-.preset-btn:hover{border-color:var(--bd2);}
-.preset-btn.on{border-color:var(--pre);background:var(--pre-a);}
-.p-icon{font-size:13px;color:var(--muted);}
-.p-name{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
-.p-count{font-size:9px;color:var(--dim);}
+.preset-radio-list{display:flex;flex-direction:column;gap:0;}
+.preset-radio-row{display:flex;align-items:center;gap:10px;padding:6px 4px;cursor:pointer;border-bottom:1px solid var(--bd);user-select:none;}
+.preset-radio-row:last-child{border-bottom:none;}
+.pr-dot{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--bd2);flex-shrink:0;transition:all .14s;}
+.preset-radio-row.on .pr-dot{border-color:var(--a1);background:var(--a1);box-shadow:0 0 0 3px var(--a1-dim);}
+.pr-label{font-size:11px;font-weight:500;color:var(--text);flex:1;}
+.pr-count{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--text3);letter-spacing:.5px;}
 .preset-btn.on .p-icon,.preset-btn.on .p-name{color:var(--pre);}
 
 /* MUSCLE TABS + LIST */
@@ -113,7 +111,12 @@ button{font-family:'Epilogue',sans-serif;}
   text-align:center;border-bottom:2px solid transparent;transition:all .13s;user-select:none;}
 .mg-tab:hover{color:var(--text);}
 .mg-tab.on{color:var(--pre);border-color:var(--pre);}
-.muscle-list{flex:1;overflow-y:auto;padding:10px;}
+.muscle-list{
+  flex:1;
+  overflow-y:auto;
+  padding:10px;
+  padding-bottom:16px;
+}
 .muscle-list::-webkit-scrollbar{width:2px;}
 .muscle-list::-webkit-scrollbar-thumb{background:var(--bd2);}
 .mg-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;
@@ -130,7 +133,37 @@ button{font-family:'Epilogue',sans-serif;}
 .mc-region{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);}
 
 /* SB FOOTER */
-.sb-foot{padding:10px 12px;border-top:1px solid var(--bd);flex-shrink:0;}
+.sb-foot{
+  padding:10px 12px;
+  border-top:1px solid var(--bd);
+  flex-shrink:0;
+  margin-top:auto;
+  background:var(--s1);
+}
+/* TOP ROW (count + clear) */
+.sb-foot-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.btn-clr-inline {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: color 0.12s;
+}
+
+.btn-clr-inline:hover {
+  color: var(--text);
+}
 .sel-count{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:7px;}
 .sel-count strong{color:var(--text);}
 .btn-gen{width:100%;padding:10px;background:var(--pre);color:var(--bg);
@@ -138,9 +171,6 @@ button{font-family:'Epilogue',sans-serif;}
   border:none;border-radius:3px;cursor:pointer;transition:all .14s;}
 .btn-gen:hover:not(:disabled){background:#caff6a;box-shadow:0 0 16px rgba(184,255,87,.25);}
 .btn-gen:disabled{background:var(--bd2);color:var(--muted);cursor:not-allowed;}
-.btn-clr{width:100%;margin-top:4px;padding:6px;background:transparent;color:var(--muted);
-  font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;
-  border:1px solid var(--bd);border-radius:3px;cursor:pointer;transition:all .12s;}
 .btn-clr:hover{color:var(--text);border-color:var(--bd2);}
 
 /* MAIN */
@@ -530,9 +560,17 @@ button{font-family:'Epilogue',sans-serif;}
 
   /* Sidebar sections inside expanded panel */
   .section-wrap { padding:8px 14px; flex-shrink:0; }
-  .muscle-list { max-height:220px; overflow-y:auto; padding:4px 14px; }
+  .muscle-list {
+  max-height:220px;
+  overflow-y:auto;
+  padding:4px 14px 12px;
+  }
 
-  .sb-foot { padding:10px 14px; }
+.sb-foot {
+  padding:10px 14px;
+  margin-top:auto;
+  background:var(--s1);
+  }
 
   /* Depth buttons slightly taller for touch */
   .depth-btn { padding:10px 6px; }
@@ -621,7 +659,6 @@ button{font-family:'Epilogue',sans-serif;}
   .mc-region { font-size:9px; }
   .sel-count { font-size:11px; }
   .btn-gen { font-size:12px; padding:12px; }
-  .btn-clr { font-size:10px; padding:8px; }
   .sb-sel-summary { font-size:11px; }
 
   /* ── CARD COLLAPSED (most seen on mobile) ── */
@@ -1029,18 +1066,32 @@ body.light .custom-panel { background:#fff; }
     </div>
     <div class="section-wrap">
       <div class="section-lbl">Full Coverage</div>
-      <div class="preset-row">
-        <div class="preset-btn" id="preset-fullbody" onclick="applyPreset('fullbody')"><span class="p-icon">&#9672;</span><span class="p-name">Select Full Body</span><span class="p-count">17 muscles</span></div>
-        <div class="preset-btn" id="preset-upper" onclick="applyPreset('upper')"><span class="p-icon">&#9651;</span><span class="p-name">Select Entire Upper</span><span class="p-count">10 muscles</span></div>
-        <div class="preset-btn" id="preset-lower" onclick="applyPreset('lower')"><span class="p-icon">&#9661;</span><span class="p-name">Select Entire Lower</span><span class="p-count">9 muscles</span></div>
-      </div>
+      <div class="preset-radio-list">
+ 		 <label class="preset-radio-row" onclick="applyPreset('fullbody')">
+    		<span class="pr-dot" id="preset-fullbody"></span>
+    		<span class="pr-label">Select Full Body</span>
+    		<span class="pr-count">17 muscles</span>
+  		</label>
+  		<label class="preset-radio-row" onclick="applyPreset('upper')">
+    		<span class="pr-dot" id="preset-upper"></span>
+    		<span class="pr-label">Select Entire Upper</span>
+    		<span class="pr-count">10 muscles</span>
+  		</label>
+  		<label class="preset-radio-row" onclick="applyPreset('lower')">
+    		<span class="pr-dot" id="preset-lower"></span>
+    		<span class="pr-label">Select Entire Lower</span>
+    		<span class="pr-count">9 muscles</span>
+  		</label>
+	</div>
     </div>
     <div class="mg-tabs" id="mg-tabs"></div>
     <div class="muscle-list" id="muscle-list"></div>
     <div class="sb-foot">
-      <div class="sel-count" id="sel-count">No muscles selected</div>
-      <button class="btn-gen" id="btn-gen" onclick="generate()" disabled>Generate Stretch Plan</button>
-      <button class="btn-clr" onclick="clearAll()">Clear selection</button>
+      <div class="sb-foot-top">
+        <div class="sel-count" id="sel-count">No muscles selected</div>
+        <button class="btn-clr-inline" onclick="clearAll()">Clear</button>
+      </div>
+      <button class="btn-gen" id="btn-gen" onclick="generate()">Generate Stretch Plan</button>
     </div>
   </div>
   <div class="main" id="main-panel">
