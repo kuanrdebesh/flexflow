@@ -76,7 +76,7 @@ button{font-family:'Epilogue',sans-serif;}
   text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
 .sb-title{font-size:14px;font-weight:700;}
 .sb-sub{font-size:11px;color:var(--muted);font-weight:300;margin-top:2px;line-height:1.5;}
-.section-wrap{padding:9px 12px;border-bottom:1px solid var(--bd);flex-shrink:0;}
+.section-wrap{padding:9px 12px;border-bottom:1px solid var(--bd);flex-shrink:0;position:relative;}
 .section-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;
   text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
 
@@ -929,7 +929,7 @@ body.light .lib-search:focus { border-color:var(--a1); }
 
 
 /* ── CUSTOM DEPTH PANEL ── */
-.custom-steppers { display:flex; flex-direction:column; gap:8px; margin-top:6px; }
+.custom-steppers { display:flex; flex-direction:column; gap:8px; }
 .cst-row { display:flex; align-items:center; justify-content:space-between; }
 .cst-lbl { font-size:12px; font-weight:500; color:var(--text2); }
 .cst-lbl.act-lbl  { color:var(--a3); }
@@ -949,6 +949,16 @@ body.light .lib-search:focus { border-color:var(--a1); }
   font-size:15px; font-weight:700;
   color:var(--text); min-width:20px; text-align:center;
 }
+.custom-panel {
+  position:absolute; left:0; right:0; top:calc(100% + 2px);
+  z-index:50;
+  background:var(--s1);
+  border:1px solid var(--a1);
+  border-radius:4px;
+  padding:8px 12px;
+  box-shadow:0 6px 20px rgba(0,0,0,.35);
+}
+body.light .custom-panel { background:#fff; box-shadow:0 4px 16px rgba(0,0,0,.15); }
 
 </style>
 </head>
@@ -995,11 +1005,8 @@ body.light .lib-search:focus { border-color:var(--a1); }
           <span class="d-desc">Set your own counts</span><span class="d-time">you decide</span>
         </div>
       </div>
-    </div>
-    <!-- CUSTOM DEPTH PANEL -->
-    <div class="section-wrap custom-panel" id="custom-panel" style="display:none">
-      <div class="section-lbl">Custom Counts</div>
-      <div class="custom-steppers">
+      <!-- CUSTOM DEPTH PANEL - floats as overlay -->
+      <div class="custom-panel" id="custom-panel" style="display:none">
         <div class="cst-row">
           <span class="cst-lbl act-lbl">Activation</span>
           <div class="cst-ctrl">
