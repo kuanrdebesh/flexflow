@@ -440,14 +440,14 @@ nav {
   <div class="hero-meta">
     <span class="hero-tag live">● Live</span>
     <span class="hero-tag">PWA · No backend</span>
-    <span class="hero-tag"><span id="story-ex1"></span> exercises</span>
+    <span class="hero-tag">126 exercises</span>
     <span class="hero-tag">17 muscle groups</span>
     <a href="https://flexflow-8cb.pages.dev" class="hero-link" target="_blank">flexflow-8cb.pages.dev ↗</a>
   </div>
 
   <div class="stats">
     <div class="stat">
-      <div class="stat-num"><span id="story-ex2"></span></div>
+      <div class="stat-num">126</div>
       <div class="stat-lbl">Exercises</div>
     </div>
     <div class="stat">
@@ -533,7 +533,7 @@ nav {
       <div class="d-label">Architecture</div>
       <div>
         <div class="d-title">No backend. No database. No server.</div>
-        <p class="d-text">The entire app — <span id="story-ex3"></span> exercises, plan logic, save/load, PWA — runs in a single HTML file. All data is embedded at build time. Plans persist in localStorage.</p>
+        <p class="d-text">The entire app — 126 exercises, plan logic, save/load, PWA — runs in a single HTML file. All data is embedded at build time. Plans persist in localStorage.</p>
         <div class="d-tradeoff"><span>Tradeoff accepted:</span> No user accounts, no cross-device sync, no analytics. Worth it for zero infrastructure cost, zero latency, and offline-first capability.</div>
       </div>
     </div>
@@ -550,14 +550,14 @@ nav {
       <div>
         <div class="d-title">Muscle group as the primary key</div>
         <p class="d-text">Every exercise is tagged to muscle groups, not body regions or equipment. Selection, filtering, coverage calculation, and display all resolve through muscle group — making the whole system consistent and extensible.</p>
-        <div class="d-tradeoff"><span>Tradeoff accepted:</span> More complex tagging upfront. Paid off in clean algorithm logic and zero special-casing across <span id="story-ex4"></span> exercises.</div>
+        <div class="d-tradeoff"><span>Tradeoff accepted:</span> More complex tagging upfront. Paid off in clean algorithm logic and zero special-casing across 126 exercises.</div>
       </div>
     </div>
     <div class="decision reveal">
       <div class="d-label">Depth modes</div>
       <div>
         <div class="d-title">Three modes, same algorithm, different caps</div>
-        <p class="d-text">Quick, Optimised, and Detailed are not different algorithms — they're the same greedy selection with dynamic caps that scale with the number of muscles selected. Single muscle = tighter cap, full body = wider cap.</p>
+        <p class="d-text">Quick, Optimised, and Custom are not different algorithms — they're the same greedy selection with different caps. Quick and Optimised use dynamic caps that scale with muscles selected. Custom lets you set the exact count for each phase — the algorithm fills from priority-1 exercises first, then priority-2 to meet your cap.</p>
         <div class="d-tradeoff"><span>Tradeoff accepted:</span> More cognitive load in explaining mode differences. Worth it because the underlying consistency makes the system predictable and the output always valid.</div>
       </div>
     </div>
@@ -598,7 +598,7 @@ nav {
     <div class="journey-item reveal">
       <div class="journey-dot"></div>
       <div class="journey-phase">Phase 03 — Database</div>
-      <div class="journey-title"><span id="story-ex5"></span> exercises, 3 phases, 17 muscle groups</div>
+      <div class="journey-title">126 exercises, 3 phases, 17 muscle groups</div>
       <p class="journey-text">Building the exercise database was the most time-intensive part — not technically, but intellectually. Every exercise needed to be tagged, phased, prioritised, and written with instructions and a biomechanical rationale. Getting the activation phase right (the overlooked middle between warm-up and stretching) was the hardest — there was almost no reference material for it.</p>
       <div class="journey-insight"><strong>PM insight:</strong> Content quality is a product decision. Bad data makes even a good algorithm useless.</div>
     </div>
@@ -636,7 +636,7 @@ nav {
 
   <div class="metrics-grid reveal">
     <div class="metric-card">
-      <div class="metric-num blue"><span id="story-ex6"></span></div>
+      <div class="metric-num blue">126</div>
       <div class="metric-lbl">Total exercises</div>
       <div class="metric-note">68 activation · 19 pre · 39 post</div>
     </div>
@@ -648,7 +648,7 @@ nav {
     <div class="metric-card">
       <div class="metric-num gold">3</div>
       <div class="metric-lbl">Depth modes</div>
-      <div class="metric-note">Quick · Optimised · Detailed</div>
+      <div class="metric-note">Quick · Optimised · Custom</div>
     </div>
     <div class="metric-card">
       <div class="metric-num blue">6+</div>
@@ -694,17 +694,12 @@ nav {
   <p class="footer-sub">The thesis validated here — muscle-first planning, decision engine over content library, zero-friction delivery — is the foundation for RepIQ: applied to workout tracking at scale.</p>
   <div class="footer-links">
     <a href="https://flexflow-8cb.pages.dev" class="footer-btn primary" target="_blank">Open FlexFlow ↗</a>
-    <a href="https://flexflow-8cb.pages.dev/flexflow-how-it-works.html" class="footer-btn secondary" target="_blank">How it works</a>
+    <a href="https://flexflow-8cb.pages.dev/how-it-works.html" class="footer-btn secondary" target="_blank">How it works</a>
   </div>
 </div>
 </div>
 
 <script>
-var EXERCISE_COUNT = 133;
-['story-ex1','story-ex2','story-ex3','story-ex4','story-ex5','story-ex6'].forEach(function(id){
-  var el = document.getElementById(id);
-  if(el) el.textContent = EXERCISE_COUNT;
-});
 const observer = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
     if(e.isIntersecting){ e.target.classList.add('visible'); }

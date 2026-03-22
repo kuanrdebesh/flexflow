@@ -600,7 +600,7 @@ body {
     <a href="#how" class="hero-cta">See how it works <span class="hero-cta-arrow">→</span></a>
     <div class="hero-stats">
       <div>
-        <div class="hero-stat-num"><span id="ex1"></span></div>
+        <div class="hero-stat-num">126</div>
         <div class="hero-stat-label">Exercises</div>
       </div>
       <div>
@@ -658,9 +658,9 @@ body {
             <div class="mode-time">~14–18 min total</div>
           </div>
           <div class="mode-card">
-            <div class="mode-icon">◯</div>
-            <div class="mode-name">Detailed</div>
-            <div class="mode-time">Full coverage</div>
+            <div class="mode-icon">⚙</div>
+            <div class="mode-name">Custom</div>
+            <div class="mode-time">You set the counts</div>
           </div>
         </div>
       </div>
@@ -760,7 +760,7 @@ body {
       <div class="flip-demo-desc">
         <div class="flip-desc-title">Muscle map + reference photo</div>
         <div class="flip-desc-text">Every exercise card shows an anatomical SVG with the target muscles highlighted in blue. Tap the figure to flip to a real reference photo showing exact position and form.</div>
-        <div class="flip-desc-text" style="margin-top:8px">All <span id="ex2"></span> exercises have SVG figures. Visual aids -- including reference photos and GIFs -- are being progressively added to provide better guidance for each movement.</div>
+        <div class="flip-desc-text" style="margin-top:8px">All 126 exercises have SVG figures. Visual aids -- including reference photos and GIFs -- are being progressively added to provide better guidance for each movement.</div>
       </div>
     </div>
   </div>
@@ -815,7 +815,7 @@ body {
       <div class="step-num">◉</div>
       <div>
         <div class="step-title">Library search</div>
-        <div class="step-text">Browse all <span id="ex3"></span> exercises in the Library tab. Search by name or muscle group to find specific movements, see their instructions, and add them to your plan manually.</div>
+        <div class="step-text">Browse all 126 exercises in the Library tab. Search by name or muscle group to find specific movements, see their instructions, and add them to your plan manually.</div>
       </div>
     </div>
   </div>
@@ -1013,7 +1013,7 @@ body {
       <div class="install-num">5</div>
       <div>
         <div class="install-title">Works offline too</div>
-        <div class="install-text">Once installed, FlexFlow works without an internet connection. All <span id="ex4"></span> exercises, your saved plans, and the full app are available offline.</div>
+        <div class="install-text">Once installed, FlexFlow works without an internet connection. All 126 exercises, your saved plans, and the full app are available offline.</div>
       </div>
     </div>
 
@@ -1030,10 +1030,6 @@ body {
 
 
 <script>
-var EXERCISE_COUNT = 133;
-['ex1','ex2','ex3','ex4'].forEach(function(id){
-  document.getElementById(id).textContent = EXERCISE_COUNT;
-});
 function toggleFlip() {
   var card = document.getElementById('flip-demo-card');
   card.classList.toggle('flipped');
