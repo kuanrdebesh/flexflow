@@ -249,7 +249,7 @@ function applyPreset(key) {
   document.getElementById('preset-' + key).classList.add('on');
   renderMuscleList(activeTab);
   updateFooter();
-  generate();
+  //generate();
 }
 function clearPresetHL() {
   document.querySelectorAll('.preset-btn').forEach(function(b){ b.classList.remove('on'); });
