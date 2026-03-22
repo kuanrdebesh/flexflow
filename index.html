@@ -76,7 +76,30 @@ button{font-family:'Epilogue',sans-serif;}
 /* SIDEBAR */
 .sb{border-right:1px solid var(--bd);background:var(--s1);display:flex;flex-direction:column;
   position:sticky;top:54px;height:calc(100vh - 54px);overflow:hidden;}
-.sb-head{padding:16px 16px 12px;border-bottom:1px solid var(--bd);flex-shrink:0;}
+.sb-head{
+  padding:16px 16px 12px;
+  border-bottom:1px solid var(--bd);
+  flex-shrink:0;
+
+  cursor:pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+ }
+
+/* hover feedback */
+.sb-head:hover{
+  background: var(--s2);
+ }
+
+/* collapsed state highlight */
+.sb.collapsed .sb-head{
+  background: var(--s2);
+  border-bottom:1px solid var(--bd2);
+  border-left: 2px solid var(--pre);
+ }
+
+.sb-head:active{
+  transform: scale(0.98);
+ }
 .sb-eye{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2.5px;
   text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
 .sb-title{font-size:14px;font-weight:700;}
@@ -108,6 +131,65 @@ button{font-family:'Epilogue',sans-serif;}
 .pr-label{font-size:11px;font-weight:500;color:var(--text);flex:1;}
 .pr-count{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--text3);letter-spacing:.5px;}
 .preset-btn.on .p-icon,.preset-btn.on .p-name{color:var(--pre);}
+.preset-title{
+  font-size:11px;
+  font-weight:600;
+  color:var(--text);
+}
+.preset-sub{
+  font-size:10px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+/* PRESET COLLAPSIBLE (SAFE — scoped) */
+
+.preset-wrap{
+  border-bottom:1px solid var(--bd);
+}
+.preset-wrap .preset-body{
+  padding-top:6px;
+  transition: all 0.2s ease;
+}
+
+.preset-wrap .preset-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:8px 10px;
+  border:1px solid var(--bd);
+  border-radius:3px;
+  background:var(--s2);
+
+  cursor:pointer;
+  transition:all 0.15s ease;
+}
+
+/* hover */
+.preset-wrap .preset-header:hover{
+  border-color:var(--bd2);
+  background:var(--s3);
+}
+
+.preset-wrap .preset-toggle{
+  font-size:11px;
+  color:var(--text2);
+  transition:transform .2s ease;
+}
+
+/* collapsed */
+.preset-wrap.collapsed .preset-body{
+  display:none;
+}
+
+/* expanded */
+.preset-wrap.expanded .preset-toggle{
+  transform:rotate(90deg);
+}
+.preset-wrap.collapsed .preset-header{
+  border-style:dashed;
+}
 
 /* MUSCLE TABS + LIST */
 .mg-tabs{display:flex;border-bottom:1px solid var(--bd);flex-shrink:0;}
@@ -154,19 +236,25 @@ button{font-family:'Epilogue',sans-serif;}
 
 .btn-clr-inline {
   background: transparent;
-  border: none;
-  color: var(--muted);
+  border: 1px solid var(--bd);
+  color: var(--text2);
+
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+
+  padding: 4px 8px;
+  border-radius: 3px;
+
   cursor: pointer;
-  padding: 2px 4px;
-  transition: color 0.12s;
+  transition: all 0.15s ease;
 }
 
 .btn-clr-inline:hover {
   color: var(--text);
+  border-color: var(--bd2);
+  background: var(--s2);
 }
 .sel-count{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-bottom:0px;}
 .sel-count strong{color:var(--text);}
@@ -579,7 +667,7 @@ button{font-family:'Epilogue',sans-serif;}
 
   padding: 10px 14px;
   border-top: 1px solid var(--bd);
-  background: rgba(7,8,15,0.96);
+  background: color-mix(in srgb, var(--s1) 92%, transparent);
   backdrop-filter: blur(10px);
   transition: opacity 0.2s ease;
 
@@ -1094,26 +1182,35 @@ body.light .custom-panel { background:#fff; }
         </div>
       </div>
     </div>
-    <div class="section-wrap">
-      <div class="section-lbl">Full Coverage</div>
-      <div class="preset-radio-list">
- 		 <label class="preset-radio-row" onclick="applyPreset('fullbody')">
-    		<span class="pr-dot" id="preset-fullbody"></span>
-    		<span class="pr-label">Select Full Body</span>
-    		<span class="pr-count">17 muscles</span>
-  		</label>
-  		<label class="preset-radio-row" onclick="applyPreset('upper')">
-    		<span class="pr-dot" id="preset-upper"></span>
-    		<span class="pr-label">Select Entire Upper</span>
-    		<span class="pr-count">10 muscles</span>
-  		</label>
-  		<label class="preset-radio-row" onclick="applyPreset('lower')">
-    		<span class="pr-dot" id="preset-lower"></span>
-    		<span class="pr-label">Select Entire Lower</span>
-    		<span class="pr-count">9 muscles</span>
-  		</label>
+  
+    <div class="section-wrap preset-wrap collapsed" id="presetWrap">
+		<div class="preset-header" onclick="togglePreset()">
+			<div>
+    			<div class="preset-title">Auto Muscle Selection</div>
+			    <div class="preset-sub">Quickly select common muscle groups</div>
+		  </div>
+    		<span class="preset-toggle">▶</span>
+  		</div>
+		<div class="preset-body">
+			<div class="preset-radio-list">
+      			<label class="preset-radio-row" onclick="applyPreset('fullbody')">
+    				<span class="pr-dot" id="preset-fullbody"></span>
+		    		<span class="pr-label">Select Full Body</span>
+    				<span class="pr-count">17 muscles</span>
+		  		</label>
+  				<label class="preset-radio-row" onclick="applyPreset('upper')">
+		    		<span class="pr-dot" id="preset-upper"></span>
+    				<span class="pr-label">Select Entire Upper</span>
+		    		<span class="pr-count">10 muscles</span>
+		  		</label>
+  				<label class="preset-radio-row" onclick="applyPreset('lower')">
+		    		<span class="pr-dot" id="preset-lower"></span>
+    				<span class="pr-label">Select Entire Lower</span>
+		    		<span class="pr-count">9 muscles</span>
+		  		</label>
+    		</div>
+  		</div>
 	</div>
-    </div>
     <div class="mg-tabs" id="mg-tabs"></div>
     <div class="muscle-list" id="muscle-list"></div>
     <div class="sb-foot">

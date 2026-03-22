@@ -1245,6 +1245,13 @@ applyPreset = function(key) {
   // applyPreset already calls generate which collapses — nothing extra needed
 };
 
+function togglePreset(){
+  console.log("clicked");  // 👈 add this
+  const el = document.getElementById('presetWrap');
+  el.classList.toggle('collapsed');
+  el.classList.toggle('expanded');
+}
+
 // ── MOBILE: BOTTOM NAV BADGES ─────────────────────────────────
 var _origUpdatePlansBadge = updatePlansBadge;
 updatePlansBadge = function() {
