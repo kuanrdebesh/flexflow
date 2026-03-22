@@ -480,13 +480,16 @@ button{font-family:'Epilogue',sans-serif;}
 
   /* Sidebar collapses to a compact header with toggle */
   .sb {
-    position:static;
+    position:sticky;
+    top:50px;
+    z-index:100;
     height:auto;
     border-right:none;
     border-bottom:1px solid var(--bd);
     max-height:52px;
     overflow:hidden;
     transition:max-height .3s ease;
+    background:var(--s1);
   }
   .sb.expanded { max-height:none; overflow-y:visible; }
 
