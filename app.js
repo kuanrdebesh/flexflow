@@ -8,7 +8,7 @@ var STRETCHES = [];
 var selected = new Set();
 var depth = 'quick';
 var customCaps = { act: 3, pre: 4, post: 6 };
-var customCapsSet = false; // true once user manually adjusts
+var customCapsSet = false;
 var activeTab = 0;
 var timers = {};
 var currentPlan = null;
@@ -237,32 +237,42 @@ function showView(name) {
 
 // ── DEPTH ─────────────────────────────────────────────
 function setDepth(d) {
-  depth = d;
-  document.getElementById('depth-quick').className    = 'depth-btn' + (d === 'quick'     ? ' quick-on'     : '');
-  document.getElementById('depth-optimised').className = 'depth-btn' + (d === 'optimised' ? ' optimised-on' : '');
-  document.getElementById('depth-custom').className   = 'depth-btn' + (d === 'custom'    ? ' custom-on'    : '');
-  // Show/hide custom panel
+  var prevDepth = depth;
   var panel = document.getElementById('custom-panel');
+  if (d === 'custom' && prevDepth === 'custom') {
+    depth = 'optimised';
+    document.getElementById('depth-quick').className     = 'depth-btn';
+    document.getElementById('depth-optimised').className = 'depth-btn optimised-on';
+    document.getElementById('depth-custom').className    = 'depth-btn';
+    if (panel) panel.style.display = 'none';
+    return;
+  }
+  depth = d;
+  document.getElementById('depth-quick').className     = 'depth-btn' + (d === 'quick'     ? ' quick-on'     : '');
+  document.getElementById('depth-optimised').className = 'depth-btn' + (d === 'optimised' ? ' optimised-on' : '');
+  document.getElementById('depth-custom').className    = 'depth-btn' + (d === 'custom'    ? ' custom-on'    : '');
   if (panel) panel.style.display = d === 'custom' ? '' : 'none';
-  // Set default caps from optimised when switching to custom (unless user already set them)
   if (d === 'custom' && !customCapsSet) {
-    var n = selected.size || 1;
+    var n = Math.max(1, selected ? selected.size : 1);
     customCaps.act  = Math.max(3, Math.min(n * 2, 12));
     customCaps.pre  = Math.max(3, Math.min(n * 2, 10));
     customCaps.post = Math.max(4, Math.min(n * 2, 14));
-    document.getElementById('cst-act').textContent  = customCaps.act;
-    document.getElementById('cst-pre').textContent  = customCaps.pre;
-    document.getElementById('cst-post').textContent = customCaps.post;
+    var ea = document.getElementById('cst-act');
+    var ep = document.getElementById('cst-pre');
+    var eo = document.getElementById('cst-post');
+    if (ea) ea.textContent = customCaps.act;
+    if (ep) ep.textContent = customCaps.pre;
+    if (eo) eo.textContent = customCaps.post;
   }
 }
 
 function adjustCustom(phase, delta) {
-  var min = 0;
-  var max = 20;
-  customCaps[phase] = Math.max(min, Math.min(max, customCaps[phase] + delta));
-  document.getElementById('cst-' + phase).textContent = customCaps[phase];
-  customCapsSet = true; // user has manually set — retain until generate
+  customCapsSet = true;
+  customCaps[phase] = Math.max(0, Math.min(20, (customCaps[phase] || 0) + delta));
+  var el = document.getElementById('cst-' + phase);
+  if (el) el.textContent = customCaps[phase];
 }
+
 
 // ── PRESETS ───────────────────────────────────────────
 function applyPreset(key) {
@@ -412,14 +422,22 @@ function shufflePlan() {
     act  = optimisedSelect(allAct,  muscles, oCapAct);
     pre  = optimisedSelect(allPre,  muscles, oCapPre);
     post = optimisedSelect(allPost, muscles, oCapPost);
+  } else if (d === 'custom') {
+    var cA1 = allAct.filter(function(s){ return (s.priority||1)===1; });
+    var cA2 = allAct.filter(function(s){ return (s.priority||1)===2; });
+    var cP1 = allPre.filter(function(s){ return (s.priority||1)===1; });
+    var cP2 = allPre.filter(function(s){ return (s.priority||1)===2; });
+    var cO1 = allPost.filter(function(s){ return (s.priority||1)===1; });
+    var cO2 = allPost.filter(function(s){ return (s.priority||1)===2; });
+    act  = optimisedSelect(cA1.concat(cA2), muscles, customCaps.act);
+    pre  = optimisedSelect(cP1.concat(cP2), muscles, customCaps.pre);
+    post = optimisedSelect(cO1.concat(cO2), muscles, customCaps.post);
   } else {
-    // Custom — shuffle then apply caps
-    act  = optimisedSelect(allAct,  muscles, customCaps.act);
-    pre  = optimisedSelect(allPre,  muscles, customCaps.pre);
-    post = optimisedSelect(allPost, muscles, customCaps.post);
+    act = allAct; pre = allPre; post = allPost;
   }
 
   currentPlan = { muscles:muscles, depth:d, act:act, pre:pre, post:post };
+
   renderPlan(currentPlan, editingPlanId || null);
 
   var btn = document.getElementById('btn-shuffle');
@@ -475,16 +493,26 @@ function generate() {
     act  = optimisedSelect(allAct,  muscles, oCapAct);
     pre  = optimisedSelect(allPre,  muscles, oCapPre);
     post = optimisedSelect(allPost, muscles, oCapPost);
+  } else if (depth === 'custom') {
+    var cA1 = allAct.filter(function(s){ return (s.priority||1)===1; });
+    var cA2 = allAct.filter(function(s){ return (s.priority||1)===2; });
+    var cP1 = allPre.filter(function(s){ return (s.priority||1)===1; });
+    var cP2 = allPre.filter(function(s){ return (s.priority||1)===2; });
+    var cO1 = allPost.filter(function(s){ return (s.priority||1)===1; });
+    var cO2 = allPost.filter(function(s){ return (s.priority||1)===2; });
+    act  = optimisedSelect(cA1.concat(cA2), muscles, customCaps.act);
+    pre  = optimisedSelect(cP1.concat(cP2), muscles, customCaps.pre);
+    post = optimisedSelect(cO1.concat(cO2), muscles, customCaps.post);
+    customCapsSet = false;
   } else {
-    // Custom mode: P1 first, fill remaining slots from P2
-    act  = optimisedSelect(allAct,  muscles, customCaps.act);
-    pre  = optimisedSelect(allPre,  muscles, customCaps.pre);
-    post = optimisedSelect(allPost, muscles, customCaps.post);
+    act  = allAct;
+    pre  = allPre;
+    post = allPost;
   }
-  customCapsSet = false; // reset after generate so next muscle change recalcs defaults
   currentPlan = {muscles:muscles, depth:depth, act:act, pre:pre, post:post};
   renderPlan(currentPlan, null);
 }
+
 
 function obj(s) { var c = {}; for (var k in s) c[k] = s[k]; return c; }
 
@@ -499,8 +527,8 @@ function renderPlan(plan, planId) {
   var act = plan.act || [];
   var preMin = Math.max(1, Math.round(plan.pre.length * 1.2));
   var postMin = Math.max(1, Math.round(plan.post.reduce(function(a,s){ return a+(s.timer||30); },0)/60));
-  var mc = plan.depth === 'quick' ? 'quick' : plan.depth === 'optimised' ? 'optimised' : 'custom';
-  var ml = plan.depth === 'quick' ? '&#9889; Quick' : plan.depth === 'optimised' ? '&#10070; Optimised' : '&#9881; Custom';
+  var mc = plan.depth === 'quick' ? 'quick' : plan.depth === 'optimised' ? 'optimised' : 'detailed';
+  var ml = plan.depth === 'quick' ? '&#9889; Quick' : plan.depth === 'optimised' ? '&#10070; Optimised' : '&#9711; Detailed';
   var mPills = mLabels.map(function(l){ return '<span class="rpill rp-m">'+l+'</span>'; }).join('');
   var covChips = mLabels.map(function(l){ return '<span class="cov-chip">'+l+'</span>'; }).join('');
   var planName = planId ? (getPlans().filter(function(p){ return p.id === planId; })[0] || {}).name : null;
