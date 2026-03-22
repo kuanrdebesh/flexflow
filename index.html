@@ -91,8 +91,8 @@ button{font-family:'Epilogue',sans-serif;}
 .d-time{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--dim);margin-top:2px;}
 .depth-btn.quick-on{border-color:var(--a3);background:var(--a3-dim);box-shadow:0 0 0 1px var(--a3);}
 .depth-btn.quick-on .d-name{color:var(--a3);}
-.depth-btn.detail-on{border-color:var(--pre);background:var(--pre-a);}
-.depth-btn.detail-on .d-name{color:var(--pre);}
+.depth-btn.custom-on{border-color:var(--a2);background:var(--a2-dim);}
+.depth-btn.custom-on .d-name{color:var(--a2);}
 
 /* PRESETS */
 .preset-row{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
@@ -161,7 +161,7 @@ button{font-family:'Epilogue',sans-serif;}
   font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;}
 .r-mode.quick{background:var(--s2);border:1px solid var(--bd2);color:var(--text2);}
 .r-mode.optimised{background:var(--a2-dim);border:1px solid var(--a2-line);color:var(--a2);}
-.r-mode.detailed{background:var(--a1-dim);border:1px solid var(--a1-line);color:var(--a1);}
+.r-mode.custom{background:var(--a2-dim);border:1px solid var(--a2-line);color:var(--a2);}
 .rpill{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1px;
   text-transform:uppercase;padding:2px 8px;border-radius:2px;}
 .rp-m{background:var(--s2);border:1px solid var(--bd2);color:var(--muted);}
@@ -728,8 +728,8 @@ body.light .btn-gen:hover:not(:disabled) { background:#243f7a; box-shadow:0 0 16
 body.light .mchip.on { border-color:var(--pre); background:rgba(42,125,0,.08); }
 body.light .mchip.on .mc-dot { background:var(--pre); border-color:var(--pre); box-shadow:0 0 5px var(--pre); }
 body.light .mchip.on .mc-name { color:var(--pre); }
-body.light .depth-btn.detail-on { border-color:var(--pre); background:rgba(42,125,0,.08); }
-body.light .depth-btn.detail-on .d-name { color:var(--pre); }
+body.light .depth-btn.custom-on { border-color:var(--a2); background:var(--a2-dim); }
+body.light .depth-btn.custom-on .d-name { color:var(--a2); }
 body.light .preset-btn.on { border-color:var(--pre); background:rgba(42,125,0,.08); }
 body.light .preset-btn.on .p-icon,body.light .preset-btn.on .p-name { color:var(--pre); }
 body.light .mg-tab.on { color:var(--pre); border-color:var(--pre); }
@@ -744,7 +744,7 @@ body.light .btn-plan-run:hover { background:#243f7a; }
 body.light .btn-add-item { color:var(--pre); border-color:rgba(42,125,0,.4); }
 body.light .btn-add-item:hover { background:rgba(42,125,0,.08); }
 body.light .btn-use-alt { background:var(--pre); }
-body.light .r-mode.detailed { background:rgba(42,125,0,.1); border-color:rgba(42,125,0,.3); color:var(--pre); }
+body.light .r-mode.custom { background:var(--a2-dim); border-color:var(--a2-line); color:var(--a2); }
 body.light .lf.on { border-color:var(--pre); color:var(--pre); background:rgba(42,125,0,.08); }
 body.light .toast.ok { border-color:rgba(42,125,0,.5); color:var(--pre); }
 body.light .modal-input:focus { border-color:var(--pre); }
@@ -927,6 +927,29 @@ body.light .lib-search:focus { border-color:var(--a1); }
   .btn-shuffle { height:28px; padding:0 10px; font-size:8px; }
 }
 
+
+/* ── CUSTOM DEPTH PANEL ── */
+.custom-steppers { display:flex; flex-direction:column; gap:8px; margin-top:6px; }
+.cst-row { display:flex; align-items:center; justify-content:space-between; }
+.cst-lbl { font-size:12px; font-weight:500; color:var(--text2); }
+.cst-lbl.act-lbl  { color:var(--a3); }
+.cst-lbl.pre-lbl  { color:var(--a1); }
+.cst-lbl.post-lbl { color:var(--a2); }
+.cst-ctrl { display:flex; align-items:center; gap:10px; }
+.cst-btn {
+  width:28px; height:28px; border-radius:3px;
+  border:1px solid var(--bd2); background:transparent;
+  color:var(--text2); font-size:16px; line-height:1;
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  transition:all .15s;
+}
+.cst-btn:hover { border-color:var(--a1); color:var(--a1); background:var(--a1-dim); }
+.cst-val {
+  font-family:'JetBrains Mono',monospace;
+  font-size:15px; font-weight:700;
+  color:var(--text); min-width:20px; text-align:center;
+}
+
 </style>
 </head>
 <body>
@@ -967,9 +990,39 @@ body.light .lib-search:focus { border-color:var(--a1); }
           <span class="d-icon">&#10070;</span><span class="d-name">Optimised</span>
           <span class="d-desc">Best return on time</span><span class="d-time">6-8 min pre · 8-10 min post</span>
         </div>
-        <div class="depth-btn" id="depth-detailed" onclick="setDepth('detailed')">
-          <span class="d-icon">&#9711;</span><span class="d-name">Detailed</span>
-          <span class="d-desc">Full sub-region coverage</span><span class="d-time">10-12 min pre · 12-15 min post</span>
+        <div class="depth-btn" id="depth-custom" onclick="setDepth('custom')">
+          <span class="d-icon">&#9881;</span><span class="d-name">Custom</span>
+          <span class="d-desc">Set your own counts</span><span class="d-time">you decide</span>
+        </div>
+      </div>
+    </div>
+    <!-- CUSTOM DEPTH PANEL -->
+    <div class="section-wrap custom-panel" id="custom-panel" style="display:none">
+      <div class="section-lbl">Custom Counts</div>
+      <div class="custom-steppers">
+        <div class="cst-row">
+          <span class="cst-lbl act-lbl">Activation</span>
+          <div class="cst-ctrl">
+            <button class="cst-btn" onclick="adjustCustom('act',-1)">&#8722;</button>
+            <span class="cst-val" id="cst-act">3</span>
+            <button class="cst-btn" onclick="adjustCustom('act',1)">&#43;</button>
+          </div>
+        </div>
+        <div class="cst-row">
+          <span class="cst-lbl pre-lbl">Pre-Workout</span>
+          <div class="cst-ctrl">
+            <button class="cst-btn" onclick="adjustCustom('pre',-1)">&#8722;</button>
+            <span class="cst-val" id="cst-pre">4</span>
+            <button class="cst-btn" onclick="adjustCustom('pre',1)">&#43;</button>
+          </div>
+        </div>
+        <div class="cst-row">
+          <span class="cst-lbl post-lbl">Post-Workout</span>
+          <div class="cst-ctrl">
+            <button class="cst-btn" onclick="adjustCustom('post',-1)">&#8722;</button>
+            <span class="cst-val" id="cst-post">6</span>
+            <button class="cst-btn" onclick="adjustCustom('post',1)">&#43;</button>
+          </div>
         </div>
       </div>
     </div>
