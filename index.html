@@ -161,7 +161,7 @@ button{font-family:'Epilogue',sans-serif;}
   font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;}
 .r-mode.quick{background:var(--s2);border:1px solid var(--bd2);color:var(--text2);}
 .r-mode.optimised{background:var(--a2-dim);border:1px solid var(--a2-line);color:var(--a2);}
-.r-mode.detailed,.r-mode.custom{background:var(--a1-dim);border:1px solid var(--a1-line);color:var(--a1);}
+.r-mode.detailed{background:var(--a1-dim);border:1px solid var(--a1-line);color:var(--a1);}
 .rpill{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1px;
   text-transform:uppercase;padding:2px 8px;border-radius:2px;}
 .rp-m{background:var(--s2);border:1px solid var(--bd2);color:var(--muted);}
@@ -927,6 +927,33 @@ body.light .lib-search:focus { border-color:var(--a1); }
   .btn-shuffle { height:28px; padding:0 10px; font-size:8px; }
 }
 
+
+/* ── CUSTOM MODE ── */
+.depth-btn.custom-on { border-color:var(--a1); background:var(--a1-dim); box-shadow:0 0 0 1px var(--a1); }
+.depth-btn.custom-on .d-name { color:var(--a1); }
+.section-wrap { position:relative; }
+.custom-panel {
+  position:absolute; left:0; right:0; top:calc(100% - 1px);
+  z-index:60;
+  background:var(--s1);
+  border:1px solid var(--a1);
+  border-top:none;
+  border-radius:0 0 4px 4px;
+  padding:8px 12px 10px;
+  box-shadow:0 8px 24px rgba(0,0,0,.4);
+}
+body.light .custom-panel { background:#fff; }
+.cst-row { display:flex; align-items:center; justify-content:space-between; padding:5px 0; }
+.cst-row + .cst-row { border-top:1px solid var(--bd); }
+.cst-lbl { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:1px; text-transform:uppercase; }
+.cst-lbl.act-lbl  { color:var(--a3); }
+.cst-lbl.pre-lbl  { color:var(--a1); }
+.cst-lbl.post-lbl { color:var(--a2); }
+.cst-ctrl { display:flex; align-items:center; gap:12px; }
+.cst-btn { width:28px; height:28px; border-radius:3px; border:1px solid var(--bd2); background:transparent; color:var(--text2); font-size:16px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .15s; }
+.cst-btn:hover { border-color:var(--a1); color:var(--a1); background:var(--a1-dim); }
+.cst-val { font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; color:var(--text); min-width:22px; text-align:center; }
+
 </style>
 </head>
 <body>
@@ -967,9 +994,36 @@ body.light .lib-search:focus { border-color:var(--a1); }
           <span class="d-icon">&#10070;</span><span class="d-name">Optimised</span>
           <span class="d-desc">Best return on time</span><span class="d-time">6-8 min pre · 8-10 min post</span>
         </div>
-        <div class="depth-btn" id="depth-detailed" onclick="setDepth('detailed')">
-          <span class="d-icon">&#9711;</span><span class="d-name">Detailed</span>
-          <span class="d-desc">Full sub-region coverage</span><span class="d-time">10-12 min pre · 12-15 min post</span>
+        <div class="depth-btn" id="depth-custom" onclick="setDepth('custom')">
+          <span class="d-icon">&#9881;</span><span class="d-name">Custom</span>
+          <span class="d-desc">Set your own counts</span><span class="d-time">you decide</span>
+        </div>
+      </div>
+      <!-- CUSTOM OVERLAY PANEL -->
+      <div class="custom-panel" id="custom-panel" style="display:none">
+        <div class="cst-row">
+          <span class="cst-lbl act-lbl">Activation</span>
+          <div class="cst-ctrl">
+            <button class="cst-btn" onclick="adjustCustom('act',-1)">&#8722;</button>
+            <span class="cst-val" id="cst-act">3</span>
+            <button class="cst-btn" onclick="adjustCustom('act',1)">&#43;</button>
+          </div>
+        </div>
+        <div class="cst-row">
+          <span class="cst-lbl pre-lbl">Pre-Workout</span>
+          <div class="cst-ctrl">
+            <button class="cst-btn" onclick="adjustCustom('pre',-1)">&#8722;</button>
+            <span class="cst-val" id="cst-pre">4</span>
+            <button class="cst-btn" onclick="adjustCustom('pre',1)">&#43;</button>
+          </div>
+        </div>
+        <div class="cst-row">
+          <span class="cst-lbl post-lbl">Post-Workout</span>
+          <div class="cst-ctrl">
+            <button class="cst-btn" onclick="adjustCustom('post',-1)">&#8722;</button>
+            <span class="cst-val" id="cst-post">6</span>
+            <button class="cst-btn" onclick="adjustCustom('post',1)">&#43;</button>
+          </div>
         </div>
       </div>
     </div>
@@ -1112,7 +1166,7 @@ body.light .lib-search:focus { border-color:var(--a1); }
           <div class="guide-modes">
             <div class="guide-mode"><span class="gm-icon">&#9889;</span><div><div class="gm-name">Quick</div><div class="gm-desc">Minimum effective dose -- ~8-10 min total</div></div></div>
             <div class="guide-mode"><span class="gm-icon gm-a1">&#10070;</span><div><div class="gm-name">Optimised</div><div class="gm-desc">Best return on time -- smart selection</div></div></div>
-            <div class="guide-mode"><span class="gm-icon">&#9881;</span><div><div class="gm-name">Custom</div><div class="gm-desc">Set exact counts per phase — algorithm fills P1 first, then P2</div></div></div>
+            <div class="guide-mode"><span class="gm-icon">&#9881;</span><div><div class="gm-name">Custom</div><div class="gm-desc">Set exact counts per phase — fills P1 first, then P2</div></div></div>
           </div>
         </div>
       </div>
